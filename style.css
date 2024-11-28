@@ -1,0 +1,695 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'GmarketSansMedium', Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+img {
+  width: 100%;
+  vertical-align: top;
+}
+
+li {
+  list-style: none;
+}
+@font-face {
+  font-family: 'SBAggroB';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'S-CoreDream-3Light';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ChosunSg';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunSg.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PuradakGentleGothicR';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.1/PuradakGentleGothicR.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+#warp {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+#firstpage {
+  width: 100%;
+  height: 1000px;
+}
+
+.firsttext {
+  color: #ffffff;
+  padding-top: 30px;
+  padding-left: 70px;
+  background-color: #000000;
+}
+
+.firsttext > .web-p {
+  font-family: 'ChosunSg';
+  font-size: 35px;
+  padding-left: 40px;
+}
+
+.firsttext > .web-h3 {
+  font-size: 27px;
+  padding-left: 40px;
+}
+
+.bgimg {
+  width: 100%;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.bgimg > img {
+  width: 100%;
+  height: 600px;
+  image-rendering: -webkit-optimize-contrast;
+  transform: translateZ(0);
+}
+
+.firstpage-footer {
+  height: 130px;
+  background-color: #000000;
+}
+
+/* //firstpage */
+
+#profile {
+  width: 100%;
+  height: 950px;
+  background-color: #ffffff;
+}
+
+.main-divbox {
+  display: flex;
+}
+
+.mini-text {
+  padding-top: 30px;
+  padding-left: 40px;
+  font-size: 22px;
+}
+
+.about-me {
+  font-family: 'PuradakGentleGothicR';
+  margin-top: 70px;
+  margin-left: 100px;
+  font-size: 40px;
+}
+
+.divbox1 {
+  margin-left: 150px;
+  margin-top: 80px;
+}
+
+.divbox1 > .Idea > h3 {
+  font-size: 40px;
+}
+
+.divbox1 > .Idea > p {
+  line-height: 1.5;
+  font-size: 18px;
+}
+
+.divbox1 > .name {
+  margin-top: 80px;
+}
+
+.divbox1 > .name > h3 {
+  font-size: 35px;
+}
+
+.divbox1 > .name > p {
+  padding-top: 5px;
+  margin-left: 5px;
+  line-height: 1.7;
+  font-size: 20px;
+}
+
+.divbox2 {
+  margin-left: 150px;
+  margin-top: 80px;
+}
+
+.divbox2 > .education > h3 {
+  font-size: 35px;
+}
+
+.divbox2 > .education > p {
+  padding-top: 5px;
+  font-size: 19px;
+}
+
+.divbox2 > .education > .wh {
+  font-size: 17px;
+  color: #666666;
+}
+
+.divbox2 > .license {
+  margin-top: 70px;
+}
+
+.divbox2 > .license > h3 {
+  font-size: 35px;
+}
+
+.divbox2 > .license > p {
+  padding-top: 5px;
+  font-size: 19px;
+}
+
+.divbox2 > .license > .wh {
+  font-size: 17px;
+  color: #666666;
+}
+
+.divbox2 > .Stack {
+  margin-top: 70px;
+}
+
+.divbox2 > .Stack > h3 {
+  font-size: 35px;
+}
+
+.divbox2 > .Stack > .stack-img {
+  display: flex;
+  transition: all 0.2s;
+}
+
+.divbox2 > .Stack > .stack-img > li {
+  padding-top: 5px;
+  width: 50px;
+  height: 50px;
+}
+
+.divbox2 > .Stack > .stack-img > li > .figma {
+  padding: 3px 8px 8px 8px;
+}
+.divbox3 {
+  margin-left: 100px;
+  margin-top: 80px;
+}
+
+.divbox3 > .pursue {
+  margin-top: 70px;
+}
+
+.divbox3 > .award > h3 {
+  font-size: 35px;
+}
+
+.divbox3 > .award > p {
+  padding-top: 5px;
+  font-size: 19px;
+}
+
+.divbox3 > .award > .wh {
+  font-size: 17px;
+  color: #666666;
+}
+
+.divbox3 > .pursue > h3 {
+  font-size: 35px;
+}
+
+.divbox3 > .pursue > ul {
+  display: flex;
+}
+
+.divbox3 > .pursue > ul > li {
+  padding-top: 5px;
+  font-size: 19px;
+  padding-left: 5px;
+}
+
+/* //profile */
+
+#contents {
+  width: 100%;
+  height: 950px;
+}
+
+.contents-box {
+  width: 100%;
+  height: 950px;
+  display: flex;
+}
+
+.contents-left-box {
+  width: 45%;
+  height: 950px;
+  background-color: #000000;
+}
+
+.contents-mini-text {
+  padding-top: 30px;
+  padding-left: 40px;
+  font-size: 22px;
+  color: #ffffff;
+}
+
+.contents-main-text {
+  font-family: 'PuradakGentleGothicR';
+  margin-top: 230px;
+  margin-left: 90px;
+  font-size: 45px;
+  color: #ffffff;
+}
+
+.contents-right-box {
+  width: 65%;
+  height: 950px;
+  background-color: #ffffff;
+}
+
+.contents-right-box > ul {
+  margin-top: 100px;
+  margin-left: 100px;
+}
+
+.contents-right-box > ul > li {
+  padding-top: 70px;
+}
+
+.contents-right-box > ul > li > p {
+  font-family: 'ChosunSg';
+  font-size: 25px;
+}
+
+.contents-right-box > ul > li > h2 {
+  font-size: 50px;
+  cursor: pointer;
+}
+/* //contents */
+
+#Introduce {
+  width: 100%;
+  height: 880px;
+  background-color: #000000;
+  position: relative;
+  z-index: 1;
+}
+
+#Introduce::after {
+  content: '';
+  width: 1520px;
+  height: 880px;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  background-image: url(./img/main-text.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.7;
+  z-index: 0;
+}
+
+.Introduce-mini-text {
+  padding-top: 30px;
+  padding-left: 40px;
+  color: #ffffff;
+  display: flex;
+  position: relative;
+  z-index: 10;
+}
+
+.Introduce-mini-text > .span01 {
+  font-family: 'ChosunSg';
+  color: #ffffff;
+  font-size: 27px;
+}
+
+.Introduce-mini-text > p {
+  padding-top: 5px;
+  margin-left: 25px;
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.Introduce-main-text > h1 {
+  padding-top: 40px;
+  margin-left: 160px;
+  font-size: 50px;
+  color: #ffffff;
+  position: relative;
+  z-index: 10;
+}
+
+.Introduce-main-text > h1::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 1150px;
+  height: 5px;
+  background-color: #ffffff;
+}
+
+.Introduce-title-text {
+  font-family: 'Pretendard-Regular';
+  padding-top: 50px;
+  margin-left: 160px;
+  font-size: 35px;
+  color: #ffffff;
+  position: relative;
+  z-index: 10;
+}
+
+.Introduce-text {
+  font-family: 'Pretendard-Regular';
+  line-height: 60px;
+  padding-top: 10px;
+  margin-left: 160px;
+  font-size: 28px;
+  color: #ffffff;
+  position: relative;
+  z-index: 10;
+}
+
+#Design {
+  width: 100%;
+  height: 880px;
+  background-color: #000000;
+}
+.Design-mini-text{
+  padding-top: 30px;
+  padding-left: 40px;
+  color: #ffffff;
+  display: flex;
+  position: relative;
+  z-index: 10;
+}
+.Design-mini-text{
+  padding-top: 30px;
+  padding-left: 40px;
+  color: #ffffff;
+  display: flex;
+  position: relative;
+  z-index: 10;
+}
+.Design-mini-text > .span02 {
+  font-family: 'ChosunSg';
+  color: #ffffff;
+  font-size: 27px;
+}
+.Design-mini-text > p {
+  padding-top: 5px;
+  margin-left: 25px;
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.Design-box{
+  display: flex;
+  margin: 0 auto;
+  transition: all 0.1s;
+  position: relative;
+  transition: transform 0.05s ease-out;
+}
+.Design-box > div {
+  transition: transform 0.5s ease;
+}
+.Design-box > .poster1{
+  width: 350px;
+  height: 486px;
+  background-image: url(./img/poster1.png);
+  margin: 180px 0 0 130px;
+  transform: rotate(17deg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.Design-box > .poster2{
+  width: 350px;
+  height: 486px;
+  background-image: url(./img/poster2.png);
+  margin: 180px 0 0 100px;
+  transform: rotate(17deg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.Design-box > .poster3{
+  width: 350px;
+  height: 486px;
+  background-image: url(./img/poster3.png);
+  margin: 180px 0 0 100px;
+  transform: rotate(17deg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: screen;
+  background-size: 200% 200%;
+  background-position: center;
+  pointer-events: none; /* 클릭 이벤트가 overlay에 전달되지 않도록 */
+  transition: opacity 0.1s ease-in-out, background-position 0.05s ease;
+  opacity: 0; /* 기본적으로 비활성화 */
+}
+
+
+#namespace { 
+  width: 100%;
+  height: 880px;
+  background-image: url(./img/Namespace.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: 100000;
+}
+.namespace-mini-text{
+  padding-top: 30px;
+  padding-left: 40px;
+  color: #ffffff;
+  display: flex;
+  position: relative;
+  z-index: 10;
+}
+.namespace-mini-text > .span03 {
+  font-family: 'ChosunSg';
+  color: #ffffff;
+  font-size: 27px;
+}
+.namespace-mini-text > p {
+  padding-top: 5px;
+  margin-left: 20px;
+  color: #ffffff;
+  font-size: 18px;
+}
+.namespace-title-text{
+  font-family: 'ChosunSg';
+  font-weight: 100;
+  position: absolute;
+  top: 500px;
+  left: 70px;
+  font-size: 125px;
+  color: #f0f0f0;
+}
+.namespace-box{
+  position: absolute;
+  top: 30px;
+  right: 60px;
+  color: #f0f0f0;
+}
+.namespace-box > div{
+  display: flex;
+}
+.namespace-box > div > h3{
+  padding-right: 10px;
+  padding-bottom: 10px;
+  font-size: 24px;
+}
+.namespace-box > div > p{
+  font-family: 'ChosunSg';
+  font-weight: 100;
+  padding-top: 5px;
+  font-size: 19px;
+}
+.namespace-overview-box{
+  position: absolute;
+  bottom: 30px;
+  right: 40px;
+  color: #f0f0f0;
+}
+.namespace-overview-box  > .overview-h3 {
+  padding-bottom: 5px;
+  font-size: 24px;
+}
+.namespace-overview-box  > p {
+  font-family: 'Pretendard-Regular';
+  font-weight: 100;
+  line-height: 1.5;
+  font-size: 19px;
+}
+/* //namespace */
+#project {
+  width: 100%;
+  height: 880px;
+  background-color: #ffffff;
+  position: relative;
+}
+.project-mini-text{
+  padding-top: 30px;
+  padding-left: 40px;
+  display: flex;
+  position: relative;
+  z-index: 10;
+}
+.project-mini-text > .span03 {
+  font-family: 'ChosunSg';
+  color: #333333;
+  font-size: 27px;
+}
+.project-mini-text > p {
+  padding-top: 5px;
+  margin-left: 20px;
+  color: #333333;
+  font-size: 18px;
+}
+.project-main-box{
+  display: flex;
+}
+.project-text{
+  margin-left: 100px;
+  margin-top: 100px;
+  position: relative;
+  z-index: 10001;
+}
+.project-text > h2{
+  font-size: 38px;
+  color: #3F866B;
+  padding-bottom: 5px;
+}
+.project-text > p{
+  font-size: 23px;
+  line-height: 2.5;
+}
+.project-img-box{
+  background-image: url(./img/project-img.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: -80px;
+  right: -150px;
+  width: 1000px;
+  height: 1100px;
+  z-index: 0;
+}
+/* //project */
+#endpage {
+  width: 100%;
+  height: 880px;
+  background-color: #000000;
+  position: relative;
+  z-index: 10001;
+}
+.endfage-mini-text{
+  padding-top: 30px;
+  padding-left: 40px;
+  display: flex;
+  position: relative;
+  z-index: 10;
+}
+.endfage-mini-text > .span04 {
+  font-family: 'ChosunSg';
+  color: #ffffff;
+  font-size: 27px;
+}
+.endfage-mini-text > p {
+  padding-top: 5px;
+  margin-left: 20px;
+  color: #ffffff;
+  font-size: 18px;
+}
+.endfage-main-text{
+  font-family: 'SBAggroB';
+  margin: 90px 0 0 240px; 
+}
+.endfage-main-text > .endfage-main-text1 {
+  font-size: 60px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+.endfage-main-text > .endfage-main-text2 {
+  font-size: 50px;
+  font-weight: 800;
+  margin-left: 450px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+.endfage-main-text > .endfage-main-text3 {
+  font-size: 70px;
+  font-weight: 800;
+  margin-left: 300px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+.endfage-footer-text{
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  color: #ffffff;
+  display: flex;
+}
+.endfage-footer-text > .endfage-footer-text1 {
+  color: #ffffff;
+  position: absolute;
+  bottom: 0px;
+  left: -650px;
+}
+.endfage-footer-text > .endfage-footer-text2 {
+  color: #ffffff;
+  transform: translateX(-70px);
+}
+.endfage-footer-text > .endfage-footer-text3 {
+  color: #ffffff;
+  position: absolute;
+  bottom: 0px;
+  left: 530px;
+}
