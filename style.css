@@ -475,7 +475,7 @@ li {
 .Design-box > .poster3{
   width: 350px;
   height: 486px;
-  background-image: url(./img/Poster3.jpg);
+  background-image: url(./img/poster3.jpg);
   margin: 180px 0 0 100px;
   transform: rotate(17deg);
   background-repeat: no-repeat;
