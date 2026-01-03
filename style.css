@@ -251,7 +251,7 @@ footer {
   margin: 0 auto;
   padding: 28px var(--gutter) 44px;
   display: grid;
-  gap: 16px;
+  gap: 26px; /* (요청) 히어로 문구/버튼 세로 간격 확대 */
   position: relative;
   z-index: 2;
 }
@@ -267,7 +267,7 @@ footer {
   color: rgba(255, 255, 255, 0.82);
   line-height: 1.65;
   font-size: clamp(14px, 1.6vw, 18px);
-  margin-top: 10px;
+  margin-top: 16px;
 }
 
 .hero-cta {
@@ -275,7 +275,11 @@ footer {
   flex-wrap: wrap;
   gap: 16px;
   align-items: center;
-  margin-top: 8px;
+  margin-top: 18px;
+}
+
+.hero-tagline {
+  max-width: 980px;
 }
 
 /* ========= Chips / Buttons ========= */
@@ -442,11 +446,18 @@ footer {
   display: grid;
   place-items: center;
   background: rgba(0, 0, 0, 0.02);
+  overflow: hidden; /* 아이콘이 밖으로 튀어나오는 현상 방지 */
 }
 .stack-img img {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+/* (요청) Figma 아이콘만 “안전하게” 살짝 작게 */
+.stack-img img[alt='Figma'] {
+  width: 80%;
+  height: 80%;
 }
 
 .pursue-text {
