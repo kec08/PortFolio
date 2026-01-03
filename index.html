@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>김은찬 | Portfolio</title>
+    <meta
+      name="description"
+      content="당연함 속에서 해결책을 발견하는 iOS 개발자 김은찬의 포트폴리오입니다."
+    />
+    <link rel="icon" href="./img/symbol-logo.png" />
+    <link rel="apple-touch-icon" href="./img/symbol-logo.png" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <div id="wrap">
+      <header class="topbar">
+        <div class="topbar-inner">
+          <a class="topbar-brand scroll-link" data-target="#hero" href="#hero"
+            >KIM EUN CHAN</a
+          >
+          <nav class="topbar-nav" aria-label="페이지 이동">
+            <a class="scroll-link" data-target="#Introduce" href="#Introduce"
+              >소개</a
+            >
+            <a
+              class="scroll-link"
+              data-target="#MainProjects"
+              href="#MainProjects"
+              >프로젝트</a
+            >
+            <a class="scroll-link" data-target="#Activity" href="#Activity"
+              >활동</a
+            >
+            <a class="scroll-link" data-target="#endpage" href="#endpage"
+              >연락</a
+            >
+          </nav>
+        </div>
+      </header>
+
+      <section id="hero" class="firstpage section-dark">
+        <div class="firsttext">
+          <div class="web-p"><p>iOS Developer</p></div>
+          <div class="web-h3"><h3>김은찬</h3></div>
+        </div>
+
+        <div class="hero-visual bgimg">
+          <img
+            class="portfolio-main-img"
+            src="./img/portfolio.jpg"
+            alt="포트폴리오 메인 이미지"
+          />
+          <div class="hero-overlay" aria-hidden="true"></div>
+        </div>
+
+        <div class="hero-bottom">
+          <div class="hero-tagline reveal">
+            <p class="hero-title">당연함 속에서 해결책을 발견하는 개발자</p>
+            <p class="hero-sub">
+              문제를 익숙한 방식으로 받아들이기보다, 새로운 관점으로
+              바라봅니다.<br />
+              작은 차이에서 개선점을 발견하고, 아이디어로 이어가고자 합니다.
+            </p>
+          </div>
+          <div class="hero-cta reveal">
+            <button
+              class="chip chip-dark js-copy"
+              data-copy="010-8979-3235"
+              type="button"
+              aria-label="전화번호 복사"
+            >
+              📱 010-8979-3235
+            </button>
+            <button
+              class="chip chip-dark js-copy"
+              data-copy="kec4489@naver.com"
+              type="button"
+              aria-label="이메일 복사"
+            >
+              📧 kec4489@naver.com
+            </button>
+            <a
+              class="chip chip-dark"
+              href="https://github.com/kec08"
+              target="_blank"
+              rel="noreferrer"
+              >🐱 @kec08</a
+            >
+            <a
+              class="chip chip-dark"
+              href="https://blog.naver.com/ssilvv"
+              target="_blank"
+              rel="noreferrer"
+              >📚 @ssilvv</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section id="profile" class="section-light">
+        <div class="mini-text"><p>profile</p></div>
+        <div class="about-me"><h2>about me</h2></div>
+
+        <div class="main-divbox profile-grid">
+          <div class="profile-col">
+            <div class="Idea reveal">
+              <h3>사용자의 행동에서 기준을 찾습니다</h3>
+              <p>
+                무엇이 선택을 망설이게 하고 무엇이 흐름을 끊는지 고민합니다.<br />
+                직관에만 의존하기보다 기준을 바탕으로 더 나은 아이디어를
+                만들어가고자 합니다.
+              </p>
+            </div>
+
+            <div class="name reveal">
+              <h3>김은찬</h3>
+              <p>
+                경북소프트웨어마이스터고등학교<br />
+                iOS / SwiftUI / UI·UX<br />
+                Email. <a href="mailto:kec4489@naver.com">kec4489@naver.com</a
+                ><br />
+                Github.
+                <a
+                  href="https://github.com/kec08"
+                  target="_blank"
+                  rel="noreferrer"
+                  >kec08</a
+                ><br />
+                Phone. 010-8979-3235
+              </p>
+            </div>
+          </div>
+
+          <div class="profile-col">
+            <div class="education reveal">
+              <h3>education</h3>
+              <p>경북소프트웨어마이스터고등학교</p>
+              <p class="wh">재학 중</p>
+            </div>
+
+            <div class="writing reveal">
+              <h3>기록하며 즐거움을 찾습니다</h3>
+              <p>
+                배운 내용을 기록하며 정리하는 과정을 즐깁니다.<br />
+                블로그 포스팅 70+개를 통해 배운 내용을 남기며 학습을 이어가고
+                있습니다.
+              </p>
+              <a
+                class="btn btn-ghost"
+                href="https://blog.naver.com/ssilvv"
+                target="_blank"
+                rel="noreferrer"
+                >블로그 보러가기</a
+              >
+            </div>
+
+            <div class="Stack reveal">
+              <h3>Stack</h3>
+              <ul class="stack-img" aria-label="기술 스택">
+                <li><img src="./img/Swift.png" alt="Swift" /></li>
+                <li><img src="./img/figma.png" alt="Figma" /></li>
+                <li><img src="./img/JS.png" alt="JavaScript" /></li>
+                <li><img src="./img/reack.png" alt="React" /></li>
+                <li><img src="./img/Ps.png" alt="Photoshop" /></li>
+                <li><img src="./img/Ai.png" alt="Illustrator" /></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="profile-col">
+            <div class="award reveal">
+              <h3>highlight</h3>
+              <p>교내 캡스톤 프로젝트 대상 - Qiri</p>
+              <p class="wh">2025.07</p>
+              <p>마이스터 특성화고 디지털 융합 챌린지 최우수상</p>
+              <p class="wh">2025.09</p>
+              <p>SW-AI 인재 양성 프로젝트 최우수상</p>
+              <p class="wh">2025.12</p>
+            </div>
+
+            <div class="pursue reveal">
+              <h3>keyword</h3>
+              <ul class="pursue-text">
+                <li><p>#문제정의</p></li>
+                <li><p>#UX</p></li>
+                <li><p>#실용성</p></li>
+                <li><p>#기록</p></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contents" class="section-split">
+        <div class="contents-box">
+          <div class="contents-left-box">
+            <div class="contents-mini-text"><p>contents</p></div>
+            <div class="contents-main-text"><h1>Contents</h1></div>
+            <p class="contents-help">
+              클릭해서 섹션으로 바로 이동할 수 있어요.
+            </p>
+          </div>
+
+          <div class="contents-right-box">
+            <ul class="contents-right-text">
+              <li>
+                <p>01</p>
+                <h2 class="scroll-link" data-target="#Introduce">Introduce</h2>
+              </li>
+              <li>
+                <p>02</p>
+                <h2 class="scroll-link" data-target="#MainProjects">
+                  Main Projects
+                </h2>
+              </li>
+              <li>
+                <p>03</p>
+                <h2 class="scroll-link" data-target="#Activity">
+                  Activity & Career
+                </h2>
+              </li>
+              <li>
+                <p>04</p>
+                <h2 class="scroll-link" data-target="#endpage">Contact</h2>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="Introduce" class="section-dark">
+        <div class="Introduce-mini-text">
+          <span class="span01">01</span>
+          <p>Introduce</p>
+        </div>
+        <div class="Introduce-main-text">
+          <h1>당연함 속에서 해결책를 발견하는 개발자</h1>
+        </div>
+        <div class="Introduce-text">
+          <p>
+            저는 iOS 개발에서 “기능을 더한다”보다 먼저, 사용자의 흐름을
+            확인합니다.<br />
+            사용자가 어디에서 망설이고, 어떤 순간에 멈추는지부터 찾습니다.<br /><br />
+            버튼 하나의 위치, 문장 한 줄의 리듬, 화면 전환 한 번의 속도처럼<br />
+            작은 차이가 경험을 바꾼다고 믿기 때문에, 불편함을 구체화하고 빠르게
+            개선합니다.<br /><br />
+            SwiftUI의 선언적 UI와 상태 흐름을 바탕으로<br />
+            더 단순하고 유지보수하기 쉬운 구조로 정리하는 일을 좋아합니다.
+          </p>
+        </div>
+      </section>
+
+      <section id="Design" class="section-dark">
+        <div class="Design-mini-text">
+          <span class="span02">+</span>
+          <p>Design / UIUX</p>
+        </div>
+        <div class="Design-box reveal">
+          <div class="poster1" role="button" tabindex="0" aria-label="포스터 1">
+            <div class="overlay"></div>
+          </div>
+          <div class="poster2" role="button" tabindex="0" aria-label="포스터 2">
+            <div class="overlay"></div>
+          </div>
+          <div class="poster3" role="button" tabindex="0" aria-label="포스터 3">
+            <div class="overlay"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="MainProjects" class="section-light">
+        <div class="mini-text"><p>main project</p></div>
+        <div class="about-me"><h2>Main Projects</h2></div>
+
+        <div
+          class="project-tabs reveal"
+          role="tablist"
+          aria-label="프로젝트 선택"
+        >
+          <button
+            class="project-tab is-active"
+            type="button"
+            role="tab"
+            aria-selected="true"
+            data-project="qiri"
+          >
+            Qiri
+          </button>
+          <button
+            class="project-tab"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            data-project="jipchak"
+          >
+            집착
+          </button>
+        </div>
+
+        <div class="project-stage">
+          <article
+            class="project-page is-active"
+            id="project-qiri"
+            data-project="qiri"
+            data-accent="#FD6F22"
+          >
+            <div class="project-page-inner">
+              <div class="project-copy reveal">
+                <p class="project-kicker">
+                  Apple Watch 사용자를 위한 더 나은 AI 에이전트
+                </p>
+                <h2 class="project-title">Qiri</h2>
+                <p class="project-period">2025.03.12 ~ 2025.07.15</p>
+
+                <div class="project-meta">
+                  <div class="meta-row">
+                    <span class="meta-label">Team</span
+                    ><span class="meta-value"
+                      >김은찬(Client/Design) · 류승엽(Server) · 양지민(AI)</span
+                    >
+                  </div>
+                  <div class="meta-row">
+                    <span class="meta-label">Key</span
+                    ><span class="meta-value"
+                      >AssistiveTouch 제스처 · WatchConnectivity · 스트리밍 응답
+                      UI</span
+                    >
+                  </div>
+                </div>
+
+                <p class="project-desc">
+                  Siri에 질문했을 때 맥락과 맞지 않는 답변을 받거나, 링크만
+                  제공되는 경험에서 출발했습니다.<br />
+                  Qiri는 손 제스처 + 음성으로 질문하고, 스트리밍 응답을 즉시
+                  확인하는 AI 에이전트입니다.
+                </p>
+
+                <div class="project-actions">
+                  <button
+                    class="btn btn-primary js-open-project"
+                    type="button"
+                    data-project="qiri"
+                  >
+                    상세 보기
+                  </button>
+                  <a
+                    class="btn btn-ghost"
+                    href="https://www.youtube.com/watch?si=77nzsMGncG27vWzh&v=rTH4DSMs_nk&feature=youtu.be"
+                    target="_blank"
+                    rel="noreferrer"
+                    >시연영상</a
+                  >
+                  <a
+                    class="btn btn-ghost"
+                    href="https://github.com/marieeeeeeeeeeeeeee"
+                    target="_blank"
+                    rel="noreferrer"
+                    >Github</a
+                  >
+                  <a
+                    class="btn btn-ghost"
+                    href="https://www.figma.com/design/dUoKwh8ulwY4H6TF49P7eZ/Qiri_2025-1%ED%95%99%EA%B8%B0-%EC%BA%A1%EC%8A%A4%ED%86%A4?node-id=0-1&t=hQSx3vak2ZWqcb71-1"
+                    target="_blank"
+                    rel="noreferrer"
+                    >Figma</a
+                  >
+                </div>
+              </div>
+
+              <div class="project-visual reveal" aria-hidden="true">
+                <figure class="project-shot">
+                  <img
+                    class="project-shot-img"
+                    src="./img/Qiri.png"
+                    alt="Qiri 앱 화면"
+                    loading="lazy"
+                  />
+                  <figcaption class="project-shot-badge">
+                    WatchOS / SwiftUI
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="project-page"
+            id="project-jipchak"
+            data-project="jipchak"
+            data-accent="#58CCFF"
+          >
+            <div class="project-page-inner">
+              <div class="project-copy reveal">
+                <p class="project-kicker">
+                  사회 초년생을 위한 자취 생활 편의 플랫폼
+                </p>
+                <h2 class="project-title">집착</h2>
+                <p class="project-period">2025.08.27 ~ 2025.12.31</p>
+
+                <div class="project-meta">
+                  <div class="meta-row">
+                    <span class="meta-label">Team</span
+                    ><span class="meta-value"
+                      >김은찬(iOS/Design) · 김환성(Web) · 류승엽/김나혜(Server)
+                      · 양지민(AI)</span
+                    >
+                  </div>
+                  <div class="meta-row">
+                    <span class="meta-label">Key</span
+                    ><span class="meta-value"
+                      >매물 등록/분석 · 체크리스트 · 대출 가이드 · 지도
+                      탐색</span
+                    >
+                  </div>
+                </div>
+
+                <p class="project-desc">
+                  주거 선택부터 계약, 입주 이후까지의 부담을 줄이기 위해 매물
+                  탐색부터 서류 분석·체크리스트까지 하나의 앱 흐름으로
+                  묶었습니다.<br />
+                  iOS 앱에서 지도 기반 탐색과 문서 업로드 분석을 안정적으로
+                  연결하는 데 집중했습니다.
+                </p>
+
+                <div class="project-actions">
+                  <button
+                    class="btn btn-primary js-open-project"
+                    type="button"
+                    data-project="jipchak"
+                  >
+                    상세 보기
+                  </button>
+                  <a
+                    class="btn btn-ghost"
+                    href="https://youtu.be/vIUcH8E60pg?si=FS7nKiLLC_Ti2CTS"
+                    target="_blank"
+                    rel="noreferrer"
+                    >시연영상</a
+                  >
+                  <a
+                    class="btn btn-ghost"
+                    href="https://github.com/gbsw-liskov"
+                    target="_blank"
+                    rel="noreferrer"
+                    >Github</a
+                  >
+                  <a
+                    class="btn btn-ghost"
+                    href="https://www.figma.com/design/sKOQ7FC8YnvBdUHCmCdr3X/Liskovs---%EC%9E%90%EC%B7%A8%EC%95%B1?node-id=794-3746&t=bC4MlZcu4CU5n0U1-1"
+                    target="_blank"
+                    rel="noreferrer"
+                    >Figma</a
+                  >
+                </div>
+              </div>
+
+              <div class="project-visual reveal" aria-hidden="true">
+                <figure class="project-shot">
+                  <img
+                    class="project-shot-img"
+                    src="./img/JeepChak.png"
+                    alt="집착 앱 화면"
+                    loading="lazy"
+                  />
+                  <figcaption class="project-shot-badge">
+                    SwiftUI / MVVM
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="Activity" class="section-dark">
+        <div class="Introduce-mini-text">
+          <span class="span01">03</span>
+          <p>Activity & Career</p>
+        </div>
+        <div class="activity-wrap">
+          <div class="activity-col reveal">
+            <h2 class="activity-title">Activity</h2>
+            <ul class="timeline">
+              <li>
+                <span class="t-date">2024.08</span
+                ><span class="t-text">Microsoft Azure 해커그라운드 장려</span>
+              </li>
+              <li>
+                <span class="t-date">2024.12</span
+                ><span class="t-text">의성군인재육성성재단 장학금 수료</span>
+              </li>
+              <li>
+                <span class="t-date">2025.01</span
+                ><span class="t-text">교내 해커톤 프로젝트 장려</span>
+              </li>
+              <li>
+                <span class="t-date">2025.02</span
+                ><span class="t-text"
+                  >2025 블레이버스 MVP 개발 해커톤 참여</span
+                >
+              </li>
+              <li>
+                <span class="t-date">2025.03</span
+                ><span class="t-text">FRAME 디자인 동아리 창설</span>
+              </li>
+              <li>
+                <span class="t-date">2025.07</span
+                ><span class="t-text">교내 캡스톤 프로젝트 대상 - Qiri</span>
+              </li>
+              <li>
+                <span class="t-date">2025.09</span
+                ><span class="t-text">디지털 융합 챌린지 최우수상</span>
+              </li>
+              <li>
+                <span class="t-date">2025.12</span
+                ><span class="t-text"
+                  >지식전략산업 아이디어 경진대회 혁신상</span
+                >
+              </li>
+              <li>
+                <span class="t-date">2025.12</span
+                ><span class="t-text">SW-AI 인재 양성 프로젝트 최우수상</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="activity-col reveal">
+            <h2 class="activity-title">License</h2>
+            <ul class="timeline">
+              <li>
+                <span class="t-date">2024.09.25</span
+                ><span class="t-text">정보처리기능사 (한국산업인력공단)</span>
+              </li>
+              <li>
+                <span class="t-date">2024.12.04</span
+                ><span class="t-text">웹디자인 기능사 (한국산업인력공단)</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <footer id="endpage" class="section-dark">
+        <div class="endfage-mini-text">
+          <span class="span04">04</span>
+          <p>Contact</p>
+        </div>
+
+        <div class="endfage-main-text reveal">
+          <div class="endfage-main-text1"><h1>Thank</h1></div>
+          <div class="endfage-main-text2"><h1>you</h1></div>
+          <div class="endfage-main-text3"><h1>for Watching</h1></div>
+        </div>
+
+        <div class="end-note reveal">
+          <p>
+            당연하게 지나치는 부분에서도 문제를 발견하고,<br />
+            해결책으로 연결할 수 있는 개발자가 되기 위해 노력하겠습니다.
+          </p>
+        </div>
+
+        <div class="endfage-footer-text">
+          <div class="endfage-footer-text1">
+            <p>
+              Phone.<br />
+              010-8979-3235
+            </p>
+          </div>
+          <div class="endfage-footer-text2"><p>KIM EUN CHAN</p></div>
+          <div class="endfage-footer-text3">
+            <p>PORTFOLIO<br />2026</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <div
+      class="toast"
+      id="toast"
+      role="status"
+      aria-live="polite"
+      aria-atomic="true"
+    ></div>
+
+    <dialog class="project-modal" id="projectModal" aria-label="프로젝트 상세">
+      <div class="modal-inner">
+        <button
+          class="modal-close js-close-project"
+          type="button"
+          aria-label="닫기"
+        >
+          ×
+        </button>
+        <div class="modal-header">
+          <p class="modal-kicker" id="modalKicker">Project</p>
+          <h2 class="modal-title" id="modalTitle">Title</h2>
+          <p class="modal-period" id="modalPeriod"></p>
+        </div>
+
+        <div class="modal-tabs" role="tablist" aria-label="프로젝트 상세 탭">
+          <button
+            class="modal-tab is-active"
+            type="button"
+            role="tab"
+            aria-selected="true"
+            data-tab="overview"
+          >
+            개요
+          </button>
+          <button
+            class="modal-tab"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            data-tab="role"
+          >
+            담당
+          </button>
+          <button
+            class="modal-tab"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            data-tab="tech"
+          >
+            기술
+          </button>
+          <button
+            class="modal-tab"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            data-tab="trouble"
+          >
+            문제 해결
+          </button>
+          <button
+            class="modal-tab"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            data-tab="learn"
+          >
+            배운 점
+          </button>
+          <button
+            class="modal-tab"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            data-tab="links"
+          >
+            링크
+          </button>
+        </div>
+
+        <div class="modal-body" id="modalBody"></div>
+      </div>
+    </dialog>
+  </body>
+</html>
