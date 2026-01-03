@@ -12,7 +12,8 @@ html {
 }
 
 body {
-  font-family: 'GmarketSansMedium', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-family: "GmarketSansMedium", system-ui, -apple-system, Segoe UI, Roboto,
+    Arial, sans-serif;
   overflow-x: hidden;
   background: #0b0b0e;
   color: #111;
@@ -43,32 +44,37 @@ button {
 
 /* ========= Fonts ========= */
 @font-face {
-  font-family: 'SBAggroB';
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
+  font-family: "SBAggroB";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff")
+    format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: 'ChosunSg';
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunSg.woff') format('woff');
+  font-family: "ChosunSg";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunSg.woff")
+    format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: 'PuradakGentleGothicR';
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.1/PuradakGentleGothicR.woff2') format('woff2');
+  font-family: "PuradakGentleGothicR";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.1/PuradakGentleGothicR.woff2")
+    format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Pretendard-Regular';
-  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-family: "Pretendard-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: 'GmarketSansMedium';
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-family: "GmarketSansMedium";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+    format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -146,7 +152,7 @@ footer {
 }
 
 .topbar-brand {
-  font-family: 'ChosunSg';
+  font-family: "ChosunSg";
   letter-spacing: 0.12em;
   font-size: 14px;
   color: rgba(255, 255, 255, 0.9);
@@ -201,7 +207,7 @@ footer {
 }
 
 .web-p {
-  font-family: 'ChosunSg';
+  font-family: "ChosunSg";
   font-size: 28px;
   padding-left: 0;
   opacity: 0.92;
@@ -257,13 +263,13 @@ footer {
 }
 
 .hero-title {
-  font-family: 'PuradakGentleGothicR';
+  font-family: "PuradakGentleGothicR";
   font-size: clamp(26px, 3.2vw, 44px);
   line-height: 1.1;
 }
 
 .hero-sub {
-  font-family: 'Pretendard-Regular';
+  font-family: "Pretendard-Regular";
   color: rgba(255, 255, 255, 0.82);
   line-height: 1.65;
   font-size: clamp(14px, 1.6vw, 18px);
@@ -317,7 +323,8 @@ footer {
   border-radius: 12px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  transition: transform 0.12s ease, box-shadow 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+  transition: transform 0.12s ease, box-shadow 0.2s ease, background 0.2s ease,
+    border-color 0.2s ease;
   user-select: none;
   text-decoration: none;
 }
@@ -370,7 +377,7 @@ footer {
 }
 
 .about-me {
-  font-family: 'PuradakGentleGothicR';
+  font-family: "PuradakGentleGothicR";
   margin-top: 56px;
   margin-left: 100px;
   font-size: clamp(34px, 3.2vw, 50px);
@@ -415,7 +422,7 @@ footer {
 .education p,
 .writing p,
 .award p {
-  font-family: 'Pretendard-Regular';
+  font-family: "Pretendard-Regular";
   line-height: 1.7;
   color: rgba(0, 0, 0, 0.8);
 }
@@ -433,13 +440,18 @@ footer {
 
 .stack-img {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; /* 요청: 1줄 고정 */
   gap: 10px;
   margin-top: 10px;
+  overflow-x: auto; /* 아주 좁은 화면에서는 가로 스크롤 */
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 2px;
 }
 .stack-img li {
   width: 44px;
   height: 44px;
+  flex: 0 0 auto;
   border-radius: 12px;
   border: 1px solid rgba(0, 0, 0, 0.08);
   padding: 8px;
@@ -455,7 +467,7 @@ footer {
 }
 
 /* (요청) Figma 아이콘만 “안전하게” 살짝 작게 */
-.stack-img img[alt='Figma'] {
+.stack-img img[alt="Figma"] {
   width: 80%;
   height: 80%;
 }
@@ -466,7 +478,7 @@ footer {
   gap: 8px;
 }
 .pursue-text li p {
-  font-family: 'ChosunSg';
+  font-family: "ChosunSg";
   font-weight: 600;
   font-size: 14px;
   padding: 8px 10px;
@@ -501,7 +513,7 @@ footer {
 }
 
 .contents-main-text {
-  font-family: 'PuradakGentleGothicR';
+  font-family: "PuradakGentleGothicR";
   margin-top: 210px;
   margin-left: 90px;
   font-size: clamp(38px, 4vw, 56px);
@@ -509,7 +521,7 @@ footer {
 }
 
 .contents-help {
-  font-family: 'Pretendard-Regular';
+  font-family: "Pretendard-Regular";
   color: rgba(255, 255, 255, 0.72);
   margin-left: 90px;
   margin-top: 14px;
@@ -530,7 +542,7 @@ footer {
 }
 
 .contents-right-text p {
-  font-family: 'ChosunSg';
+  font-family: "ChosunSg";
   font-size: 22px;
   opacity: 0.75;
 }
@@ -554,7 +566,7 @@ footer {
 }
 
 #Introduce::after {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background-image: url(./img/main-text.png);
@@ -579,7 +591,7 @@ footer {
 .Introduce-mini-text .span01,
 .endfage-mini-text .span04,
 .Design-mini-text .span02 {
-  font-family: 'ChosunSg';
+  font-family: "ChosunSg";
   font-size: 26px;
 }
 
@@ -600,7 +612,7 @@ footer {
 }
 
 .Introduce-title-text {
-  font-family: 'Pretendard-Regular';
+  font-family: "Pretendard-Regular";
   padding-top: 44px;
   margin-left: 160px;
   margin-right: 60px;
@@ -611,7 +623,7 @@ footer {
 }
 
 .Introduce-text {
-  font-family: 'Pretendard-Regular';
+  font-family: "Pretendard-Regular";
   line-height: 2.05;
   padding-top: 18px;
   margin-left: 160px;
@@ -683,10 +695,21 @@ footer {
   position: absolute;
   inset: 0;
   mix-blend-mode: screen;
-  background:
-    radial-gradient(600px 300px at 30% 30%, rgba(255, 255, 255, 0.26), transparent 60%),
-    radial-gradient(900px 400px at 70% 60%, rgba(253, 111, 34, 0.18), transparent 65%),
-    radial-gradient(800px 350px at 40% 80%, rgba(88, 204, 255, 0.18), transparent 65%);
+  background: radial-gradient(
+      600px 300px at 30% 30%,
+      rgba(255, 255, 255, 0.26),
+      transparent 60%
+    ),
+    radial-gradient(
+      900px 400px at 70% 60%,
+      rgba(253, 111, 34, 0.18),
+      transparent 65%
+    ),
+    radial-gradient(
+      800px 350px at 40% 80%,
+      rgba(88, 204, 255, 0.18),
+      transparent 65%
+    );
   background-size: 200% 200%;
   background-position: center;
   pointer-events: none;
@@ -749,7 +772,7 @@ footer {
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
   gap: 0;
-  background: linear-gradient(120deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.00));
+  background: linear-gradient(120deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0));
 }
 
 .project-copy {
@@ -757,7 +780,7 @@ footer {
 }
 
 .project-kicker {
-  font-family: 'ChosunSg';
+  font-family: "ChosunSg";
   letter-spacing: 0.06em;
   text-transform: uppercase;
   opacity: 0.7;
@@ -765,7 +788,7 @@ footer {
 }
 
 .project-title {
-  font-family: 'PuradakGentleGothicR';
+  font-family: "PuradakGentleGothicR";
   font-size: clamp(42px, 5.2vw, 70px);
   line-height: 1;
   color: var(--accent);
@@ -773,7 +796,7 @@ footer {
 
 .project-period {
   margin-top: 8px;
-  font-family: 'Pretendard-Regular';
+  font-family: "Pretendard-Regular";
   color: rgba(0, 0, 0, 0.65);
 }
 
@@ -792,17 +815,17 @@ footer {
   padding: 6px 0;
 }
 .meta-label {
-  font-family: 'ChosunSg';
+  font-family: "ChosunSg";
   opacity: 0.7;
 }
 .meta-value {
-  font-family: 'Pretendard-Regular';
+  font-family: "Pretendard-Regular";
   color: rgba(0, 0, 0, 0.85);
 }
 
 .project-desc {
   margin-top: 18px;
-  font-family: 'Pretendard-Regular';
+  font-family: "Pretendard-Regular";
   line-height: 1.75;
   color: rgba(0, 0, 0, 0.85);
 }
@@ -815,10 +838,17 @@ footer {
 }
 
 .project-visual {
-  background:
-    radial-gradient(700px 400px at 30% 20%, rgba(255, 255, 255, 0.55), transparent 62%),
-    radial-gradient(900px 500px at 80% 60%, rgba(0, 0, 0, 0.08), transparent 60%),
-    linear-gradient(135deg, rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.00));
+  background: radial-gradient(
+      700px 400px at 30% 20%,
+      rgba(255, 255, 255, 0.55),
+      transparent 62%
+    ),
+    radial-gradient(
+      900px 500px at 80% 60%,
+      rgba(0, 0, 0, 0.08),
+      transparent 60%
+    ),
+    linear-gradient(135deg, rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0));
   display: grid;
   place-items: center;
   padding: 40px; /* (5번) 우측 여백 넉넉하게 */
@@ -838,25 +868,24 @@ footer {
   will-change: transform;
 }
 
-.project-page[data-project='qiri'] {
+.project-page[data-project="qiri"] {
   --glow-main: rgba(253, 111, 34, 0.22);
   --glow-sub: rgba(253, 111, 34, 0.1);
 }
 
-.project-page[data-project='jipchak'] {
+.project-page[data-project="jipchak"] {
   --glow-main: rgba(88, 204, 255, 0.22);
   --glow-sub: rgba(88, 204, 255, 0.1);
 }
 
 .project-shot::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   border-radius: 26px;
   pointer-events: none;
   /* 테두리 대신 “아주 얇은” 하이라이트로 카드 경계만 살림 */
-  box-shadow:
-    0 0 0 1px rgba(0, 0, 0, 0.04) inset,
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.04) inset,
     0 1px 0 rgba(255, 255, 255, 0.55) inset;
   opacity: 1;
 }
@@ -877,7 +906,7 @@ footer {
   position: absolute;
   top: 14px;
   left: 14px;
-  font-family: 'ChosunSg';
+  font-family: "ChosunSg";
   font-size: 13px;
   padding: 8px 10px;
   border-radius: 999px;
@@ -910,7 +939,7 @@ footer {
 }
 
 .activity-title {
-  font-family: 'PuradakGentleGothicR';
+  font-family: "PuradakGentleGothicR";
   font-size: 30px;
   margin-bottom: 16px;
 }
@@ -932,11 +961,11 @@ footer {
 }
 
 .t-date {
-  font-family: 'ChosunSg';
+  font-family: "ChosunSg";
   color: rgba(255, 255, 255, 0.78);
 }
 .t-text {
-  font-family: 'Pretendard-Regular';
+  font-family: "Pretendard-Regular";
   color: rgba(255, 255, 255, 0.9);
 }
 
@@ -964,7 +993,7 @@ footer {
 }
 
 .endfage-main-text {
-  font-family: 'SBAggroB';
+  font-family: "SBAggroB";
   margin: 90px 0 0 160px;
 }
 
@@ -995,7 +1024,7 @@ footer {
   margin: 64px auto 0; /* (7번) 문구 위 여백 확장 */
   padding: 0 var(--gutter);
   text-align: center;
-  font-family: 'Pretendard-Regular';
+  font-family: "Pretendard-Regular";
   color: rgba(255, 255, 255, 0.85);
   line-height: 1.7;
 }
@@ -1050,19 +1079,19 @@ footer {
 }
 
 .modal-kicker {
-  font-family: 'ChosunSg';
+  font-family: "ChosunSg";
   opacity: 0.65;
 }
 
 .modal-title {
-  font-family: 'PuradakGentleGothicR';
+  font-family: "PuradakGentleGothicR";
   font-size: 40px;
   margin-top: 6px;
 }
 
 .modal-period {
   margin-top: 6px;
-  font-family: 'Pretendard-Regular';
+  font-family: "Pretendard-Regular";
   color: rgba(0, 0, 0, 0.6);
 }
 
@@ -1089,7 +1118,7 @@ footer {
   margin-top: 16px;
   border-top: 1px solid rgba(0, 0, 0, 0.08);
   padding-top: 16px;
-  font-family: 'Pretendard-Regular';
+  font-family: "Pretendard-Regular";
   line-height: 1.75;
   color: rgba(0, 0, 0, 0.86);
 }
@@ -1217,5 +1246,3 @@ footer {
     text-align: center;
   }
 }
-
-
