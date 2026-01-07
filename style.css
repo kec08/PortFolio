@@ -974,7 +974,7 @@ footer {
   min-height: 100vh;
   position: relative;
   z-index: 10001;
-  padding-bottom: 60px;
+  padding-bottom: 40px;
 }
 
 .endfage-mini-text {
@@ -1021,7 +1021,8 @@ footer {
 
 .end-note {
   max-width: 980px;
-  margin: 64px auto 0; /* (7번) 문구 위 여백 확장 */
+  margin: 64px auto 0;
+  margin-bottom: 70px;
   padding: 0 var(--gutter);
   text-align: center;
   font-family: "Pretendard-Regular";
