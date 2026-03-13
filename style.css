@@ -776,7 +776,7 @@ footer {
 }
 
 .project-copy {
-  padding: 40px; /* (5번) 좌측 여백 넉넉하게 */
+  padding: 52px 48px;
 }
 
 .project-kicker {
@@ -788,21 +788,22 @@ footer {
 }
 
 .project-title {
+  margin-top: 12px;
   font-family: "PuradakGentleGothicR";
-  font-size: clamp(42px, 5.2vw, 70px);
+  font-size: clamp(36px, 5.2vw, 60px);
   line-height: 1;
   color: var(--accent);
 }
 
 .project-period {
-  margin-top: 8px;
+  margin-top: 12px;
   font-family: "Pretendard-Regular";
   color: rgba(0, 0, 0, 0.65);
 }
 
 .project-meta {
-  margin-top: 18px;
-  padding: 14px 16px;
+  margin-top: 26px;
+  padding: 18px 20px;
   border-radius: 14px;
   border: 1px solid rgba(0, 0, 0, 0.08);
   background: rgba(255, 255, 255, 0.9);
@@ -812,7 +813,7 @@ footer {
   display: grid;
   grid-template-columns: 90px 1fr;
   gap: 10px;
-  padding: 6px 0;
+  padding: 9px 0;
 }
 .meta-label {
   font-family: "ChosunSg";
@@ -824,14 +825,14 @@ footer {
 }
 
 .project-desc {
-  margin-top: 18px;
+  margin-top: 20px;
   font-family: "Pretendard-Regular";
   line-height: 1.75;
   color: rgba(0, 0, 0, 0.85);
 }
 
 .project-actions {
-  margin-top: 18px;
+  margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
@@ -1051,9 +1052,16 @@ footer {
   border: none;
   padding: 0;
   width: min(980px, 94vw);
+  max-height: 90vh;
+  overflow-y: auto;
   border-radius: 18px;
   background: #ffffff;
   box-shadow: var(--shadow);
+  margin: auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .modal-inner {
