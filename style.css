@@ -195,6 +195,7 @@ footer {
   user-select: none;
   -webkit-user-select: none;
   pointer-events: none;
+  transition: opacity 0.8s ease;
 }
 
 .firsttext {

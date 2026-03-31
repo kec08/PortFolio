@@ -46,11 +46,14 @@
         </div>
 
         <div class="hero-visual bgimg">
-          <img
+          <video
             class="portfolio-main-img"
-            src="./img/portfolio.jpg"
-            alt="포트폴리오 메인 이미지"
-          />
+            src="./img/portfolio.mp4"
+            autoplay
+            muted
+            loop
+            playsinline
+          ></video>
           <div class="hero-overlay" aria-hidden="true"></div>
         </div>
 
@@ -654,5 +657,27 @@
         <div class="modal-body" id="modalBody"></div>
       </div>
     </dialog>
+
+    <script>
+      (function () {
+        const video = document.querySelector('.portfolio-main-img');
+        if (!video || video.tagName !== 'VIDEO') return;
+
+        const FADE_DURATION = 0.8;
+
+        video.addEventListener('timeupdate', function () {
+          const timeLeft = video.duration - video.currentTime;
+          if (timeLeft <= FADE_DURATION && video.style.opacity !== '0') {
+            video.style.opacity = '0';
+          }
+        });
+
+        video.addEventListener('seeked', function () {
+          if (video.currentTime < 1) {
+            video.style.opacity = '1';
+          }
+        });
+      })();
+    </script>
   </body>
 </html>
