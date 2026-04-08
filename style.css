@@ -389,14 +389,20 @@ footer {
   margin: 0 auto;
   padding: 60px var(--gutter) 0;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1.2fr));
   gap: 28px;
+  align-items: stretch;
 }
 
 .profile-col {
-  display: grid;
-  gap: 14px; /* (2번) 컬럼 안 카드 간격 정리 */
-  align-content: start;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  min-width: 0;
+}
+
+.profile-col > div {
+  width: 100%;
 }
 
 .profile-col > div {
@@ -441,12 +447,9 @@ footer {
 
 .stack-img {
   display: flex;
-  flex-wrap: nowrap; /* 요청: 1줄 고정 */
+  flex-wrap: wrap; /* 좁은 컬럼에서도 모든 아이콘이 보이도록 줄바꿈 */
   gap: 10px;
   margin-top: 10px;
-  overflow-x: auto; /* 아주 좁은 화면에서는 가로 스크롤 */
-  overflow-y: hidden;
-  -webkit-overflow-scrolling: touch;
   padding-bottom: 2px;
 }
 .stack-img li {
@@ -1280,5 +1283,131 @@ footer {
     gap: 10px;
     align-items: center;
     text-align: center;
+  }
+}
+
+/* ========= Introduce Stack ========= */
+.intro-stack {
+  margin: 20px 60px 80px 160px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  position: relative;
+  z-index: 10;
+}
+.intro-stack-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.intro-stack-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #111;
+  font-family: "Pretendard-Regular";
+  font-weight: 600;
+  font-size: 16px;
+  width: fit-content;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+}
+.intro-stack-tag img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+.intro-stack-list {
+  list-style: disc;
+  padding-left: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-family: "Pretendard-Regular";
+  font-size: clamp(20px, 1.5vw, 20px);
+  line-height: 2;
+  color: rgba(255, 255, 255, 0.88);
+}
+.intro-stack-list strong {
+  color: #ffffff;
+  font-weight: 700;
+}
+@media (max-width: 760px) {
+  .intro-stack {
+    margin: 16px 40px 60px 40px;
+  }
+}
+
+/* ========= Sub Projects ========= */
+#SubProjects {
+  padding: 120px 8vw 140px;
+}
+.sub-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+.sub-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 24px 22px;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: #fff;
+  text-decoration: none;
+  color: #111;
+  transition: transform 0.25s ease, box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+.sub-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+  border-color: rgba(0, 0, 0, 0.16);
+}
+.sub-card-title {
+  font-family: "ChosunSg";
+  font-size: 20px;
+  font-weight: 700;
+  color: #111;
+}
+.sub-card-desc {
+  font-size: 14px;
+  line-height: 1.55;
+  color: #444;
+  min-height: 44px;
+}
+.sub-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+.sub-card-tags span {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.05);
+  color: #333;
+}
+.sub-card-period {
+  font-size: 12px;
+  color: #888;
+  margin-top: auto;
+  padding-top: 6px;
+}
+
+@media (max-width: 960px) {
+  .sub-projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .sub-projects-grid {
+    grid-template-columns: 1fr;
   }
 }
