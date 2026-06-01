@@ -1,6 +1,68 @@
 /* global document, window, navigator */
 
 const PROJECTS = {
+  snapy: {
+    accent: "#F5C518",
+    kicker: "친구들과 공유하는 진짜 일상",
+    title: "SNAPY",
+    period: "2026.03.01 ~",
+    links: {
+      github: "https://github.com/2026-snapy/SNAPY_iOS",
+      figma: "https://www.figma.com/design/X3YFCzXVcM173oBQCoGf0c/3%ED%95%99%EB%85%84-%EC%BA%A1%EC%8A%A4%ED%86%A4?node-id=36-3&t=tiKIu10uXv7cSs5G-1",
+      demo: "https://www.youtube.com/@김은찬-s7o",
+      appstore: "https://apps.apple.com/kr/app/스내피-snapy/id6761876306",
+    },
+    overview: [
+      "듀얼 카메라로 전면·후면을 동시에 촬영하고, 하루를 아침·점심·저녁으로 나누어 기록하는 사진 기반 SNS입니다.",
+      "필터·보정 없이 있는 그대로의 일상을 공유하고, 24시간 스토리·음성 댓글·사진 방명록으로 사진만으로 소통합니다.",
+      "60개 API 엔드포인트 연동, 143개 Swift 파일, 약 20,000줄 규모의 프로젝트입니다.",
+      "App Store 심사 7회 제출·6건 리젝을 거쳐 최종 승인, 실제 출시 및 운영 중입니다.",
+    ],
+    role: [
+      "AVCaptureMultiCamSession 기반 듀얼 카메라 동시 촬영 + PIP 드래그 구현",
+      "Google Sign-In / Apple Sign-In OAuth 인증 및 JWT 자동 재발급 세션 관리",
+      "음성 댓글 녹음·재생 및 실시간 파형 시각화 (EMA 스무딩, PCM 파형 UI)",
+      "Moya TargetType 기반 네트워크 계층 설계 및 12개 Service 공통 토큰 갱신 패턴 적용",
+      "신고(8가지 사유)·차단 API 연동 및 차단 상태별 프로필 UI 5단계 분기 처리",
+      "TestFlight 배포, 앱스토어 심사 대응 (가이드라인 1.2, 2.1(a), 2.3, 5.1.2)",
+    ],
+    tech: [
+      "Swift / SwiftUI: 선언적 UI 기반 화면 구성",
+      "MVVM: View → ViewModel → Service → API 단방향 흐름",
+      "AVFoundation: MultiCamSession 듀얼 카메라, AVAudioRecorder 음성 댓글",
+      "Moya / Alamofire: 네트워크 계층 추상화 및 Multipart 업로드",
+      "Kingfisher: 메모리+디스크 이중 캐싱 이미지 로딩",
+      "async/await + Combine: 비동기 처리 및 상태 관리",
+      "Google Sign-In / Apple Sign-In: OAuth 소셜 로그인",
+      "Contacts Framework: 연락처 동기화 기반 친구 추천",
+    ],
+    trouble: [
+      {
+        title: "AsyncImage 캐싱 미지원으로 이미지 로딩 성능 저하",
+        problem:
+          "사진 중심 서비스에서 AsyncImage가 캐싱을 지원하지 않아 화면 전환마다 매번 네트워크 요청이 발생, 13개 파일에서 깜빡임과 로딩 지연이 반복되었습니다.",
+        solution:
+          "Kingfisher(KFImage)로 전환하여 메모리+디스크 이중 캐싱을 적용하고, DownsamplingImageProcessor로 메모리 사용량을 절감했습니다.",
+        result:
+          "이미지 표시 속도 약 90% 이상 개선 (네트워크 300~500ms → 캐시 히트 시 10ms 이내), 화면 전환 시 깜빡임 해소.",
+      },
+      {
+        title: "프로필 피드 앨범 상세 조회 순차 호출로 로딩 지연",
+        problem:
+          "일괄 조회 API가 없어 앨범 상세를 GET /api/albums/{id}로 최대 31건 순차 호출해야 했고, 응답 시간이 건수만큼 누적되었습니다.",
+        solution:
+          "withTaskGroup을 활용한 병렬 호출로 전환하고, 피드와 방명록 조회도 async let으로 병렬 처리했습니다.",
+        result:
+          "최대 31건 순차 호출 대비 로딩 시간 약 96% 단축 (전체 대기 → 가장 느린 1건 대기 수준).",
+      },
+    ],
+    learn: [
+      "사진 기반 서비스에서 이미지 캐싱은 UX에 직결되며, 라이브러리 선택이 체감 성능을 크게 좌우함을 체감했습니다.",
+      "앱스토어 심사 대응은 안내 문서보다 코드 레벨에서 확실하게 처리하는 것이 가장 효과적이었습니다.",
+      "SNS 서비스에 필수적인 신고·차단·개인정보 고지 등 안전 기능의 중요성을 직접 체득했습니다.",
+      "일괄 조회 API가 없는 환경에서 Swift Concurrency TaskGroup 병렬 처리가 UX 개선에 직접적인 효과가 있음을 확인했습니다.",
+    ],
+  },
   qiri: {
     accent: "#FD6F22",
     kicker: "Apple Watch 사용자를 위한 더 나은 AI 에이전트",
@@ -245,7 +307,7 @@ function initProjectTabs() {
     t.addEventListener("click", () => activate(t.getAttribute("data-project")));
   });
 
-  activate("qiri");
+  activate("snapy");
 }
 
 function renderModalBody(projectKey, tabKey) {

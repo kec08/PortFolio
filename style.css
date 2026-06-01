@@ -1342,7 +1342,7 @@ footer {
 
 /* ========= Sub Projects ========= */
 #SubProjects {
-  padding: 120px 8vw 140px;
+  padding: 120px 0 140px;
 }
 .sub-projects-grid {
   display: grid;
@@ -1399,6 +1399,38 @@ footer {
   color: #888;
   margin-top: auto;
   padding-top: 6px;
+}
+
+#SubProjects .mini-text {
+  padding-left: 40px;
+}
+#SubProjects .about-me {
+  margin-left: 100px;
+}
+#SubProjects .sub-projects-grid {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#Download .sub-card {
+  border: none;
+  background: #1a1a1f;
+  color: #fff;
+}
+#Download .sub-card:hover {
+  border-color: transparent;
+  box-shadow: 0 12px 32px rgba(255, 255, 255, 0.06);
+}
+#Download .sub-card-title {
+  color: #fff;
+}
+#Download .sub-card-desc {
+  color: #aaa;
+}
+#Download .sub-card-tags span {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ccc;
 }
 
 @media (max-width: 960px) {

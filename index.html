@@ -6,7 +6,7 @@
     <title>김은찬 | Portfolio</title>
     <meta
       name="description"
-      content="나침반 같은 iOS 개발자 김은찬입니다."
+      content="안녕하세요, iOS 개발자 김은찬입니다."
     />
     <link rel="icon" href="./img/symbol-logo.png" />
     <link rel="apple-touch-icon" href="./img/symbol-logo.png" />
@@ -29,6 +29,9 @@
               data-target="#MainProjects"
               href="#MainProjects"
               >projects</a
+            >
+            <a class="scroll-link" data-target="#Download" href="#Download"
+              >download</a
             >
             <a class="scroll-link" data-target="#Activity" href="#Activity"
               >activity</a
@@ -59,10 +62,10 @@
 
         <div class="hero-bottom">
           <div class="hero-tagline reveal">
-            <p class="hero-title">나침반 같은 iOS 개발자 김은찬입니다.</p>
+            <p class="hero-title">안녕하세요, iOS 개발자 김은찬입니다.</p>
             <p class="hero-sub">
-              나침반이 북쪽을 잃지 않듯, 흐름이 흔들릴 때 방향을 바로잡습니다.<br />
-              그 과정 속에서 더 나은 사용자 경험을 설계합니다.
+              사용자의 일상에 자연스럽게 스며들어 꾸준히 사용되는,<br />
+              사용성 높은 서비스를 만드는 것을 목표로 합니다.
             </p>
           </div>
           <div class="hero-cta reveal">
@@ -217,12 +220,18 @@
               </li>
               <li>
                 <p>03</p>
+                <h2 class="scroll-link" data-target="#Download">
+                  Download
+                </h2>
+              </li>
+              <li>
+                <p>04</p>
                 <h2 class="scroll-link" data-target="#Activity">
                   activity
                 </h2>
               </li>
               <li>
-                <p>04</p>
+                <p>05</p>
                 <h2 class="scroll-link" data-target="#endpage">Contact</h2>
               </li>
             </ul>
@@ -236,13 +245,14 @@
           <p>Introduce</p>
         </div>
         <div class="Introduce-main-text">
-          <h1>나침반 같은 iOS 개발자 김은찬입니다.</h1>
+          <h1>안녕하세요, iOS 개발자 김은찬입니다.</h1>
         </div>
         <div class="Introduce-text">
           <p>
-            나침반이 북쪽을 잃지 않듯, 흐름이 흔들릴 때 방향을 바로잡습니다.<br>
-            그 과정 속에서 더 나은 사용자 경험을 설계합니다.<br /><br />
+            SwiftUI 기반 iOS 앱 4종을 App Store에 출시 및 관리 경험을 보유하고 있습니다.<br />
+            80+ 이상의 <a href="https://blog.naver.com/ssilvv" target="_blank" rel="noreferrer" style="color:#fff;text-decoration:underline;">블로그</a> 포스팅을 통해 배운 내용을 남기며 학습을 이어가고 있습니다.
           </p>
+          <br />
         </div>
 
         <div class="intro-stack reveal">
@@ -318,6 +328,15 @@
             type="button"
             role="tab"
             aria-selected="true"
+            data-project="snapy"
+          >
+            SNAPY
+          </button>
+          <button
+            class="project-tab"
+            type="button"
+            role="tab"
+            aria-selected="false"
             data-project="qiri"
           >
             Qiri
@@ -336,6 +355,97 @@
         <div class="project-stage">
           <article
             class="project-page is-active"
+            id="project-snapy"
+            data-project="snapy"
+            data-accent="#F5C518"
+          >
+            <div class="project-page-inner">
+              <div class="project-copy reveal">
+                <p class="project-kicker">
+                  친구들과 공유하는 진짜 일상
+                </p>
+                <h2 class="project-title">SNAPY</h2>
+                <p class="project-period">2026.03.01 ~</p>
+
+                <div class="project-meta">
+                  <div class="meta-row">
+                    <span class="meta-label">Team</span
+                    ><span class="meta-value"
+                      >iOS Client/Design - 1명 · Web Client - 1명<br>
+                      Server - 3명</span
+                    >
+                  </div>
+                  <div class="meta-row">
+                    <span class="meta-label">Release</span
+                    ><span class="meta-value"
+                      >App Store 출시</span
+                    >
+                  </div>
+                  <div class="meta-row">
+                    <span class="meta-label">Key</span
+                    ><span class="meta-value"
+                      >듀얼 카메라 · 음성 댓글 · 스토리 · 신고/차단<br>
+                      OAuth · JWT 세션 관리</span
+                    >
+                  </div>
+                </div>
+
+                <p class="project-desc">
+                  기존 SNS의 필터·보정 중심 소통에서 벗어나, 듀얼 카메라로<br>
+                  전면·후면을 동시에 촬영하여 보정 없는 진짜 일상을<br>
+                  친구들과 나누는 사진 기반 SNS 플랫폼입니다.
+                </p>
+
+                <div class="project-actions">
+                  <button
+                    class="btn btn-primary js-open-project"
+                    type="button"
+                    data-project="snapy"
+                  >
+                    상세 보기
+                  </button>
+                  <a
+                    class="btn btn-ghost"
+                    href="https://apps.apple.com/kr/app/스내피-snapy/id6761876306"
+                    target="_blank"
+                    rel="noreferrer"
+                    >App Store</a
+                  >
+                  <a
+                    class="btn btn-ghost"
+                    href="https://github.com/2026-snapy/SNAPY_iOS"
+                    target="_blank"
+                    rel="noreferrer"
+                    >Github</a
+                  >
+                  <a
+                    class="btn btn-ghost"
+                    href="https://www.figma.com/design/X3YFCzXVcM173oBQCoGf0c/3%ED%95%99%EB%85%84-%EC%BA%A1%EC%8A%A4%ED%86%A4?node-id=36-3&t=tiKIu10uXv7cSs5G-1"
+                    target="_blank"
+                    rel="noreferrer"
+                    >Figma</a
+                  >
+                </div>
+              </div>
+
+              <div class="project-visual reveal" aria-hidden="true">
+                <figure class="project-shot">
+                  <img
+                    class="project-shot-img"
+                    src="./img/SNAPY-banner.jpg"
+                    alt="SNAPY 앱 화면"
+                    loading="lazy"
+                  />
+                  <figcaption class="project-shot-badge">
+                    SwiftUI / MVVM
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="project-page"
             id="project-qiri"
             data-project="qiri"
             data-accent="#FD6F22"
@@ -521,11 +631,90 @@
         </div>
       </section>
 
+      <section id="Download" class="section-dark" style="padding-top:8rem;padding-bottom:14rem;">
+        <div class="mini-text"><p>download</p></div>
+        <div class="about-me"><h2>Download</h2></div>
+
+        <div class="sub-projects-grid" style="max-width:1200px;margin:4rem auto 0;gap:28px;">
+          <a
+            class="sub-card reveal"
+            href="https://apps.apple.com/kr/app/스내피-snapy/id6761876306"
+            target="_blank"
+            rel="noreferrer"
+            style="padding:0;overflow:hidden;"
+          >
+            <img src="./img/SNAPY-banner.jpg" alt="SNAPY" style="width:100%;height:220px;object-fit:cover;" />
+            <div style="padding:20px 22px 22px;">
+              <h3 class="sub-card-title">SNAPY</h3>
+              <p class="sub-card-desc">
+                듀얼 카메라로 전면·후면 동시 촬영, 사진으로 소통하는 일상 공유 SNS
+              </p>
+              <div class="sub-card-tags">
+                <span>SwiftUI</span><span>MVVM</span><span>Moya</span><span>Kingfisher</span>
+              </div>
+            </div>
+          </a>
+
+          <a
+            class="sub-card reveal"
+            href="https://apps.apple.com/kr/app/얼공/id6762845172"
+            target="_blank"
+            rel="noreferrer"
+            style="padding:0;overflow:hidden;"
+          >
+            <img src="./img/IceStudy.jpg" alt="얼공" style="width:100%;height:220px;object-fit:cover;" />
+            <div style="padding:20px 22px 22px;">
+              <h3 class="sub-card-title">얼공</h3>
+              <p class="sub-card-desc">
+                얼음이 녹는 것만 바라보며 집중하는 학습 타이머 앱
+              </p>
+              <div class="sub-card-tags">
+                <span>SwiftUI</span><span>MVVM</span><span>Moya</span><span>WidgetKit</span>
+              </div>
+            </div>
+          </a>
+
+          <a
+            class="sub-card reveal"
+            href="https://apps.apple.com/kr/app/햄피/id6766738253"
+            target="_blank"
+            rel="noreferrer"
+            style="padding:0;overflow:hidden;"
+          >
+            <img src="./img/Hampy.jpg" alt="햄피" style="width:100%;height:220px;object-fit:cover;" />
+            <div style="padding:20px 22px 22px;">
+              <h3 class="sub-card-title">햄피</h3>
+              <p class="sub-card-desc">
+                다이나믹 아일랜드에 살고 있는 가상 펫 햄스터
+              </p>
+              <div class="sub-card-tags">
+                <span>SwiftUI</span><span>ActivityKit</span><span>WidgetKit</span><span>AppIntents</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+
       <section id="SubProjects" class="section-light">
         <div class="mini-text"><p>sub project</p></div>
         <div class="about-me"><h2>Sub Projects</h2></div>
 
         <div class="sub-projects-grid">
+          <a
+            class="sub-card reveal"
+            href="https://woozy-shoe-773.notion.site/35d5bcf81b3580e7b874ef7aa51d694c"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <h3 class="sub-card-title">얼공</h3>
+            <p class="sub-card-desc">
+              얼음공부법 기반 학습 타이머. 남은 시간 대신 얼음이 녹는 시각적 피드백으로 집중 유도
+            </p>
+            <div class="sub-card-tags">
+              <span>SwiftUI</span><span>Moya</span><span>WidgetKit</span><span>CoreLocation</span>
+            </div>
+            <p class="sub-card-period">2026.02 ~ 2026.04</p>
+          </a>
           <a
             class="sub-card reveal"
             href="https://woozy-shoe-773.notion.site/GO-3175bcf81b358024b714c177d9042d3f?source=copy_link"
@@ -541,6 +730,22 @@
               ><span>iOS</span>
             </div>
             <p class="sub-card-period">2025.03.11 ~ 2024.12.17</p>
+          </a>
+
+          <a
+            class="sub-card reveal"
+            href="https://woozy-shoe-773.notion.site/35d5bcf81b35809c9737c49b6d9acc70"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <h3 class="sub-card-title">햄피</h3>
+            <p class="sub-card-desc">
+              다이나믹 아일랜드 위에 살아있는 가상 펫 햄스터 앱. 먹이주기·쓰다듬기·쳇바퀴로 키우는 성장 시스템
+            </p>
+            <div class="sub-card-tags">
+              <span>SwiftUI</span><span>ActivityKit</span><span>WidgetKit</span><span>AppIntents</span>
+            </div>
+            <p class="sub-card-period">2026.04 ~ 2026.05</p>
           </a>
 
           <a
