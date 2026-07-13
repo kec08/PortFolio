@@ -256,9 +256,9 @@ footer {
 .hero-bottom {
   max-width: var(--container);
   margin: 0 auto;
-  padding: 28px var(--gutter) 44px;
+  padding: 44px var(--gutter) 88px;
   display: grid;
-  gap: 26px; /* (요청) 히어로 문구/버튼 세로 간격 확대 */
+  gap: 34px;
   position: relative;
   z-index: 2;
 }
@@ -272,21 +272,21 @@ footer {
 .hero-sub {
   font-family: "Pretendard-Regular";
   color: rgba(255, 255, 255, 0.82);
-  line-height: 1.65;
+  line-height: 1.75;
   font-size: clamp(14px, 1.6vw, 18px);
-  margin-top: 16px;
+  margin-top: 20px;
 }
 
 .hero-cta {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 18px 24px;
   align-items: center;
-  margin-top: 18px;
+  margin-top: 8px;
 }
 
 .hero-tagline {
-  max-width: 980px;
+  max-width: 1120px;
 }
 
 /* ========= Chips / Buttons ========= */
@@ -500,13 +500,18 @@ footer {
   min-height: 100vh;
   display: grid;
   grid-template-columns: 0.95fr 1.05fr;
+  align-items: center;
 }
 
 .contents-left-box {
   background-color: #000000;
   color: #ffffff;
+  min-height: 100vh;
   padding: 30px 0;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .contents-mini-text {
@@ -518,7 +523,7 @@ footer {
 
 .contents-main-text {
   font-family: "PuradakGentleGothicR";
-  margin-top: 210px;
+  margin-top: 0;
   margin-left: 90px;
   font-size: clamp(38px, 4vw, 56px);
   color: #ffffff;
@@ -533,12 +538,17 @@ footer {
 
 .contents-right-box {
   background-color: #ffffff;
+  min-height: 100vh;
   padding: 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .contents-right-text {
-  margin-top: 90px;
-  margin-left: 100px;
+  margin: 0 auto;
+  width: min(100%, 760px);
+  text-align: left;
 }
 
 .contents-right-text li {
@@ -557,7 +567,7 @@ footer {
   transition: transform 0.12s ease, color 0.2s ease;
 }
 .contents-right-text h2:hover {
-  transform: translateX(6px);
+  transform: translateY(-2px);
   color: rgba(0, 0, 0, 0.85);
 }
 
@@ -565,6 +575,7 @@ footer {
 #Introduce {
   /* (3번) 14인치에서 하단이 과하게 비어 보이지 않게 “과도한 풀스크린”을 완화 */
   min-height: 920px;
+  padding-bottom: 110px;
   position: relative;
   z-index: 1;
 }
@@ -630,6 +641,7 @@ footer {
   font-family: "Pretendard-Regular";
   line-height: 2.05;
   padding-top: 18px;
+  padding-bottom: 52px;
   margin-left: 160px;
   margin-right: 60px;
   font-size: clamp(17px, 2.15vw, 24px); /* (3번) 본문 더 크게 */
@@ -653,7 +665,7 @@ footer {
   align-items: center;
   gap: 34px; /* (4번) 포스터 간격 확장 */
   margin: 0 auto;
-  padding: 120px var(--gutter) 80px;
+  padding: 120px var(--gutter) 40px;
   position: relative;
   transition: transform 0.05s ease-out;
 }
@@ -978,6 +990,19 @@ footer {
   border-bottom: none;
 }
 
+.timeline-reverse-date li {
+  grid-template-columns: 1fr 92px;
+}
+
+.timeline-reverse-date .t-text {
+  order: 1;
+}
+
+.timeline-reverse-date .t-date {
+  order: 2;
+  text-align: right;
+}
+
 .t-date {
   font-family: "ChosunSg";
   color: rgba(255, 255, 255, 0.78);
@@ -1075,112 +1100,230 @@ footer {
 
 /* ========= Modal ========= */
 .project-modal::backdrop {
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(5, 7, 10, 0.72);
+  backdrop-filter: blur(10px);
 }
 
 .project-modal {
   border: none;
   padding: 0;
-  width: min(980px, 94vw);
-  max-height: 90vh;
+  width: min(1040px, 94vw);
+  max-height: 92vh;
   overflow-y: auto;
-  border-radius: 18px;
-  background: #ffffff;
-  box-shadow: var(--shadow);
-  margin: auto;
+  overflow-x: hidden;
+  border-radius: 28px;
+  background:
+    radial-gradient(1200px 420px at 0% 0%, rgba(255, 255, 255, 0.92), #ffffff 38%),
+    linear-gradient(180deg, #ffffff, #f7f8fa);
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.28);
   position: fixed;
-  top: 50%;
+  top: 4vh;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
+  color: #111116;
 }
 
 .modal-inner {
   position: relative;
-  padding: 22px 22px 26px;
+  padding: 36px 28px 30px;
 }
 
 .modal-close {
   position: absolute;
-  top: 14px;
-  right: 14px;
-  width: 40px;
-  height: 40px;
-  border-radius: 12px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  background: rgba(0, 0, 0, 0.03);
+  top: 22px;
+  right: 22px;
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  border: 1px solid rgba(17, 17, 22, 0.08);
+  background: rgba(17, 17, 22, 0.04);
   cursor: pointer;
   font-size: 22px;
   line-height: 1;
+  transition: background 0.2s ease, transform 0.12s ease;
+}
+
+.modal-close:hover {
+  background: rgba(17, 17, 22, 0.08);
+  transform: translateY(-1px);
 }
 
 .modal-header {
-  padding-right: 50px;
+  padding: 8px 72px 22px 0;
+  margin-bottom: 18px;
+  border-bottom: 1px solid rgba(17, 17, 22, 0.08);
 }
 
 .modal-kicker {
   font-family: "ChosunSg";
-  opacity: 0.65;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.62;
 }
 
 .modal-title {
   font-family: "PuradakGentleGothicR";
-  font-size: 40px;
-  margin-top: 6px;
+  font-size: clamp(36px, 5vw, 54px);
+  line-height: 1.04;
+  margin-top: 10px;
+  overflow-wrap: anywhere;
 }
 
 .modal-period {
-  margin-top: 6px;
+  margin-top: 12px;
   font-family: "Pretendard-Regular";
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(17, 17, 22, 0.58);
+  font-size: 15px;
 }
 
 .modal-tabs {
-  margin-top: 14px;
+  margin-top: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 10px;
 }
 
 .modal-tab {
-  padding: 10px 12px;
+  padding: 11px 15px;
   border-radius: 999px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  background: rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(17, 17, 22, 0.08);
+  background: rgba(17, 17, 22, 0.035);
   cursor: pointer;
+  color: rgba(17, 17, 22, 0.7);
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease,
+    transform 0.12s ease;
 }
+
+.modal-tab:hover {
+  background: rgba(17, 17, 22, 0.06);
+  transform: translateY(-1px);
+}
+
 .modal-tab.is-active {
   background: #111116;
   color: #ffffff;
+  border-color: #111116;
 }
 
 .modal-body {
-  margin-top: 16px;
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
-  padding-top: 16px;
+  margin-top: 22px;
   font-family: "Pretendard-Regular";
   line-height: 1.75;
-  color: rgba(0, 0, 0, 0.86);
+  color: rgba(17, 17, 22, 0.88);
 }
 
 .modal-body h3 {
-  margin-top: 14px;
-  margin-bottom: 8px;
-  font-size: 18px;
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
 }
 
-.modal-body ul {
-  padding-left: 18px;
+.modal-list {
+  display: grid;
+  gap: 14px;
 }
-.modal-body li {
-  list-style: disc;
-  margin: 6px 0;
+
+.modal-list-card {
+  display: block;
+  padding: 20px 22px;
+  border-radius: 22px;
+  border: 1px solid rgba(17, 17, 22, 0.08);
+  background: rgba(248, 249, 251, 0.92);
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.05);
+}
+
+.modal-list-index {
+  display: inline;
+  margin-right: 10px;
+  color: #111116;
+  font-family: "ChosunSg";
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.modal-list-card p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.8;
+  color: rgba(17, 17, 22, 0.88);
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+.modal-problem-card {
+  padding: 24px;
+  border-radius: 24px;
+  border: 1px solid rgba(17, 17, 22, 0.08);
+  background: linear-gradient(180deg, #fbfbfc, #f4f6f8);
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.05);
+}
+
+.modal-problem-card + .modal-problem-card {
+  margin-top: 16px;
+}
+
+.modal-problem-grid {
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.modal-problem-block {
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(17, 17, 22, 0.06);
+}
+
+.modal-problem-label {
+  display: inline-flex;
+  margin-bottom: 8px;
+  font-family: "ChosunSg";
+  font-size: 13px;
+  color: rgba(17, 17, 22, 0.58);
+}
+
+.modal-problem-block p {
+  margin: 0;
+  line-height: 1.82;
+  color: rgba(17, 17, 22, 0.86);
+  word-break: keep-all;
+  overflow-wrap: anywhere;
 }
 
 .modal-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 10px;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.modal-links .btn {
+  min-width: 140px;
+  min-height: 48px;
+  padding: 12px 16px;
+  border-radius: 16px;
+  background: #ffffff;
+  border: 1px solid rgba(17, 17, 22, 0.08);
+}
+
+@media (max-width: 720px) {
+  .project-modal {
+    width: min(96vw, 96vw);
+    max-height: 94vh;
+    border-radius: 22px;
+    top: 2vh;
+  }
+
+  .modal-inner {
+    padding: 20px 18px 22px;
+  }
+
+  .modal-header {
+    padding-right: 56px;
+  }
 }
 
 /* ========= Toast ========= */
@@ -1226,10 +1369,10 @@ footer {
     grid-template-columns: 1fr;
   }
   .contents-main-text {
-    margin-top: 120px;
+    margin-top: 0;
   }
   .contents-right-text {
-    margin-left: 40px;
+    width: 100%;
   }
   .Introduce-main-text h1,
   .Introduce-title-text,
@@ -1288,7 +1431,7 @@ footer {
 
 /* ========= Introduce Stack ========= */
 .intro-stack {
-  margin: 20px 60px 80px 160px;
+  margin: 20px 60px 0 160px;
   display: flex;
   flex-direction: column;
   gap: 36px;

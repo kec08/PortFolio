@@ -318,7 +318,18 @@ function renderModalBody(projectKey, tabKey) {
   if (!p) return "";
 
   const list = (items) =>
-    `<ul>${items.map((x) => `<li>${escapeHtml(x)}</li>`).join("")}</ul>`;
+    `<div class="modal-list">${items
+      .map(
+        (x, index) => `
+          <article class="modal-list-card">
+            <p><strong class="modal-list-index">${String(index + 1).padStart(
+              2,
+              "0"
+            )}.</strong> ${escapeHtml(x)}</p>
+          </article>
+        `
+      )
+      .join("")}</div>`;
 
   if (tabKey === "overview") return list(p.overview);
   if (tabKey === "role") return list(p.role);
@@ -329,12 +340,23 @@ function renderModalBody(projectKey, tabKey) {
     return p.trouble
       .map(
         (t) => `
-          <h3>${escapeHtml(t.title)}</h3>
-          <ul>
-            <li><b>문제</b>: ${escapeHtml(t.problem)}</li>
-            <li><b>해결</b>: ${escapeHtml(t.solution)}</li>
-            <li><b>결과</b>: ${escapeHtml(t.result)}</li>
-          </ul>
+          <article class="modal-problem-card">
+            <h3>${escapeHtml(t.title)}</h3>
+            <div class="modal-problem-grid">
+              <section class="modal-problem-block">
+                <span class="modal-problem-label">문제</span>
+                <p>${escapeHtml(t.problem)}</p>
+              </section>
+              <section class="modal-problem-block">
+                <span class="modal-problem-label">해결</span>
+                <p>${escapeHtml(t.solution)}</p>
+              </section>
+              <section class="modal-problem-block">
+                <span class="modal-problem-label">결과</span>
+                <p>${escapeHtml(t.result)}</p>
+              </section>
+            </div>
+          </article>
         `
       )
       .join("");
@@ -449,6 +471,15 @@ function initProjectModal() {
 
 function initPosters() {
   const posters = document.querySelectorAll(".Design-box > div");
+  const posterLinks = {
+    poster1:
+      "https://www.figma.com/design/sKOQ7FC8YnvBdUHCmCdr3X/Liskovs---%EC%9E%90%EC%B7%A8%EC%95%B1?node-id=0-1&t=BvyFlKdzSXx34k1V-1",
+    poster2:
+      "https://www.figma.com/design/6f4gjhqaMArlxQ8i0bssle/FRAME---%EB%B0%94%EC%9D%B4%EB%8B%90?node-id=344-469&t=a9bKOweibMZPWoFs-1",
+    poster3:
+      "https://www.figma.com/design/FYp5kLyspWLK00PFUZFEnx/%EB%82%98%EC%9D%B4%ED%82%A4?node-id=0-1&t=PXSlVR525xoJc6FV-1",
+  };
+
   posters.forEach((poster) => {
     const overlay = poster.querySelector(".overlay");
     if (!overlay) return;
@@ -472,13 +503,25 @@ function initPosters() {
     });
 
     poster.addEventListener("click", () => {
-      overlay.style.opacity = overlay.style.opacity === "1" ? "0" : "1";
+      const key = Array.from(poster.classList).find((name) =>
+        Object.hasOwn(posterLinks, name)
+      );
+      const href = key ? posterLinks[key] : null;
+      if (href) {
+        window.open(href, "_blank", "noopener,noreferrer");
+      }
     });
 
     poster.addEventListener("keydown", (e) => {
       if (e.key === "Enter" || e.key === " ") {
         e.preventDefault();
-        overlay.style.opacity = overlay.style.opacity === "1" ? "0" : "1";
+        const key = Array.from(poster.classList).find((name) =>
+          Object.hasOwn(posterLinks, name)
+        );
+        const href = key ? posterLinks[key] : null;
+        if (href) {
+          window.open(href, "_blank", "noopener,noreferrer");
+        }
       }
     });
   });
