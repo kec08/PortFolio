@@ -5,7 +5,7 @@ const PROJECTS = {
     accent: "#F5C518",
     kicker: "친구들과 공유하는 진짜 일상",
     title: "SNAPY",
-    period: "2026.03.01 ~",
+    period: "2026.03.01 ~ 2026.08.05",
     links: {
       github: "https://github.com/2026-snapy/SNAPY_iOS",
       figma: "https://www.figma.com/design/X3YFCzXVcM173oBQCoGf0c/3%ED%95%99%EB%85%84-%EC%BA%A1%EC%8A%A4%ED%86%A4?node-id=36-3&t=tiKIu10uXv7cSs5G-1",
@@ -13,19 +13,25 @@ const PROJECTS = {
       appstore: "https://apps.apple.com/kr/app/스내피-snapy/id6761876306",
     },
     overview: [
-      "듀얼 카메라로 전면·후면을 동시에 촬영하고, 하루를 아침·점심·저녁으로 나누어 기록하는 사진 기반 SNS입니다.",
-      "필터·보정 없이 있는 그대로의 일상을 공유하고, 24시간 스토리·음성 댓글·사진 방명록으로 사진만으로 소통합니다.",
-      "60개 API 엔드포인트 연동, 143개 Swift 파일, 약 20,000줄 규모의 프로젝트입니다.",
-      "App Store 심사 7회 제출·6건 리젝을 거쳐 최종 승인, 실제 출시 및 운영 중입니다.",
-      "2026년 아진산업 SILI AX 기술전에서 실사용자 시연과 피드백 수집을 진행하며 서비스 방향성을 검증했습니다.",
+      "보정된 모습을 공유하는 기존 SNS의 방식에서 벗어나, 듀얼 카메라로 전면·후면을 동시에 촬영해 친구들과 진짜 일상을 나누는 사진 기반 SNS입니다.",
+      "하루를 아침·점심·저녁으로 나누어 기록하고, 24시간 스토리·음성 댓글·사진 방명록으로 자연스럽게 소통할 수 있습니다.",
+      "경북소프트웨어마이스터고 캡스톤 대상 수상 및 App Store 출시, 아진산업 SILI AX 기술전에서 사용자 시연을 진행했습니다.",
+    ],
+    preview: [
+      "./img/snapy-preview-1.jpg",
+      "./img/snapy-preview-2.jpg",
+      "./img/snapy-preview-3.jpg",
+      "./img/snapy-preview-4.jpg",
+      "./img/snapy-preview-5.jpg",
+      "./img/snapy-preview-6.jpg",
+      "./img/snapy-preview-7.jpg",
+      "./img/snapy-preview-8.jpg",
     ],
     role: [
-      "AVCaptureMultiCamSession 기반 듀얼 카메라 동시 촬영 + PIP 드래그 구현",
-      "Google Sign-In / Apple Sign-In OAuth 인증 및 JWT 자동 재발급 세션 관리",
-      "음성 댓글 녹음·재생 및 실시간 파형 시각화 (EMA 스무딩, PCM 파형 UI)",
-      "Moya TargetType 기반 네트워크 계층 설계 및 12개 Service 공통 토큰 갱신 패턴 적용",
-      "신고(8가지 사유)·차단 API 연동 및 차단 상태별 프로필 UI 5단계 분기 처리",
-      "TestFlight 배포, 앱스토어 심사 대응 (가이드라인 1.2, 2.1(a), 2.3, 5.1.2)",
+      "AVCaptureMultiCamSession으로 전·후면 동시 촬영과 PIP 드래그 인터랙션 구현",
+      "Google·Apple OAuth 로그인과 JWT exp 기반 자동 토큰 재발급 세션 설계",
+      "DeepLinkRouter로 Universal Link·커스텀 스킴의 앨범·스토리·프로필 진입 통합",
+      "Kingfisher 캐싱, 신고·차단 상태 분기, TestFlight 및 App Store 심사 대응",
     ],
     tech: [
       "Swift / SwiftUI: 선언적 UI 기반 화면 구성",
@@ -77,17 +83,15 @@ const PROJECTS = {
       demo: "https://www.youtube.com/watch?si=77nzsMGncG27vWzh&v=rTH4DSMs_nk&feature=youtu.be",
     },
     overview: [
-      "손 제스처만으로 AI에게 질문하고, 원하는 정보를 빠르게 받는 Apple Watch용 AI 에이전트입니다.",
-      "Siri의 맥락 불일치/링크 제공 중심 경험의 불편함에서 출발했습니다.",
-      "iOS / watchOS 앱을 분리 구성해 상황에 맞는 디바이스에서 사용하도록 설계했습니다.",
-      "🏆 경북소프트웨어마이스터고 캡스톤 대상 수상.",
-      "대구 ICT 융합 엑스포 전시와 사용자 시연을 통해 접근성 관점의 필요성과 서비스 전달 방식을 검증했습니다.",
+      "Siri가 맥락과 맞지 않는 답변이나 검색 링크를 제공하는 불편함에서 출발한 Apple Watch용 AI 에이전트입니다.",
+      "손 제스처와 음성으로 질문하고, 작은 화면에서도 필요한 답변을 빠르게 확인할 수 있도록 iOS·watchOS 경험을 분리해 설계했습니다.",
+      "경북소프트웨어마이스터고 캡스톤 대상 수상 및 대구 ICT 융합 엑스포 전시를 통해 접근성과 서비스 전달 방식을 검증했습니다.",
     ],
     role: [
-      "iOS·watchOS 공통 구조 설계 (SwiftUI 기반 화면 구성 및 상태 흐름 설계)",
-      "Apple 로그인 구현 (AuthenticationServices 기반 인증 플로우 설계)",
-      "iPhone ↔ Apple Watch 통신 구현 (WatchConnectivity, reachable/실패 케이스 고려)",
-      "서버 연동 및 스트리밍 응답 UI 처리 (URLSession 스트리밍 수신 → 실시간 반영)",
+      "SwiftUI와 Combine 기반으로 iOS·watchOS 화면을 분리하고 공통 상태 흐름 설계",
+      "AuthenticationServices와 Moya TargetType을 활용한 Apple 로그인 및 사용자 식별 구현",
+      "WatchConnectivity의 isReachable 확인·재시도·updateApplicationContext 백업 동기화 구성",
+      "URLSession dataTask로 AI 스트리밍 청크를 버퍼링하고 첫 응답부터 Watch 화면에 반영",
     ],
     tech: [
       "Swift / SwiftUI: 선언적 UI 기반 화면 구성",
@@ -126,6 +130,77 @@ const PROJECTS = {
       "박람회 현장에서 기능 설명보다 사용자가 얻는 가치를 먼저 전달해야 서비스가 더 설득력 있게 받아들여진다는 점을 배웠습니다.",
     ],
   },
+  pacing: {
+    accent: "#FF2053",
+    kicker: "같은 음악을 들으며 함께 달리는 러닝 서비스",
+    title: "Pacing",
+    logo: "./img/pacing-logo.png",
+    period: "2026.06.20 ~",
+    links: {
+      github: "https://github.com/kec08/Pacing",
+      appstore: "https://apps.apple.com/kr/app/pacing/id6784299290",
+      blog: "https://blog.naver.com/ssilvv/224382783055",
+    },
+    overview: [
+      "친구와 함께 러닝하며 같은 음악을 듣고, 서로의 플레이리스트를 공유하는 iOS 러닝 앱입니다.",
+      "친구의 러닝·음악 활동을 확인하고, 공유 플레이리스트를 탐색해 Apple Music 보관함에 저장할 수 있습니다.",
+      "실시간 위치·재생 곡 공유와 같이 듣기 세션으로 같은 곡과 재생 위치를 동기화하고, 러닝 경로·거리·평균 페이스를 기록합니다.",
+      "AI를 활용한 기획·디자인·개발부터 Firebase 구성, 실기기 QA, App Store 배포까지 직접 진행했습니다.",
+    ],
+    preview: [
+      "./img/pacing-preview-1.jpg",
+      "./img/pacing-preview-2.jpg",
+      "./img/pacing-preview-3.jpg",
+      "./img/pacing-preview-4.jpg",
+      "./img/pacing-preview-5.jpg",
+      "./img/pacing-preview-6.jpg",
+      "./img/pacing-preview-7.jpg",
+      "./img/pacing-preview-8.jpg",
+      "./img/pacing-preview-9.jpg",
+    ],
+    role: [
+      "Feature-first MVVM으로 화면을 나누고 Firebase·위치·음악 로직을 Core 계층으로 분리",
+      "Firebase Authentication·Firestore·Realtime Database로 로그인, 친구 관계, 러닝·음악 데이터 구성",
+      "MusicKit·MediaPlayer로 Apple Music 권한, 보관함 플레이리스트, 재생 제어와 음악 탐색 구현",
+      "같이 듣기 이벤트와 백그라운드 위치 업데이트를 분리 설계하고 실기기 QA·App Store 배포 진행",
+    ],
+    tech: [
+      "Swift / SwiftUI: 선언적 UI 기반 화면 구성",
+      "Swift Charts: 러닝 데이터를 시각화하는 화면 구성",
+      "Feature-first MVVM + @Observable: 기능 단위 상태 관리",
+      "Swift Concurrency: 비동기 작업 및 백그라운드 흐름 처리",
+      "MapKit / Core Location: 러닝 경로와 위치 정보 처리",
+      "MusicKit / MediaPlayer: Apple Music 기반 음악 재생 및 연동",
+      "Firebase: Authentication, Cloud Firestore, Realtime Database, Cloud Functions",
+      "Figma / Codex / App Store Connect: 디자인·AI 개발·배포 도구",
+    ],
+    trouble: [
+      {
+        title: "같이 듣기 중 곡 전환 시 재생 지연 및 중복 동기화",
+        problem:
+          "1초 주기로 세션 전체를 갱신하는 구조에서 단순 재생 위치 보정과 실제 곡 변경 이벤트가 구분되지 않았습니다. 이로 인해 게스트 기기의 곡 전환이 지연되거나 중복 재생 준비가 발생했습니다.",
+        solution:
+          "곡 전환 단위의 고유 값인 playbackEventID를 추가해 곡 변경 이벤트와 1초 주기 위치 보정 이벤트를 분리했습니다. 새 곡 이벤트가 오면 이전 비동기 재생 준비 작업의 결과를 무효화하도록 보완했습니다.",
+        result:
+          "불필요한 중복 재생 준비를 제거하고, 단순 위치 갱신에서는 재생 큐를 다시 구성하지 않도록 개선했습니다.",
+      },
+      {
+        title: "백그라운드 전환 시 러닝 기록 중단",
+        problem:
+          "앱을 백그라운드로 전환하면 시간은 증가하지만 거리·페이스·칼로리·지도 경로가 갱신되지 않았습니다. 소스 코드 설정과 실제 앱 번들의 UIBackgroundModes가 일치하지 않는 문제도 확인했습니다.",
+        solution:
+          "UIBackgroundModes에 location과 audio를 명시하고, LocationManager에 allowsBackgroundLocationUpdates를 적용했습니다. 러닝 시작 전 위치 권한을 확인하고 권한이 부족하면 설정 화면으로 안내하도록 구성했습니다.",
+        result:
+          "백그라운드 위치 이벤트가 LocationManager → RunningViewModel → RunningView 흐름으로 전달되어 거리·경로·페이스·칼로리가 함께 갱신되도록 안정화했습니다.",
+      },
+    ],
+    learn: [
+      "AI 활용에서는 프로젝트 구조·작업 범위·완료 기준을 명확히 전달하는 것이 결과의 품질과 유지보수성에 중요하다는 점을 배웠습니다.",
+      "실시간 같이 듣기 기능을 구현하며 이벤트 구분과 비동기 작업 취소 처리가 사용자 경험에 직접 영향을 준다는 점을 경험했습니다.",
+      "위치·음악·실시간 데이터가 결합된 앱에서는 상태 흐름과 백그라운드 조건을 먼저 설계해야 안정적인 기능을 만들 수 있음을 체득했습니다.",
+      "기획부터 디자인, iOS 개발, Firebase 데이터 설계, 실기기 QA, App Store 배포까지 서비스 개발 전 과정을 경험했습니다.",
+    ],
+  },
   jipchak: {
     accent: "#58CCFF",
     kicker: "사회 초년생을 위한 자취 생활 편의 플랫폼",
@@ -138,19 +213,21 @@ const PROJECTS = {
       demo: "https://youtu.be/vIUcH8E60pg?si=FS7nKiLLC_Ti2CTS",
     },
     overview: [
-      "주거 선택부터 계약/입주 이후까지의 부담을 줄이는 통합 주거 지원 플랫폼입니다.",
-      "매물 등록 → 문서 업로드 → AI 분석 → 결과 시각화까지 단일 흐름으로 완성했습니다.",
-      "대출 가이드/매물 분석/체크리스트 기능을 하나의 앱으로 통합했습니다.",
-      "🏆 경북소프트웨어마이스터고 캡스톤 동상 수상.",
-      "App Store 심사를 거쳐 실제 출시했고, 개인정보 처리방침 작성과 필수 권한 안내, 심사 대응까지 직접 진행했습니다.",
+      "전월세 계약 경험이 부족한 사회 초년생이 계약 전 위험 요소를 쉽게 확인하도록 돕는 AI 자취 플랫폼입니다.",
+      "매물 정보와 서류를 업로드하면 AI가 위험 요소를 분석하고, 체크리스트·대출 가이드·지도 탐색을 한 흐름으로 제공합니다.",
+      "경북소프트웨어마이스터고 캡스톤 동상 수상 및 App Store 출시까지 진행했습니다.",
+    ],
+    preview: [
+      "./img/jipchak-preview-1.jpg",
+      "./img/jipchak-preview-2.jpg",
+      "./img/jipchak-preview-3.jpg",
+      "./img/jipchak-preview-4.jpg",
     ],
     role: [
-      "SwiftUI 탭 피처 단위 화면 구성",
-      "MVVM 구조로 View–ViewModel–Model 역할 분리 설계",
-      "Combine 기반 상태 관리(@Published)로 입력 검증/로딩/에러 흐름 연결",
-      "Moya로 로그인/회원가입 API 연동 및 토큰(Access/Refresh) 재발급 처리",
-      "네이버 지도 SDK(UIKit) → UIViewRepresentable로 SwiftUI 연동 및 상태 동기화",
-      "PDF 업로드/멀티파트 요청(Moya)로 매물 분석 API 연동",
+      "MVVM으로 View·ViewModel·Service 책임을 나누고 Combine 단방향 상태 흐름 구성",
+      "JWT exp 확인과 Refresh Token 재발급으로 로그인 세션 유지",
+      "UIViewRepresentable로 Naver Map SDK를 SwiftUI에 연결하고 지도 상태 동기화",
+      "Moya Multipart로 JSON과 PDF를 함께 전송해 AI 매물 분석·체크리스트·대출 가이드 연동",
     ],
     tech: [
       "Swift / SwiftUI: 선언적 UI 기반 화면 구성",
@@ -293,8 +370,17 @@ function initProjectTabs() {
   const tabs = Array.from(document.querySelectorAll(".project-tab"));
   const pages = Array.from(document.querySelectorAll(".project-page"));
   if (!tabs.length || !pages.length) return;
+  const projectKeys = new Set(
+    pages.map((page) => page.getAttribute("data-project"))
+  );
+  const scrollToProjects = () => {
+    document
+      .querySelector("#MainProjects")
+      ?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
 
-  const activate = (key) => {
+  const activate = (key, updateHash = false) => {
+    if (!projectKeys.has(key)) key = "snapy";
     tabs.forEach((t) => {
       const active = t.getAttribute("data-project") === key;
       t.classList.toggle("is-active", active);
@@ -304,37 +390,82 @@ function initProjectTabs() {
       p.classList.toggle("is-active", p.getAttribute("data-project") === key)
     );
     setProjectAccent(key);
+    if (updateHash && window.location.hash !== `#${key}`) {
+      window.history.replaceState(null, "", `#${key}`);
+    }
   };
 
   tabs.forEach((t) => {
-    t.addEventListener("click", () => activate(t.getAttribute("data-project")));
+    t.addEventListener("click", () =>
+      activate(t.getAttribute("data-project"), true)
+    );
   });
 
-  activate("snapy");
+  const hashProject = window.location.hash.slice(1).toLowerCase();
+  const hasInitialProject = projectKeys.has(hashProject);
+  activate(hasInitialProject ? hashProject : "snapy");
+  if (hasInitialProject) window.requestAnimationFrame(scrollToProjects);
+  window.addEventListener("hashchange", () => {
+    const nextProject = window.location.hash.slice(1).toLowerCase();
+    if (projectKeys.has(nextProject)) {
+      activate(nextProject);
+      scrollToProjects();
+    }
+  });
 }
 
 function renderModalBody(projectKey, tabKey) {
   const p = PROJECTS[projectKey];
   if (!p) return "";
 
-  const list = (items) =>
-    `<div class="modal-list">${items
-      .map(
-        (x, index) => `
-          <article class="modal-list-card">
-            <p><strong class="modal-list-index">${String(index + 1).padStart(
-              2,
-              "0"
-            )}.</strong> ${escapeHtml(x)}</p>
-          </article>
-        `
-      )
-      .join("")}</div>`;
+  const bulletList = (items) =>
+    `<ul class="modal-bullet-list">${items
+      .map((x) => `<li>${escapeHtml(x)}</li>`)
+      .join("")}</ul>`;
 
-  if (tabKey === "overview") return list(p.overview);
-  if (tabKey === "role") return list(p.role);
-  if (tabKey === "tech") return list(p.tech);
-  if (tabKey === "learn") return list(p.learn);
+  if (tabKey === "overview") {
+    const [lead, ...points] = p.overview;
+    return `<section class="modal-summary">
+      <p class="modal-summary-lead">${escapeHtml(lead)}</p>
+      ${bulletList(points)}
+    </section>`;
+  }
+  if (tabKey === "role") {
+    return `<section class="modal-summary">
+      <p class="modal-section-eyebrow">내가 맡은 일</p>
+      ${bulletList(p.role)}
+    </section>`;
+  }
+  if (tabKey === "tech") {
+    return `<section class="modal-summary">
+      <p class="modal-section-eyebrow">사용 기술과 도구</p>
+      <div class="modal-tech-cloud">${p.tech
+        .map((x) => `<span>${escapeHtml(x)}</span>`)
+        .join("")}</div>
+    </section>`;
+  }
+  if (tabKey === "learn") {
+    return `<section class="modal-summary">
+      <p class="modal-section-eyebrow">프로젝트에서 배운 점</p>
+      ${bulletList(p.learn)}
+    </section>`;
+  }
+
+  if (tabKey === "preview" && p.preview) {
+    return `<section class="modal-preview-gallery">
+      <p class="modal-section-eyebrow">${escapeHtml(p.title)} 서비스 미리보기</p>
+      <div class="modal-preview-grid">
+        ${p.preview
+          .map(
+            (src, index) => `
+              <figure class="modal-preview-item">
+                <img src="${escapeHtml(src)}" alt="${escapeHtml(p.title)} 미리보기 ${index + 1}" loading="lazy" />
+              </figure>`
+          )
+          .join("")}
+      </div>
+    </section>`;
+  }
 
   if (tabKey === "trouble") {
     return p.trouble
@@ -364,6 +495,12 @@ function renderModalBody(projectKey, tabKey) {
 
   if (tabKey === "links") {
     const links = [];
+    if (p.links.appstore)
+      links.push(
+        `<a class="btn btn-ghost" href="${escapeHtml(
+          p.links.appstore
+        )}" target="_blank" rel="noreferrer">App Store</a>`
+      );
     if (p.links.github)
       links.push(
         `<a class="btn btn-ghost" href="${escapeHtml(
@@ -382,11 +519,11 @@ function renderModalBody(projectKey, tabKey) {
           p.links.demo
         )}" target="_blank" rel="noreferrer">발표/시연</a>`
       );
-    if (p.links.appstore)
+    if (p.links.blog)
       links.push(
         `<a class="btn btn-ghost" href="${escapeHtml(
-          p.links.appstore
-        )}" target="_blank" rel="noreferrer">App Store</a>`
+          p.links.blog
+        )}" target="_blank" rel="noreferrer">Blog</a>`
       );
     return `<div class="modal-links">${links.join("")}</div>`;
   }
@@ -412,14 +549,28 @@ function initProjectModal() {
     const p = PROJECTS[currentProject];
     if (!p) return;
     modal.style.setProperty("--accent", p.accent);
+    modal.dataset.project = currentProject;
     modal.querySelector(".modal-title").style.color = p.accent;
   };
 
   const sync = () => {
     const p = PROJECTS[currentProject];
     if (!p) return;
+    const hasPreview = Array.isArray(p.preview) && p.preview.length > 0;
+    const previewButton = modal.querySelector('[data-tab="preview"]');
+    if (!hasPreview && currentTab === "preview") currentTab = "overview";
+    if (previewButton) {
+      previewButton.hidden = !hasPreview;
+      previewButton.setAttribute("aria-hidden", String(!hasPreview));
+    }
     if (modalKicker) modalKicker.textContent = p.kicker;
-    if (modalTitle) modalTitle.textContent = p.title;
+    if (modalTitle) {
+      modalTitle.innerHTML = p.logo
+        ? `<img class="modal-title-logo" src="${escapeHtml(
+            p.logo
+          )}" alt="${escapeHtml(p.title)}" />`
+        : escapeHtml(p.title);
+    }
     if (modalPeriod) modalPeriod.textContent = p.period;
     if (modalBody)
       modalBody.innerHTML = renderModalBody(currentProject, currentTab);
@@ -432,14 +583,31 @@ function initProjectModal() {
     });
   };
 
-  const open = (projectKey) => {
+  const open = (projectKey, pushHistory = true) => {
     currentProject = projectKey;
     currentTab = "overview";
     sync();
+    if (pushHistory && window.location.hash !== `#${projectKey}-detail`) {
+      window.history.pushState(
+        { projectDetail: projectKey },
+        "",
+        `#${projectKey}-detail`
+      );
+    }
     if (typeof modal.showModal === "function") modal.showModal();
   };
 
   const close = () => {
+    if (
+      window.location.hash === `#${currentProject}-detail` &&
+      window.history.state?.projectDetail === currentProject
+    ) {
+      window.history.back();
+      return;
+    }
+    if (window.location.hash === `#${currentProject}-detail`) {
+      window.history.replaceState(null, "", `#${currentProject}`);
+    }
     if (typeof modal.close === "function") modal.close();
   };
 
@@ -467,6 +635,17 @@ function initProjectModal() {
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && modal.open) close();
   });
+
+  window.addEventListener("popstate", () => {
+    if (modal.open) modal.close();
+  });
+
+  const initialDetail = window.location.hash
+    .slice(1)
+    .match(/^(snapy|pacing|qiri|jipchak)-detail$/i);
+  if (initialDetail && PROJECTS[initialDetail[1].toLowerCase()]) {
+    open(initialDetail[1].toLowerCase(), false);
+  }
 }
 
 function initPosters() {
