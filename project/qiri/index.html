@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Qiri | 김은찬</title>
+    <link rel="stylesheet" href="../detail.css?v=3" />
+    <link rel="stylesheet" href="./qiri.css" />
+    <link rel="stylesheet" href="../../glass-interaction.css?v=5" />
+    <script src="../detail.js" defer></script>
+    <script src="./qiri-content.js" defer></script>
+    <script src="../detail-links.js?v=1" defer></script>
+    <script src="../project-theme.js" defer></script>
+    <script src="../../glass-pointer.js?v=5" defer></script>
+  </head>
+  <body data-project="qiri">
+    <a class="back" href="../index.html" aria-label="프로젝트 목록으로 돌아가기">‹</a>
+    <button class="project-theme-toggle detail-theme-toggle" type="button" data-project-theme-toggle aria-label="화이트 모드로 변경" aria-pressed="false"></button>
+
+    <section class="hero">
+      <img data-image alt="Qiri 대표 이미지" />
+      <div class="hero-copy">
+        <span class="tag" data-tag></span>
+        <h1 data-title></h1>
+        <p data-period></p>
+        <div class="detail-links" data-detail-links aria-label="Qiri 관련 링크"></div>
+      </div>
+    </section>
+
+    <main>
+      <p class="intro" data-summary></p>
+
+      <section class="block">
+        <p class="label">MY ROLE</p>
+        <h2>주요 구현</h2>
+        <ul data-role></ul>
+      </section>
+
+      <section class="block">
+        <p class="label">TECH</p>
+        <h2>사용 기술</h2>
+        <div class="tech" data-tech></div>
+        <p class="tech-note">
+          iPhone과 Apple Watch의 사용 환경을 분리해 설계하고, WatchConnectivity와 URLSession Streaming으로 작은 화면에 맞는 실시간 AI 경험을 구현했습니다.
+        </p>
+      </section>
+
+      <section class="block case-study">
+        <p class="label">PROBLEM SOLVING</p>
+        <h2>문제 해결 과정</h2>
+
+        <article>
+          <h3>AssistiveTouch 기반 질문 흐름 접근성 개선</h3>
+          <p>
+            질문을 시작하고 답변을 확인하기까지 여러 번의 제스처가 필요해, 손을 쓰기 어려운 상황에서 오히려 사용 흐름이 복잡해지는 문제가 있었습니다.
+          </p>
+          <p>
+            화면마다 탐색 요소를 최소화하고 단축어와 AssistiveTouch를 연결해 앱 실행부터 음성 질문까지 바로 이어지도록 흐름을 다시 설계했습니다. 그 결과 제스처를 <strong>6회에서 3회로 줄여 약 50% 단축</strong>했습니다.
+          </p>
+        </article>
+
+        <article>
+          <h3>스트리밍 AI 응답의 가독성 개선</h3>
+          <p>
+            응답 속도를 높이기 위해 스트리밍 데이터를 가공 없이 출력하면서 미완성 문장과 마크다운 문법이 반복 노출되어, 작은 Watch 화면에서 답변을 읽기 어려웠습니다.
+          </p>
+          <p>
+            수신한 응답을 버퍼에 모으고 문장과 마크다운 구조가 완성된 시점에 UI를 갱신하도록 데이터 수신과 화면 표시 로직을 분리했습니다. 빠른 첫 응답은 유지하면서 텍스트 깨짐을 제거했습니다.
+          </p>
+        </article>
+      </section>
+
+      <section class="block validation">
+        <p class="label">USER VALIDATION</p>
+        <h2>실사용자 검증</h2>
+        <h3>ICT 박람회에서 서비스 시연</h3>
+        <p>
+          2025년 ICT 박람회에서 Qiri를 실제 사용자에게 시연하고 사용성 피드백을 수집했습니다. 손 제스처 기반 질문 방식과 접근성 측면의 필요성을 중심으로 서비스 가치를 설명했습니다.
+        </p>
+        <p>
+          학생부터 개발자까지 다양한 방문객에게 독창적이고 실생활 활용성이 높다는 반응을 받았으며, 총 <strong>200명 이상</strong>이 체험하고 <strong>40건</strong>의 피드백을 수집했습니다.
+        </p>
+        <p class="validation-result">체험 200+명 · 피드백 40건</p>
+      </section>
+
+      <section class="block service-screens">
+        <p class="label">(02) SCREENSHOTS</p>
+        <h2>서비스 화면</h2>
+        <div class="screens screens-horizontal" aria-label="Qiri 서비스 화면">
+          <figure><img src="../../img/qiri-screen-1.png" alt="Qiri 앱 시작 화면" /></figure>
+          <figure><img src="../../img/qiri-screen-2.png" alt="Qiri Apple Watch 설정 가이드 화면" /></figure>
+          <figure><img src="../../img/qiri-screen-3.png" alt="Qiri 손 제스처 질문 화면" /></figure>
+          <figure><img src="../../img/qiri-screen-4.png" alt="Qiri AI 답변 화면" /></figure>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap');:root{--bg:#08090d;--ink:#f7f8fb;--muted:rgba(247,248,251,.58);--line:rgba(255,255,255,.16);--glass:rgba(255,255,255,.075)}*{box-sizing:border-box}html{background:var(--bg)}body{margin:0;background:radial-gradient(circle at 86% 8%,rgba(126,108,255,.22),transparent 26%),var(--bg);color:var(--ink);font-family:'DM Sans','Noto Sans KR',sans-serif}a{color:inherit;text-decoration:none}header{position:sticky;z-index:2;top:14px;display:flex;justify-content:space-between;align-items:center;width:min(1240px,calc(100% - 32px));height:56px;margin:14px auto 0;padding:0 20px;border:1px solid var(--line);border-radius:999px;background:rgba(14,17,26,.34);backdrop-filter:blur(18px)}header>a{font-size:13px;font-weight:800;letter-spacing:-.07em}header nav{display:flex;gap:23px;font-size:13px;color:var(--muted)}main{width:min(1240px,calc(100% - 48px));margin:0 auto;padding:120px 0}.eyebrow{margin:0;color:#c8ff75;font-size:12px;font-weight:800;letter-spacing:.14em}h1{margin:14px 0 12px;font-size:clamp(62px,10vw,142px);line-height:.88;letter-spacing:-.1em}.lead{margin:0;color:var(--muted);font-size:17px}.project-list{margin-top:70px;border-top:1px solid var(--line)}.project-row{position:relative;display:grid;grid-template-columns:290px 1fr auto;gap:28px;align-items:center;min-height:220px;padding:18px 12px;border-bottom:1px solid var(--line);transition:padding .45s ease,background .45s ease}.project-row img{width:100%;height:180px;object-fit:cover;border-radius:18px;opacity:.72;transition:opacity .45s,transform .65s cubic-bezier(.2,.9,.2,1)}.project-row span{display:grid;gap:8px}.project-row em{color:#c8ff75;font-size:12px;font-style:normal;font-weight:800}.project-row strong{font-size:clamp(32px,4vw,58px);letter-spacing:-.09em}.project-row small{color:var(--muted);font-size:15px}.project-row b{display:grid;place-items:center;width:46px;height:46px;border:1px solid var(--line);border-radius:50%;font-size:22px;transition:transform .4s,background .4s}.project-row:hover{padding-inline:26px;background:linear-gradient(90deg,rgba(183,221,255,.12),rgba(202,255,122,.06))}.project-row:hover img{opacity:1;transform:scale(1.035)}.project-row:hover b{transform:scale(1.12);background:rgba(200,255,117,.22)}@media(max-width:700px){main{width:calc(100% - 36px);padding-top:82px}.project-row{grid-template-columns:1fr auto;gap:16px;padding:16px 0}.project-row img{grid-column:1/3;height:190px}.project-row strong{font-size:40px}.project-row:hover{padding-inline:10px}header{width:calc(100% - 16px)}}
+/* 프로젝트 목록의 제목은 화면의 여백과 카드가 함께 보이도록 한 단계 낮춥니다. */
+h1{font-size:clamp(52px,7vw,104px);line-height:.92}
+.lead{font-size:17px;line-height:1.55}
+/* 목록 오른쪽 화살표는 문자 대신 방향이 고정된 벡터 아이콘으로 표시합니다. */
+.project-row>b{font-size:0;color:var(--ink);transform:none}
+.project-row>b::before{content:"";display:block;width:20px;height:20px;background:currentColor;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5 12h13M13 6l6 6-6 6' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5 12h13M13 6l6 6-6 6' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat}
+.project-row:hover>b{transform:translateX(4px) scale(1.08);rotate:none}
+html,body{overflow-x:hidden;scrollbar-width:none;-ms-overflow-style:none}
+html::-webkit-scrollbar,body::-webkit-scrollbar{display:none;width:0;height:0}
+header{position:sticky;isolation:isolate}
+header>a{position:absolute;left:50%;transform:translateX(-50%);white-space:nowrap}
+
+/* The row arrow is a fixed, centered action control. The glass pointer may
+   surround the row, but it must never rotate or move this arrow. */
+.project-row>b{display:grid!important;place-items:center!important;position:relative!important;transform:none!important;rotate:none!important;font-size:0!important;line-height:1!important}
+.project-row>b::before{content:"→"!important;display:block!important;width:auto!important;height:auto!important;background:none!important;mask:none!important;-webkit-mask:none!important;font:700 22px/1 Arial,sans-serif!important;color:currentColor!important}
+.project-row:hover>b,.project-row.is-glass-selected>b{transform:none!important;rotate:none!important;background:rgba(255,255,255,.1)!important}
+
+/* Akar Icons: use the supplied compact arrow assets in both themes. */
+.project-row>b{justify-self:end!important;width:46px!important;height:46px!important;padding:0!important;transform:none!important;rotate:none!important;background:rgba(255,255,255,.06)!important}
+.project-row>b::before{content:""!important;width:22px!important;height:22px!important;background:url("../img/akar-arrow-white.png") center/contain no-repeat!important;mask:none!important;-webkit-mask:none!important;font-size:0!important}
+.project-row:hover>b,.project-row.is-glass-selected>b{transform:none!important;rotate:none!important;background:rgba(255,255,255,.12)!important}
+body.is-light-theme .project-row>b::before,body.light .project-row>b::before{background-image:url("../img/akar-arrow-black.png")!important}
+
+/* Use the supplied back-arrow artwork, flipped to point forward, without a glass button. */
+.project-row>b {
+  border: 0 !important;
+  background: rgba(104, 116, 128, .86) !important;
+  box-shadow: none !important;
+}
+.project-row>b::before {
+  width: 30px !important;
+  height: 30px !important;
+  background-image: url("../img/eva-arrow-white.png") !important;
+  transform: rotate(180deg);
+}
+.project-row:hover>b,
+.project-row.is-glass-selected>b {
+  background: rgba(104, 116, 128, .86) !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+body.is-light-theme .project-row>b::before,
+body.light .project-row>b::before {
+  background-image: url("../img/eva-arrow-black.png") !important;
+}
+
+header {
+  border-bottom: 0 !important;
+}
+
+/* About 페이지와 동일한 단색 배경 */
+:root {
+  --bg: #0b0c0f;
+}
+
+html,
+body {
+  background: #0b0c0f !important;
+}
+
+/* 화살표 주변의 회색 원 제거 */
+.project-row > b,
+.project-row:hover > b,
+.project-row.is-glass-selected > b {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+header nav,
+header nav a {
+  color: var(--ink) !important;
+}
+/* 프로젝트 페이지 공통 테마 전환 버튼과 화이트 모드 */
+.project-theme-toggle{display:grid;place-items:center;width:44px;height:44px;flex:0 0 44px;padding:0;border:0;border-radius:50%;background:transparent url("../img/moon.png") center/24px 24px no-repeat;color:transparent;font-size:0;cursor:pointer;transition:transform .3s ease,background-color .3s ease}
+.project-theme-toggle:hover{transform:scale(1.08);background-color:rgba(255,255,255,.1)}
+body.is-light-theme{--bg:#f4f5f8;--ink:#111522;--muted:rgba(17,21,34,.64);--line:rgba(17,21,34,.16);background:#f4f5f8!important;color:#111522}
+body.is-light-theme .project-theme-toggle{background-image:none;color:#111522}
+body.is-light-theme .project-theme-toggle::before{content:"☀";font:400 23px/1 Arial,sans-serif}
+body.is-light-theme header{background:rgba(255,255,255,.72);border-color:rgba(17,21,34,.14);box-shadow:0 12px 30px rgba(38,45,72,.08)}
+body.is-light-theme .project-row:hover{background:linear-gradient(90deg,rgba(111,157,220,.12),rgba(133,180,85,.1))}
+body.is-light-theme .project-row img{opacity:.9}
+body.is-light-theme .project-row:hover>b{background:rgba(17,21,34,.08)!important}
+
+/* 화이트 모드에서 형광색 라벨과 번호의 대비를 높입니다. */
+body.is-light-theme .eyebrow,
+body.is-light-theme .project-row em{color:#1769d1!important}
+
+/* 화이트 모드 hover에서도 화살표 뒤 원형 배경을 표시하지 않습니다. */
+body.is-light-theme .project-row > b,
+body.is-light-theme .project-row:hover > b,
+body.is-light-theme .project-row.is-glass-selected > b{
+  background:transparent!important;
+  background-color:transparent!important;
+  border-color:transparent!important;
+  box-shadow:none!important;
+}
+
+/* 화이트 모드에서는 헤더 콘텐츠를 검은색으로 표시 */
+body.is-light-theme header,
+body.is-light-theme header>a,
+body.is-light-theme header nav,
+body.is-light-theme header nav a{color:#111522!important}
+body.is-light-theme .project-theme-toggle{color:#111522!important}
+
+/* 화이트 모드의 스크롤 헤더도 어두운 글래스가 남지 않도록 밝게 유지합니다. */
+body.is-light-theme .page-shared-header.is-scrolled{
+  background:linear-gradient(100deg,rgba(255,255,255,.94),rgba(214,223,243,.9) 56%,rgba(230,244,231,.92))!important;
+  border-color:rgba(17,21,34,.12)!important;
+  box-shadow:0 18px 42px rgba(80,95,125,.16),inset 0 1px rgba(255,255,255,.96)!important;
+  backdrop-filter:blur(22px) saturate(1.35)!important;
+}
+
+/* 홈 헤더와 동일한 3열 정렬: 좌측 메뉴·중앙 브랜드·우측 테마 */
+header{display:grid!important;grid-template-columns:1fr auto 1fr!important;align-items:center!important;justify-content:initial!important;height:58px!important;padding:0 32px!important}
+header nav{grid-column:1!important;grid-row:1!important;align-items:center!important}
+@media(min-width:701px){
+  header.page-shared-header:not(.is-scrolled) nav{padding-left:18px!important}
+  header.page-shared-header:not(.is-scrolled) nav{gap:40px!important}
+  header.page-shared-header.is-scrolled nav{padding-left:0!important}
+}
+header>a{position:static!important;grid-column:2!important;grid-row:1!important;justify-self:center!important;transform:none!important}
+header>.project-theme-toggle{grid-column:3!important;grid-row:1!important;justify-self:end!important}
+/* About 헤더와 같은 상단 고정 위치: 우측 여백을 18px로 통일 */
+header>.project-theme-toggle{position:absolute!important;right:18px!important;top:50%!important;transform:translateY(-50%)!important}
+header>.project-theme-toggle:hover{transform:translateY(-50%) scale(1.08)!important}
+@media(max-width:700px){header{height:54px!important;padding:0 13px!important}}
+header.page-shared-header{width:100vw!important}

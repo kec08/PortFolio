@@ -4,18 +4,20 @@ const PROJECTS = {
   snapy: {
     accent: "#F5C518",
     kicker: "친구들과 공유하는 진짜 일상",
+    modalKicker: "iOS · Social",
+    modalRole: "기획 · 디자인 · 개발",
     title: "SNAPY",
     period: "2026.03.01 ~ 2026.08.05",
     links: {
       github: "https://github.com/2026-snapy/SNAPY_iOS",
       figma: "https://www.figma.com/design/X3YFCzXVcM173oBQCoGf0c/3%ED%95%99%EB%85%84-%EC%BA%A1%EC%8A%A4%ED%86%A4?node-id=36-3&t=tiKIu10uXv7cSs5G-1",
-      demo: "https://www.youtube.com/@김은찬-s7o",
+      demo: "https://youtube.com/shorts/THLN_q6rfBg?si=QTnbH3gTbxNAy-b4",
       appstore: "https://apps.apple.com/kr/app/스내피-snapy/id6761876306",
     },
     overview: [
-      "보정된 모습을 공유하는 기존 SNS의 방식에서 벗어나, 듀얼 카메라로 전면·후면을 동시에 촬영해 친구들과 진짜 일상을 나누는 사진 기반 SNS입니다.",
-      "하루를 아침·점심·저녁으로 나누어 기록하고, 24시간 스토리·음성 댓글·사진 방명록으로 자연스럽게 소통할 수 있습니다.",
-      "경북소프트웨어마이스터고 캡스톤 대상 수상 및 App Store 출시, 아진산업 SILI AX 기술전에서 사용자 시연을 진행했습니다.",
+      "기존 SNS의 연출된 공유 방식에서 벗어나, 듀얼 카메라로 전면·후면을 동시에 촬영해 진짜 일상을 나누는 사진 기반 SNS입니다.",
+      "하루를 아침·점심·저녁으로 나누어 기록하고, 24시간 스토리·음성 댓글·사진 방명록으로 부담 없이 소통할 수 있도록 기획·디자인·개발했습니다.",
+      "경북소프트웨어마이스터고 캡스톤 대상 수상과 App Store 출시를 진행했으며, 아진산업 SILI AX 기술전에서 실사용자 검증을 진행했습니다.",
     ],
     preview: [
       "./img/snapy-preview-1.jpg",
@@ -23,7 +25,7 @@ const PROJECTS = {
       "./img/snapy-preview-3.jpg",
       "./img/snapy-preview-4.jpg",
       "./img/snapy-preview-5.jpg",
-      "./img/snapy-preview-6.jpg",
+      "./img/snapy-preview-7.jpg",
       "./img/snapy-preview-7.jpg",
       "./img/snapy-preview-8.jpg",
     ],
@@ -73,34 +75,35 @@ const PROJECTS = {
   },
   qiri: {
     accent: "#FD6F22",
-    kicker: "Apple Watch 사용자를 위한 더 나은 AI 에이전트",
+    kicker: "Apple Watch 사용자를 위한 AI 에이전트",
+    modalKicker: "watchOS · AI",
+    modalRole: "기획 · 디자인 · 개발",
     title: "Qiri",
     period: "2025.03.12 ~ 2025.07.15",
     links: {
-      github: "https://github.com/marieeeeeeeeeeeeeee",
+      github: "https://github.com/kec08/QiriUpdate",
       figma:
-        "https://www.figma.com/design/dUoKwh8ulwY4H6TF49P7eZ/Qiri_2025-1%ED%95%99%EA%B8%B0-%EC%BA%A1%EC%8A%A4%ED%86%A4?node-id=0-1&t=hQSx3vak2ZWqcb71-1",
+        "https://www.figma.com/design/dUoKwh8ulwY4H6TF49P7eZ/Qiri_2025-1%ED%95%99%EA%B8%B0-%EC%BA%A1%EC%8A%A4%ED%86%A4?node-id=0-1",
       demo: "https://www.youtube.com/watch?si=77nzsMGncG27vWzh&v=rTH4DSMs_nk&feature=youtu.be",
     },
     overview: [
-      "Siri가 맥락과 맞지 않는 답변이나 검색 링크를 제공하는 불편함에서 출발한 Apple Watch용 AI 에이전트입니다.",
-      "손 제스처와 음성으로 질문하고, 작은 화면에서도 필요한 답변을 빠르게 확인할 수 있도록 iOS·watchOS 경험을 분리해 설계했습니다.",
-      "경북소프트웨어마이스터고 캡스톤 대상 수상 및 대구 ICT 융합 엑스포 전시를 통해 접근성과 서비스 전달 방식을 검증했습니다.",
+      "기존 Siri가 질문의 맥락을 충분히 이해하지 못하고 검색 결과만 보여주는 문제에서 출발한 Apple Watch AI 에이전트입니다.",
+      "AssistiveTouch 손 제스처로 앱을 실행하고 음성으로 질문하면, AI 답변을 실시간으로 확인할 수 있도록 iOS·watchOS 경험을 분리해 설계했습니다.",
+      "경북소프트웨어마이스터고 캡스톤 대상 수상과 대구 ICT 융합 엑스포 전시를 통해 접근성과 서비스 전달 방식을 검증했습니다.",
     ],
     role: [
       "SwiftUI와 Combine 기반으로 iOS·watchOS 화면을 분리하고 공통 상태 흐름 설계",
-      "AuthenticationServices와 Moya TargetType을 활용한 Apple 로그인 및 사용자 식별 구현",
+      "Moya TargetType으로 Apple 로그인 API를 분리하고 apple_user_id 기반 인증 구현",
       "WatchConnectivity의 isReachable 확인·재시도·updateApplicationContext 백업 동기화 구성",
-      "URLSession dataTask로 AI 스트리밍 청크를 버퍼링하고 첫 응답부터 Watch 화면에 반영",
+      "URLSession dataTask로 AI 응답을 청크 단위 수신·버퍼링하고 완성된 문장부터 Watch에 반영",
     ],
     tech: [
       "Swift / SwiftUI: 선언적 UI 기반 화면 구성",
       "WatchOS: Apple Watch 전용 UX 및 제스처 기반 인터랙션",
       "WatchConnectivity: iPhone ↔ Watch 데이터/메시지 통신",
-      "Combine: 선언적 상태 관리 및 데이터 흐름",
-      "URLSession: 네트워크 통신 및 스트리밍 응답 처리",
-      "Moya: 네트워크 계층 추상화 및 API 관리",
-      "RxSwift: 비동기 이벤트 스트림 처리",
+      "URLSession Streaming: AI 응답의 청크 단위 수신 및 실시간 표시",
+      "Moya: 인증 API와 네트워크 계층 추상화",
+      "RxSwift / Combine: 비동기 이벤트와 공통 상태 흐름 처리",
     ],
     trouble: [
       {
@@ -134,7 +137,11 @@ const PROJECTS = {
     accent: "#FF2053",
     kicker: "같은 음악을 들으며 함께 달리는 러닝 서비스",
     title: "Pacing",
-    logo: "./img/pacing-logo.png",
+    logo: "./img/pacing-project-logo.png",
+    modalKicker: "iOS · MusicKit",
+    modalRole: "기획 · 디자인 · 개발",
+    status: "현재 운영 중",
+    release: "출시",
     period: "2026.06.20 ~",
     links: {
       github: "https://github.com/kec08/Pacing",
@@ -203,19 +210,22 @@ const PROJECTS = {
   },
   jipchak: {
     accent: "#58CCFF",
-    kicker: "사회 초년생을 위한 자취 생활 편의 플랫폼",
+    kicker: "내가 찾는 집, 바로 여기 착",
+    modalKicker: "iOS · AI",
+    modalRole: "기획 · 디자인 · 개발",
     title: "집착",
     period: "2025.08.27 ~ 2025.12.31",
     links: {
-      github: "https://github.com/gbsw-liskov",
+      github: "https://github.com/gbsw-liskov/Capstone-IOS",
+      appstore: "https://apps.apple.com/kr/app/%EC%A7%91%EC%B0%A9/id6757211728",
       figma:
-        "https://www.figma.com/design/sKOQ7FC8YnvBdUHCmCdr3X/Liskovs---%EC%9E%90%EC%B7%A8%EC%95%B1?node-id=794-3746&t=bC4MlZcu4CU5n0U1-1",
+        "https://www.figma.com/design/sKOQ7FC8YnvBdUHCmCdr3X/Liskovs---%EC%9E%90%EC%B7%A8%EC%95%B1?node-id=794-3746&t=G3jLKXZGDED0oPGA-1",
       demo: "https://youtu.be/vIUcH8E60pg?si=FS7nKiLLC_Ti2CTS",
     },
     overview: [
-      "전월세 계약 경험이 부족한 사회 초년생이 계약 전 위험 요소를 쉽게 확인하도록 돕는 AI 자취 플랫폼입니다.",
-      "매물 정보와 서류를 업로드하면 AI가 위험 요소를 분석하고, 체크리스트·대출 가이드·지도 탐색을 한 흐름으로 제공합니다.",
-      "경북소프트웨어마이스터고 캡스톤 동상 수상 및 App Store 출시까지 진행했습니다.",
+      "전월세 계약이 익숙하지 않은 사회 초년생을 위한 AI 전월세 안심 플랫폼입니다.",
+      "매물 정보와 등기부등본·건축물대장 등 서류를 AI로 분석하고, 위험 요소 체크리스트와 대출 가이드를 제공합니다.",
+      "UI/UX와 iOS 개발, 경북소프트웨어마이스터고 캡스톤 동상 수상 및 App Store 출시를 담당했습니다.",
     ],
     preview: [
       "./img/jipchak-preview-1.jpg",
@@ -224,19 +234,18 @@ const PROJECTS = {
       "./img/jipchak-preview-4.jpg",
     ],
     role: [
-      "MVVM으로 View·ViewModel·Service 책임을 나누고 Combine 단방향 상태 흐름 구성",
-      "JWT exp 확인과 Refresh Token 재발급으로 로그인 세션 유지",
-      "UIViewRepresentable로 Naver Map SDK를 SwiftUI에 연결하고 지도 상태 동기화",
-      "Moya Multipart로 JSON과 PDF를 함께 전송해 AI 매물 분석·체크리스트·대출 가이드 연동",
+      "SwiftUI·MVVM 기반 앱 구조와 ObservableObject·@Published 상태 흐름 구성",
+      "UIViewRepresentable로 Naver Map SDK를 연결하고 마커·카메라·선택 상태 동기화",
+      "Moya Multipart로 매물 정보와 이미지·PDF를 함께 전송해 AI 분석 기능 연동",
+      "체크리스트 생성·항목 추가·상태 변경·결과 확인까지의 SwiftUI 사용자 흐름 구현",
     ],
     tech: [
       "Swift / SwiftUI: 선언적 UI 기반 화면 구성",
-      "MVVM: 역할 분리로 유지보수성 강화",
-      "Combine: 상태 관리 및 데이터 흐름 처리",
-      "RxSwift: 비동기 이벤트 스트림 처리",
-      "Moya + CombineMoya: 네트워크 계층 추상화",
-      "Naver Map SDK (NMapsMap): 지도 기반 매물 탐색",
-      "UserDefaults: 토큰 저장 및 로그인 상태 복원",
+      "MVVM: 화면·상태·네트워크 책임 분리",
+      "Combine / RxSwift: 입력·로딩·에러 상태와 비동기 이벤트 처리",
+      "Moya: JSON·이미지·PDF Multipart 네트워크 요청",
+      "Naver Map SDK: 지도 기반 매물 탐색과 마커 상태 동기화",
+      "AI 분석: 매물·부동산 서류 위험 요소와 대출 가이드 생성",
     ],
     trouble: [
       {
@@ -327,7 +336,8 @@ function initScrollLinks() {
     el.addEventListener("click", (e) => {
       const targetSelector =
         el.getAttribute("data-target") || el.getAttribute("href");
-      if (!targetSelector) return;
+      // 일반 페이지 링크는 페이지 전환 스크립트에 맡기고, 앵커 링크만 부드럽게 스크롤합니다.
+      if (!targetSelector || !targetSelector.startsWith("#")) return;
       const target = document.querySelector(targetSelector);
       if (!target) return;
       e.preventDefault();
@@ -537,8 +547,18 @@ function initProjectModal() {
 
   const modalKicker = document.getElementById("modalKicker");
   const modalTitle = document.getElementById("modalTitle");
+  const modalSubtitle = document.getElementById("modalSubtitle");
   const modalPeriod = document.getElementById("modalPeriod");
   const modalBody = document.getElementById("modalBody");
+  const modalVisual = document.getElementById("modalVisual");
+  const modalProjectIcon = document.getElementById("modalProjectIcon");
+  const modalDetailLink = document.getElementById("modalDetailLink");
+  const heroImage = document.getElementById("projectHeroImage");
+  const heroKicker = document.getElementById("projectHeroKicker");
+  const heroTitle = document.getElementById("projectHeroTitle");
+  const heroPeriod = document.getElementById("projectHeroPeriod");
+  const heroGithub = document.getElementById("projectHeroGithub");
+  const screenshots = document.getElementById("projectScreenshots");
   const closeBtn = modal.querySelector(".js-close-project");
   const tabButtons = Array.from(modal.querySelectorAll(".modal-tab"));
 
@@ -563,17 +583,82 @@ function initProjectModal() {
       previewButton.hidden = !hasPreview;
       previewButton.setAttribute("aria-hidden", String(!hasPreview));
     }
-    if (modalKicker) modalKicker.textContent = p.kicker;
-    if (modalTitle) {
-      modalTitle.innerHTML = p.logo
-        ? `<img class="modal-title-logo" src="${escapeHtml(
-            p.logo
-          )}" alt="${escapeHtml(p.title)}" />`
-        : escapeHtml(p.title);
+    if (modalKicker) {
+      const tags = (p.modalKicker || p.kicker || "Project")
+        .split(/[·•|,/]+/)
+        .map((tag) => tag.trim())
+        .filter(Boolean);
+      modalKicker.innerHTML = tags
+        .map((tag, index) => {
+          const normalized = tag.toLowerCase().replace(/[^a-z0-9가-힣]+/g, "-");
+          return `<span class="modal-meta-tag modal-meta-tag--${index % 4} modal-meta-tag--${normalized}">${escapeHtml(tag)}</span>`;
+        })
+        .join("");
     }
-    if (modalPeriod) modalPeriod.textContent = p.period;
-    if (modalBody)
-      modalBody.innerHTML = renderModalBody(currentProject, currentTab);
+    if (modalTitle) modalTitle.textContent = p.title;
+    if (modalSubtitle) modalSubtitle.textContent = p.overview?.[0] || "";
+    if (modalPeriod) {
+      modalPeriod.innerHTML = `${escapeHtml(p.period)}${p.release || p.status ? ` <span class="modal-status-badge">${escapeHtml([p.release, p.status].filter(Boolean).join(" · "))}</span>` : ""}`;
+    }
+    if (modalProjectIcon) {
+      const iconByProject = {
+        snapy: "./img/snapy-icon.jpg",
+        pacing: "./img/pacing-modal-icon.png",
+        qiri: "./img/qiri-icon.png",
+        jipchak: "./img/jipchak-icon.jpg",
+      };
+      modalProjectIcon.src = iconByProject[currentProject] || "./img/project-img.jpg";
+      modalProjectIcon.alt = `${p.title} 아이콘`;
+    }
+    const sheetSrc = currentProject === "snapy"
+      ? "./img/snapy-modal-banner.jpg"
+      : currentProject === "pacing"
+        ? "./img/pacing-detail-banner.jpg"
+        : currentProject === "qiri"
+          ? "./img/qiri-modal-banner.jpg"
+          : currentProject === "jipchak"
+            ? "./img/jipchak-modal-banner.jpg"
+            : p.preview?.[0] || "./img/project-img.jpg";
+    if (modalVisual) {
+      modalVisual.src = sheetSrc;
+      modalVisual.alt = `${p.title} 프로젝트 대표 이미지`;
+    }
+    if (modalDetailLink) {
+      modalDetailLink.hidden = false;
+      modalDetailLink.href = `./project/${currentProject}/index.html`;
+      modalDetailLink.textContent = "자세히 보기 →";
+    }
+    const heroSrc = sheetSrc;
+    if (heroImage) {
+      heroImage.src = heroSrc;
+      heroImage.alt = `${p.title} 프로젝트 대표 이미지`;
+    }
+    if (heroKicker) heroKicker.textContent = p.kicker;
+    if (heroTitle) heroTitle.textContent = p.title;
+    if (heroPeriod) heroPeriod.textContent = p.period;
+    if (heroGithub) {
+      heroGithub.hidden = !p.links?.github;
+      heroGithub.href = p.links?.github || "#";
+    }
+    if (screenshots) {
+      screenshots.innerHTML = (p.preview || [])
+        .map((src, index) => `<figure><img src="${escapeHtml(src)}" alt="${escapeHtml(p.title)} 화면 ${index + 1}" loading="lazy" /></figure>`)
+        .join("");
+    }
+    if (modalBody) {
+      const quickLinks = [];
+      const quickLink = (key, label, href, icon) => `<a class="modal-quick-link modal-quick-link--${key}" href="${escapeHtml(href)}" target="_blank" rel="noreferrer" aria-label="${label}">${icon}</a>`;
+      if (p.links?.appstore) quickLinks.push(quickLink("appstore", "App Store", p.links.appstore, '<span class="modal-link-icon modal-link-icon--apple" aria-hidden="true"></span>'));
+      if (p.links?.github) quickLinks.push(quickLink("github", "GitHub", p.links.github, '<img class="modal-link-icon" src="https://cdn.simpleicons.org/github/ffffff" alt="" aria-hidden="true" />'));
+      if (p.links?.figma) quickLinks.push(quickLink("figma", "Figma", p.links.figma, '<img class="modal-link-icon" src="https://cdn.simpleicons.org/figma/ffffff" alt="" aria-hidden="true" />'));
+      if (p.links?.demo) quickLinks.push(quickLink("demo", "시연 영상", p.links.demo, '<img class="modal-link-icon" src="https://cdn.simpleicons.org/youtube/ffffff" alt="" aria-hidden="true" />'));
+      if (p.links?.blog) quickLinks.push(quickLink("blog", "Blog", p.links.blog, '<span class="modal-link-icon modal-link-icon--blog" aria-hidden="true">B</span>'));
+      modalBody.innerHTML = `<section class="modal-quick-summary">
+        <p>${escapeHtml(p.overview[0])}</p>
+        <dl><div><dt>기간</dt><dd>${escapeHtml(p.period)}${p.release || p.status ? ` <span class="modal-status-badge">${escapeHtml([p.release, p.status].filter(Boolean).join(" · "))}</span>` : ""}</dd></div><div><dt>역할</dt><dd>${escapeHtml(p.modalRole || "기획 · 디자인 · 개발")}</dd></div></dl>
+        <div class="modal-quick-actions">${quickLinks.join("")}</div>
+      </section>`;
+    }
     applyAccent();
 
     tabButtons.forEach((b) => {
@@ -613,13 +698,6 @@ function initProjectModal() {
 
   document.querySelectorAll(".js-open-project").forEach((btn) => {
     btn.addEventListener("click", () => open(btn.getAttribute("data-project")));
-  });
-
-  tabButtons.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      currentTab = btn.getAttribute("data-tab") || "overview";
-      sync();
-    });
   });
 
   if (closeBtn) closeBtn.addEventListener("click", close);
@@ -719,6 +797,142 @@ function initHeroGradientMotion() {
   overlay.style.setProperty("--hy", "26%");
 }
 
+function initGlassInteractions() {
+  const header = document.querySelector("[data-glass-header]");
+  const cursor = document.querySelector(".glass-cursor");
+  const about = document.querySelector("#about");
+  const aboutToggle = document.querySelector(".topbar-about-toggle");
+  const aboutMenu = document.querySelector("#aboutMenu");
+
+  if (header) {
+    const syncHeader = () => header.classList.toggle("is-scrolled", window.scrollY > 36);
+    syncHeader();
+    window.addEventListener("scroll", syncHeader, { passive: true });
+  }
+
+  if (aboutToggle && aboutMenu) {
+    const closeMenu = () => {
+      aboutMenu.hidden = true;
+      aboutToggle.setAttribute("aria-expanded", "false");
+    };
+
+    aboutToggle.addEventListener("click", (event) => {
+      event.preventDefault();
+      const willOpen = aboutMenu.hidden;
+      aboutMenu.hidden = !willOpen;
+      aboutToggle.setAttribute("aria-expanded", String(willOpen));
+    });
+
+    aboutMenu.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
+    document.addEventListener("click", (event) => {
+      if (!header.contains(event.target)) closeMenu();
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") closeMenu();
+    });
+  }
+
+  const themeToggle = document.querySelector(".topbar-theme-toggle");
+  if (themeToggle) {
+    try {
+      if (window.localStorage.getItem("portfolio-theme") === "light") {
+        document.body.classList.add("is-light-theme");
+      }
+    } catch (_) {}
+
+    themeToggle.addEventListener("click", (event) => {
+      event.preventDefault();
+      const isLight = document.body.classList.toggle("is-light-theme");
+      try {
+        window.localStorage.setItem("portfolio-theme", isLight ? "light" : "dark");
+      } catch (_) {}
+      themeToggle.setAttribute("aria-pressed", String(isLight));
+    });
+
+    themeToggle.setAttribute(
+      "aria-pressed",
+      String(document.body.classList.contains("is-light-theme"))
+    );
+  }
+
+  // 커서 위치와 hover 크기는 glass-pointer.js가 전역으로 관리합니다.
+  // 여기서 별도 RAF를 돌리면 About/프로젝트 영역에서 두 로직이 충돌합니다.
+  if (!cursor || window.__glassPointerManaged || document.body.classList.contains("has-glass-pointer")) return;
+  if (!window.matchMedia("(pointer: fine)").matches) return;
+
+  let cursorX = window.innerWidth / 2;
+  let cursorY = window.innerHeight / 2;
+  let targetX = cursorX;
+  let targetY = cursorY;
+  let raf = 0;
+
+  const renderCursor = () => {
+    cursorX += (targetX - cursorX) * 0.18;
+    cursorY += (targetY - cursorY) * 0.18;
+    cursor.style.left = `${cursorX}px`;
+    cursor.style.top = `${cursorY}px`;
+    raf = requestAnimationFrame(renderCursor);
+  };
+
+  const updateAboutLight = (event) => {
+    if (!about) return;
+    const rect = about.getBoundingClientRect();
+    about.style.setProperty("--about-x", `${((event.clientX - rect.left) / rect.width) * 100}%`);
+    about.style.setProperty("--about-y", `${((event.clientY - rect.top) / rect.height) * 100}%`);
+  };
+
+  document.addEventListener("pointermove", (event) => {
+    targetX = event.clientX;
+    targetY = event.clientY;
+    cursor.classList.add("is-visible");
+    updateAboutLight(event);
+  }, { passive: true });
+
+  const magneticTargets = document.querySelectorAll(".btn, .chip, .project-tab, .project-page, .sub-card, .topbar-menu a, .topbar-theme-toggle");
+  magneticTargets.forEach((target) => {
+    target.addEventListener("pointerenter", () => cursor.classList.add("is-hovering"));
+    target.addEventListener("pointerleave", () => {
+      cursor.classList.remove("is-hovering");
+      target.style.removeProperty("--magnetic-x");
+      target.style.removeProperty("--magnetic-y");
+    });
+    target.addEventListener("pointermove", (event) => {
+      const rect = target.getBoundingClientRect();
+      const x = ((event.clientX - rect.left) / rect.width - 0.5) * 12;
+      const y = ((event.clientY - rect.top) / rect.height - 0.5) * 12;
+      target.style.setProperty("--magnetic-x", `${x}px`);
+      target.style.setProperty("--magnetic-y", `${y}px`);
+    });
+    target.addEventListener("click", () => {
+      document.body.classList.add("is-pressing");
+      target.classList.add("is-sucked");
+      window.setTimeout(() => document.body.classList.remove("is-pressing"), 220);
+      window.setTimeout(() => target.classList.remove("is-sucked"), 520);
+    });
+  });
+
+  document.addEventListener("pointerleave", () => cursor.classList.remove("is-visible"));
+  renderCursor();
+  window.addEventListener("pagehide", () => cancelAnimationFrame(raf), { once: true });
+}
+
+function initAboutModal() {
+  const modal = document.getElementById("aboutDetailModal");
+  const triggers = document.querySelectorAll("[data-about-modal]");
+  if (!modal || !triggers.length) return;
+  const close = () => {
+    if (typeof modal.close === "function") modal.close();
+  };
+  triggers.forEach((trigger) => trigger.addEventListener("click", () => modal.showModal?.()));
+  modal.querySelector(".js-close-about")?.addEventListener("click", close);
+  modal.addEventListener("click", (event) => {
+    if (event.target === modal) close();
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && modal.open) close();
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   initScrollLinks();
   initReveal();
@@ -727,4 +941,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initProjectModal();
   initPosters();
   initHeroGradientMotion();
+  initGlassInteractions();
+  initAboutModal();
 });

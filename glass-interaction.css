@@ -1,0 +1,120 @@
+/* One restrained glass pointer and prism interactions across portfolio pages. */
+#about::before,#about::after{display:none!important}.cursor{display:none!important}.glass-cursor{width:28px!important;height:28px!important;margin:-14px 0 0 -14px!important;border-color:rgba(255,255,255,.9)!important;background:linear-gradient(135deg,rgba(255,255,255,.55),rgba(151,208,255,.16) 48%,rgba(8,12,21,.2))!important;box-shadow:inset 2px 2px 4px rgba(255,255,255,.72),inset -3px -3px 6px rgba(0,0,0,.28),0 5px 16px rgba(0,0,0,.35)!important}.glass-cursor.is-hovering{width:34px!important;height:34px!important;margin:-17px 0 0 -17px!important}.has-glass-pointer,.has-glass-pointer *{cursor:none!important}html.has-glass-pointer,html.has-glass-pointer *{cursor:none!important}.universal-glass-cursor{position:fixed;z-index:99999;top:-14px;left:-14px;width:28px;height:28px;border:1px solid rgba(255,255,255,.9);border-radius:50%;pointer-events:none;opacity:0;background:linear-gradient(135deg,rgba(255,255,255,.55),rgba(151,208,255,.16) 48%,rgba(8,12,21,.2));box-shadow:inset 2px 2px 4px rgba(255,255,255,.72),inset -3px -3px 6px rgba(0,0,0,.28),0 5px 16px rgba(0,0,0,.35);backdrop-filter:blur(5px) saturate(1.8);transform:translate(-50%,-50%);transition:opacity .15s,width .22s,height .22s}.universal-glass-cursor.is-visible{opacity:1}.universal-glass-cursor.is-hovering{width:34px;height:34px}
+.btn{border-color:rgba(255,255,255,.5)!important;background:linear-gradient(135deg,rgba(255,255,255,.17),rgba(142,184,255,.09))!important;box-shadow:inset 0 1px rgba(255,255,255,.72),inset 0 -1px rgba(255,255,255,.1),0 12px 28px rgba(0,0,0,.2)!important}.btn:after{background:radial-gradient(circle at 30% 22%,rgba(255,255,255,.56),rgba(141,203,255,.16) 35%,rgba(210,162,255,.1) 56%,transparent 72%)!important}.btn:hover{border-color:rgba(226,244,255,.9)!important;box-shadow:inset 0 1px rgba(255,255,255,.9),0 0 0 1px rgba(163,224,255,.23),0 14px 34px rgba(103,159,255,.23)!important}
+.project-gallery-card:hover>img{transform:none!important;filter:none!important}.project-gallery-card::before{content:"";position:absolute;z-index:5;inset:0;padding:1px;border-radius:inherit;opacity:0;pointer-events:none;background:linear-gradient(125deg,rgba(255,255,255,.84),rgba(138,224,255,.6) 28%,rgba(220,153,255,.55) 55%,rgba(216,255,137,.52) 76%,rgba(255,255,255,.8));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;transition:opacity .38s ease}.project-gallery-card:hover::before,.project-gallery-card.is-glass-selected::before{opacity:1}.project-gallery-card:hover,.project-gallery-card.is-glass-selected{border-radius:30px!important;box-shadow:inset 0 0 42px rgba(170,216,255,.17),0 20px 55px rgba(82,139,255,.2)!important}.project-gallery-card:hover::after,.project-gallery-card.is-glass-selected::after{background:linear-gradient(180deg,rgba(225,244,255,.08),rgba(5,7,14,.72))!important}.project-gallery-card:hover .project-card-arrow,.project-gallery-card.is-glass-selected .project-card-arrow{background:rgba(221,244,255,.22)!important;border-color:rgba(255,255,255,.85)!important;box-shadow:inset 0 1px rgba(255,255,255,.7),0 0 18px rgba(151,212,255,.32)!important}.project-row{isolation:isolate}.project-row::before{content:"";position:absolute;z-index:-1;inset:6px;border:1px solid transparent;border-radius:20px;opacity:0;background:linear-gradient(115deg,rgba(210,238,255,.18),rgba(163,197,255,.08) 44%,rgba(235,185,255,.18)) border-box;-webkit-mask:linear-gradient(#000 0 0) padding-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;transition:opacity .28s ease,transform .35s cubic-bezier(.18,.9,.2,1);transform:scale(.97)}.project-row.is-glass-selected,.project-row:hover{background:linear-gradient(100deg,rgba(192,229,255,.14),rgba(198,160,255,.08) 54%,rgba(231,255,177,.11))!important;box-shadow:inset 0 1px rgba(255,255,255,.18),0 16px 36px rgba(88,117,255,.15)}.project-row.is-glass-selected::before,.project-row:hover::before{opacity:1;transform:scale(1)}.project-row.is-glass-selected img,.project-row:hover img{opacity:1;transform:scale(1.035)}.project-row.is-glass-selected b,.project-row:hover b{transform:rotate(-25deg) scale(1.12);background:rgba(207,236,255,.25)!important;border-color:rgba(255,255,255,.8)}
+.btn:after{background:radial-gradient(circle at 30% 20%,rgba(255,255,255,.38),rgba(255,255,255,.08) 40%,rgba(212,188,255,.08) 62%,transparent 74%)!important}.btn:hover,.btn.is-sucked,.modal-detail-link:hover{transform:translate3d(var(--magnetic-x,0px),-2px,0) scale(1.035)!important;border-color:rgba(255,255,255,.82)!important;background:rgba(255,255,255,.16)!important;box-shadow:inset 0 1px rgba(255,255,255,.72),0 14px 34px rgba(0,0,0,.24)!important;transition:transform .55s cubic-bezier(.18,.9,.2,1),background .55s ease,box-shadow .55s ease,border-color .55s ease!important}.modal-detail-link{color:#fff!important;background:rgba(255,255,255,.09)!important;border-color:rgba(255,255,255,.42)!important;transition:transform .55s cubic-bezier(.18,.9,.2,1),background .55s ease,box-shadow .55s ease,border-color .55s ease!important}
+.btn{background:rgba(255,255,255,.10)!important}.btn:hover,.btn.is-sucked,.modal-detail-link:hover{background:rgba(255,255,255,.16)!important}
+.glass-cursor,.universal-glass-cursor{z-index:2147483647!important;isolation:isolate!important;mix-blend-mode:normal!important;will-change:transform,width,height,opacity!important}.glass-cursor.is-hovering,.universal-glass-cursor.is-hovering{width:44px!important;height:44px!important;border-radius:50%!important;background:rgba(255,255,255,.12)!important;box-shadow:inset 2px 2px 5px rgba(255,255,255,.58),inset -4px -4px 8px rgba(0,0,0,.2),0 5px 20px rgba(0,0,0,.22)!important}.glass-cursor.is-targeting,.universal-glass-cursor.is-targeting{width:var(--target-width,44px)!important;height:var(--target-height,44px)!important;border-radius:var(--target-radius,999px)!important;background:rgba(255,255,255,.10)!important;border-color:rgba(255,255,255,.82)!important;box-shadow:inset 2px 2px 6px rgba(255,255,255,.58),inset -4px -4px 10px rgba(0,0,0,.18),0 8px 26px rgba(0,0,0,.22)!important}
+.about-detail-trigger::before{display:none!important}.about-detail-trigger:hover{color:#111!important;background:rgba(255,255,255,.12)!important}
+.glass-cursor,.universal-glass-cursor{border:1px solid transparent!important;background:linear-gradient(rgba(255,255,255,.035),rgba(255,255,255,.035)) padding-box,linear-gradient(115deg,rgba(255,255,255,.86),rgba(186,221,255,.72) 24%,rgba(224,181,255,.62) 50%,rgba(255,224,176,.58) 72%,rgba(255,255,255,.84)) border-box!important}.glass-cursor.is-targeting,.universal-glass-cursor.is-targeting{background:linear-gradient(rgba(255,255,255,.045),rgba(255,255,255,.045)) padding-box,linear-gradient(115deg,rgba(255,255,255,.92),rgba(187,221,255,.8) 24%,rgba(226,181,255,.72) 50%,rgba(255,224,176,.68) 72%,rgba(255,255,255,.9)) border-box!important}
+.glass-cursor,.universal-glass-cursor{background:rgba(255,255,255,.045)!important;backdrop-filter:blur(1.5px) saturate(1.12)!important;-webkit-backdrop-filter:blur(1.5px) saturate(1.12)!important;box-shadow:inset 1px 1px 3px rgba(255,255,255,.38),inset -2px -2px 5px rgba(0,0,0,.12),0 4px 14px rgba(0,0,0,.16)!important}.glass-cursor.is-hovering,.universal-glass-cursor.is-hovering{background:rgba(255,255,255,.055)!important;backdrop-filter:blur(1.5px) saturate(1.12)!important;-webkit-backdrop-filter:blur(1.5px) saturate(1.12)!important}.glass-cursor.is-targeting,.universal-glass-cursor.is-targeting{background:rgba(255,255,255,.06)!important;backdrop-filter:blur(1.5px) saturate(1.12)!important;-webkit-backdrop-filter:blur(1.5px) saturate(1.12)!important;box-shadow:inset 1px 1px 3px rgba(255,255,255,.42),inset -2px -2px 6px rgba(0,0,0,.14),0 6px 18px rgba(0,0,0,.18)!important}
+.glass-cursor,.universal-glass-cursor{margin:0!important;transform:translate(-50%,-50%)!important;transform-origin:center center!important;top:0;left:0}
+/* 하나의 원형 글래스 커서만 사용하고, 커서 영역을 요소 크기로 확장하지 않습니다. */
+.glass-cursor,.modal-glass-cursor{display:none!important}
+.universal-glass-cursor{display:block!important;width:26px!important;height:26px!important;margin:0!important;border-radius:50%!important;pointer-events:none!important;position:fixed!important;z-index:2147483647!important;transform:translate(-50%,-50%)!important;opacity:0!important;background:rgba(255,255,255,.045)!important;border:1px solid rgba(255,255,255,.86)!important;box-shadow:inset 1px 1px 3px rgba(255,255,255,.4),inset -2px -2px 5px rgba(0,0,0,.12),0 4px 14px rgba(0,0,0,.14)!important;backdrop-filter:blur(.6px) saturate(1.04)!important;-webkit-backdrop-filter:blur(.6px) saturate(1.04)!important;transition:width .28s cubic-bezier(.2,.8,.2,1),height .28s cubic-bezier(.2,.8,.2,1),opacity .16s ease!important}
+.universal-glass-cursor.is-visible{opacity:1!important}.universal-glass-cursor.is-hovering{width:44px!important;height:44px!important}
+.universal-glass-cursor.is-targeting{width:var(--target-width)!important;height:var(--target-height)!important;border-radius:var(--target-radius)!important;background:rgba(255,255,255,.028)!important;border:1px solid rgba(255,255,255,.72)!important;box-shadow:inset 1px 1px 3px rgba(255,255,255,.28),inset -2px -2px 7px rgba(0,0,0,.1),0 8px 22px rgba(0,0,0,.13)!important;backdrop-filter:blur(.6px) saturate(1.04)!important;-webkit-backdrop-filter:blur(.6px) saturate(1.04)!important;transition:width .48s cubic-bezier(.18,.9,.2,1),height .48s cubic-bezier(.18,.9,.2,1),left .42s cubic-bezier(.18,.9,.2,1),top .42s cubic-bezier(.18,.9,.2,1),border-radius .18s ease,opacity .16s ease!important}
+dialog .universal-glass-cursor{position:fixed!important;z-index:2147483647!important}
+@media (pointer:fine){html.has-glass-pointer,html.has-glass-pointer *{cursor:none!important}}
+
+/* Targeted glass keeps the element centered and uses a restrained prism edge. */
+.universal-glass-cursor.is-targeting{border:1px solid transparent!important;background:linear-gradient(rgba(255,255,255,.035),rgba(255,255,255,.035)) padding-box,linear-gradient(115deg,rgba(255,255,255,.95),rgba(174,220,255,.82) 25%,rgba(226,181,255,.76) 51%,rgba(255,224,176,.72) 75%,rgba(255,255,255,.92)) border-box!important;transform:translate(-50%,-50%)!important;transform-origin:center center!important}
+.universal-glass-cursor.is-targeting{transition:width .52s cubic-bezier(.18,.9,.2,1),height .52s cubic-bezier(.18,.9,.2,1),left .44s cubic-bezier(.18,.9,.2,1),top .44s cubic-bezier(.18,.9,.2,1),border-radius .24s ease,opacity .16s ease!important}
+.universal-glass-cursor.is-targeting{background:linear-gradient(rgba(255,255,255,.018),rgba(255,255,255,.018)) padding-box,linear-gradient(115deg,rgba(255,255,255,.92),rgba(174,220,255,.7) 25%,rgba(226,181,255,.62) 51%,rgba(255,224,176,.58) 75%,rgba(255,255,255,.88)) border-box!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;box-shadow:inset 0 0 0 1px rgba(255,255,255,.06),0 6px 18px rgba(0,0,0,.14)!important}
+.universal-glass-cursor.is-targeting{background:rgba(255,255,255,.028)!important;background-image:none!important;border:1px solid rgba(255,255,255,.72)!important;backdrop-filter:blur(.6px)!important;-webkit-backdrop-filter:blur(.6px)!important;box-shadow:inset 0 0 0 1px rgba(255,255,255,.08),0 0 10px rgba(174,220,255,.08),0 6px 18px rgba(0,0,0,.14)!important}
+.universal-glass-cursor.is-targeting{background-color:rgba(255,255,255,.012)!important;background-image:none!important;border:1px solid rgba(255,255,255,.72)!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;box-shadow:inset 0 0 0 1px rgba(255,255,255,.08),0 0 10px rgba(174,220,255,.08),0 6px 18px rgba(0,0,0,.14)!important}
+.universal-glass-cursor::before{content:"";position:absolute;inset:-1px;border-radius:inherit;padding:1px;pointer-events:none;opacity:0;background:linear-gradient(115deg,rgba(255,255,255,.7),rgba(174,220,255,.38) 28%,rgba(226,181,255,.34) 52%,rgba(255,224,176,.3) 76%,rgba(255,255,255,.64));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;transition:opacity .3s ease}
+.universal-glass-cursor.is-targeting::before{opacity:.72}
+.universal-glass-cursor.is-targeting{backdrop-filter:blur(.6px)!important;-webkit-backdrop-filter:blur(.6px)!important}
+/* 열린 모달 내부에서는 커서와 버튼을 같은 좌표계로 맞춥니다. */
+dialog .universal-glass-cursor{position:absolute!important;z-index:2147483647!important}
+/* 모달 버튼은 자기 위치를 바꾸지 않고 glass cursor만 버튼을 감쌉니다. */
+#projectModal .modal-detail-link:hover,
+#projectModal .modal-detail-link.is-sucked,
+#projectModal .modal-quick-link:hover,
+#projectModal .modal-quick-link.is-sucked{transform:none!important}
+
+/* Download/Sub Projects use the same prism edge as the main project cards. */
+#Download .sub-card,
+#SubProjects .sub-card {
+  position: relative;
+  isolation: isolate;
+  border-color: transparent !important;
+  transition: box-shadow .38s ease, border-radius .38s ease, background .38s ease !important;
+}
+#Download .sub-card::before,
+#SubProjects .sub-card::before {
+  content: "";
+  position: absolute;
+  z-index: 5;
+  inset: 0;
+  padding: 1px;
+  border-radius: inherit;
+  opacity: 0;
+  pointer-events: none;
+  background: linear-gradient(125deg,
+    rgba(255,255,255,.84),
+    rgba(138,224,255,.6) 28%,
+    rgba(220,153,255,.55) 55%,
+    rgba(216,255,137,.52) 76%,
+    rgba(255,255,255,.8));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  transition: opacity .38s ease;
+}
+#Download .sub-card:hover,
+#SubProjects .sub-card:hover {
+  border-radius: 26px;
+  box-shadow: inset 0 0 30px rgba(170,216,255,.14), 0 18px 48px rgba(82,139,255,.18) !important;
+}
+#Download .sub-card:hover::before,
+#SubProjects .sub-card:hover::before {
+  opacity: 1;
+}
+
+/* Keep the glass treatment crisp: no backdrop blur. */
+.glass-cursor,
+.universal-glass-cursor,
+.project-gallery-card,
+.project-gallery-icon,
+.project-gallery-copy small,
+#Download .sub-card,
+#SubProjects .sub-card {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* Keep the project list hover surface in a stable blue-gray tone. */
+.project-row:hover,
+.project-row.is-glass-selected {
+  background: rgba(104, 116, 128, .22) !important;
+}
+
+/* 헤더 링크 호버는 컬러 채움 없이 중립적인 외곽선만 표시합니다. */
+.universal-glass-cursor.is-targeting.is-header-target {
+  background: transparent !important;
+  border: 1px solid rgba(255,255,255,.72) !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+.universal-glass-cursor.is-targeting.is-header-target::before {
+  display: none !important;
+}
+
+/* 화이트 모드에서는 헤더 선택 영역이 보이도록 옅은 회색을 더합니다. */
+body.is-light-theme .universal-glass-cursor.is-targeting.is-header-target {
+  background: rgba(17, 21, 34, .12) !important;
+  border-color: rgba(17, 21, 34, .26) !important;
+}
+
+/* 프로젝트 화살표 뒤의 회색 원 제거 */
+.project-row > b,
+.project-row:hover > b,
+.project-row.is-glass-selected > b {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}

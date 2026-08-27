@@ -1,0 +1,36 @@
+.detail-links{display:flex;flex-wrap:wrap;gap:10px;margin:34px 0 12px}.detail-links a{display:inline-flex;align-items:center;gap:14px;padding:12px 16px;border:1px solid rgba(255,255,255,.28);border-radius:999px;background:rgba(255,255,255,.045);transition:background .35s ease,border-color .35s ease,transform .35s ease}.detail-links a:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.68);background:rgba(255,255,255,.12)}.detail-links span{font-size:18px}
+
+/* Pacing 소개는 핵심 문장만 읽히도록 폭과 크기를 조정합니다. */
+.intro{max-width:1060px!important;font-size:clamp(24px,2.6vw,36px)!important;line-height:1.45!important}
+
+/* 본문은 일반 굵기, 핵심 기술과 수치만 강조합니다. */
+.case-study article p{font-weight:400!important}
+.case-study article p strong{font-weight:700!important}
+.case-study article h3{font-weight:600!important}
+
+/* SNAPY와 동일한 상세 사례 섹션 typography */
+.case-study h2,
+.service-screens h2{font-size:clamp(24px,3.2vw,40px)!important}
+.case-study article p{
+  margin:0 0 12px!important;
+  color:var(--muted)!important;
+  font-size:16px!important;
+  line-height:1.8!important;
+  font-weight:400!important;
+}
+.case-study article{
+  padding:0 0 28px!important;
+  border-bottom:1px solid var(--line)!important;
+}
+.case-study article + article{margin-top:32px!important}
+.case-study h3{
+  margin:0 0 14px!important;
+  color:var(--ink)!important;
+  font-size:21px!important;
+  font-weight:600!important;
+  letter-spacing:-.045em!important;
+}
+.case-study article p strong{color:var(--ink)!important;font-weight:700!important}
+.service-screens{width:100vw!important;margin-left:calc((min(980px,calc(100vw - 44px)) - 100vw)/2)!important;padding:0 max(22px,calc((100vw - 1180px)/2))!important}
+.service-screens h2{margin-bottom:8px!important}
+@media(max-width:700px){.service-screens{margin-left:calc((100vw - 100%)/-2)!important;padding:0 22px!important}}

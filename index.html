@@ -11,37 +11,33 @@
     <link rel="icon" href="./img/symbol-logo.png" />
     <link rel="apple-touch-icon" href="./img/symbol-logo.png" />
     <link rel="stylesheet" href="./style.css" />
-    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="./override.css?v=6" />
+    <link rel="stylesheet" href="./header-patch.css" />
+    <link rel="stylesheet" href="./header-motion-patch.css" />
+    <link rel="stylesheet" href="./theme-patch.css" />
+    <link rel="stylesheet" href="./project-grid-patch.css" />
+    <link rel="stylesheet" href="./glass-interaction.css?v=4" />
+    <link rel="stylesheet" href="./page-transition.css?v=4" />
+    <script src="./glass-pointer.js?v=4" defer></script>
+    <script src="./script.js?v=5" defer></script>
+    <script src="./page-transition.js?v=4" defer></script>
   </head>
   <body>
+    <header class="topbar" data-glass-header>
+      <div class="topbar-inner">
+        <nav class="topbar-nav topbar-nav--left" aria-label="페이지 이동">
+          <a href="./about/index.html">About</a>
+          <a class="scroll-link" href="./project/index.html">Projects</a>
+        </nav>
+        <a class="topbar-brand scroll-link" data-target="#hero" href="#hero" aria-label="김은찬 포트폴리오 홈">
+          <span>KIM EUN CHAN</span>
+        </a>
+        <nav class="topbar-nav topbar-nav--right" aria-label="보조 메뉴">
+          <a class="topbar-theme-toggle" href="#" aria-label="테마 변경" aria-pressed="false"></a>
+        </nav>
+      </div>
+    </header>
     <div id="wrap">
-      <header class="topbar">
-        <div class="topbar-inner">
-          <a class="topbar-brand scroll-link" data-target="#hero" href="#hero"
-            >KIM EUN CHAN</a
-          >
-          <nav class="topbar-nav" aria-label="페이지 이동">
-            <a class="scroll-link" data-target="#Introduce" href="#Introduce"
-              >introduce</a
-            >
-            <a
-              class="scroll-link"
-              data-target="#MainProjects"
-              href="#MainProjects"
-              >projects</a
-            >
-            <a class="scroll-link" data-target="#Download" href="#Download"
-              >download</a
-            >
-            <a class="scroll-link" data-target="#Activity" href="#Activity"
-              >activity</a
-            >
-            <a class="scroll-link" data-target="#endpage" href="#endpage"
-              >contact</a
-            >
-          </nav>
-        </div>
-      </header>
 
       <section id="hero" class="firstpage section-dark">
         <div class="firsttext">
@@ -60,7 +56,7 @@
           <div class="hero-overlay" aria-hidden="true"></div>
         </div>
 
-        <div class="hero-bottom">
+        <div class="hero-bottom" aria-hidden="true">
           <div class="hero-tagline reveal">
             <p class="hero-title">안녕하세요, 앱 개발자 김은찬입니다.</p>
             <p class="hero-sub">
@@ -110,12 +106,37 @@
         </div>
       </section>
 
-      <section id="profile" class="section-light">
-        <div class="mini-text"><p>profile</p></div>
-        <div class="about-me"><h2>about me</h2></div>
+      <section id="about" class="section-light about-section">
+        <div class="about-heading">
+          <div class="mini-text"><p>ABOUT</p></div>
+          <p class="about-kicker">iOS Developer · SwiftUI · Product-minded</p>
+          <h1>사용자의 불편을 발견하고,<br /><em>끝까지 쓰이는 앱</em>으로 만듭니다.</h1>
+          <p class="about-lead">
+            SwiftUI 기반 iOS 앱을 직접 설계하고 출시해 왔습니다. 기능을 만드는 데서 멈추지 않고,
+            사용자가 어디에서 망설이고 어떤 순간에 다시 돌아오는지 관찰하며 제품을 개선합니다.
+          </p>
+        </div>
+
+        <div class="about-feature">
+          <figure class="about-feature-photo">
+            <img src="./img/profile-portrait.png" alt="김은찬 프로필 사진" />
+          </figure>
+          <div class="about-feature-copy">
+            <p class="about-feature-index">ABOUT ME</p>
+            <h2>안녕하세요,<br />앱 개발자 김은찬입니다.</h2>
+            <p>
+              사용자가 실제로 겪는 불편을 기술로 해결하고, 출시 이후에도 사용자 피드백을 바탕으로 서비스를 지속적으로 개선하는 개발자를 목표로 합니다.
+            </p>
+            <a class="btn about-detail-trigger" href="./about/index.html">포트폴리오 보기 <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
 
         <div class="main-divbox profile-grid">
           <div class="profile-col">
+            <figure class="about-portrait reveal">
+              <img src="./img/profile-portrait.png" alt="김은찬 프로필 사진" />
+              <figcaption><strong>김은찬</strong><span>iOS Developer · KIM EUN CHAN</span></figcaption>
+            </figure>
             <div class="Idea reveal">
               <h3>사용자 관점에서 판단하고 <br>설계하는 개발자</h3>
               <p>
@@ -182,14 +203,15 @@
             <div class="Stack reveal">
               <h3>Stack</h3>
               <ul class="stack-img" aria-label="기술 스택">
-                <li><img src="./img/Swift.png" alt="Swift" /></li>
-                <li><img src="./img/figma.png" alt="Figma" /></li>
-                <li><img src="./img/reack.png" alt="React" /></li>
-                <li><img src="./img/java.png" alt="Java" /></li>
-                <li><img src="./img/springboot.png" alt="Spring Boot" /></li>
-                <li><img src="./img/git.png" alt="Git" /></li>
-                <li><img src="./img/Ps.png" alt="Photoshop" /></li>
-                <li><img src="./img/mysql.png" alt="MySQL" /></li>
+                <li data-stack="Swift"><img src="./img/Swift-transparent.png" alt="Swift" /></li>
+                <li data-stack="Flutter"><img class="stack-icon--flutter" src="https://cdn.simpleicons.org/flutter" alt="Flutter" /></li>
+                <li data-stack="Figma"><img src="./img/figma.png" alt="Figma" /></li>
+                <li data-stack="React"><img src="./img/reack.png" alt="React" /></li>
+                <li data-stack="Java"><img src="./img/java.png" alt="Java" /></li>
+                <li data-stack="Spring"><img src="./img/springboot.png" alt="Spring Boot" /></li>
+                <li data-stack="GitHub"><img src="https://cdn.simpleicons.org/github" alt="GitHub" /></li>
+                <li data-stack="Ps"><img src="./img/Ps.png" alt="Photoshop" /></li>
+                <li data-stack="MySQL"><img src="./img/mysql.png" alt="MySQL" /></li>
               </ul>
             </div>
           </div>
@@ -226,12 +248,6 @@
               </li>
               <li>
                 <p>04</p>
-                <h2 class="scroll-link" data-target="#Activity">
-                  activity
-                </h2>
-              </li>
-              <li>
-                <p>05</p>
                 <h2 class="scroll-link" data-target="#endpage">Contact</h2>
               </li>
             </ul>
@@ -241,7 +257,6 @@
 
       <section id="Introduce" class="section-dark">
         <div class="Introduce-mini-text">
-          <span class="span01">01</span>
           <p>Introduce</p>
         </div>
         <div class="Introduce-main-text">
@@ -259,7 +274,7 @@
         <div class="intro-stack reveal">
           <div class="intro-stack-group">
             <div class="intro-stack-tag">
-              <img src="./img/Swift.png" alt="Swift" />
+              <img src="./img/Swift-transparent.png" alt="Swift" />
               <span>Swift</span>
             </div>
             <ul class="intro-stack-list">
@@ -317,8 +332,26 @@
       </section>
 
       <section id="MainProjects" class="section-light">
-        <div class="mini-text"><p>main project</p></div>
-        <div class="about-me"><h2>Main Projects</h2></div>
+        <div class="project-section-label">project</div>
+
+        <div class="project-gallery" aria-label="주요 프로젝트">
+          <button class="project-gallery-card project-gallery-card--snapy js-open-project" type="button" data-project="snapy">
+            <img src="./img/snapy-thumbnail.png" alt="SNAPY 프로젝트 미리보기" loading="lazy" />
+            <span class="project-gallery-copy"><small>iOS · Social</small><strong>SNAPY</strong><em>친구들과 공유하는 진짜 일상</em></span>
+          </button>
+          <button class="project-gallery-card project-gallery-card--pacing js-open-project" type="button" data-project="pacing">
+            <img src="./img/Pacing-preview.jpg" alt="Pacing 프로젝트 미리보기" loading="lazy" />
+            <span class="project-gallery-copy"><small>iOS · MusicKit</small><strong>Pacing</strong><em>같은 음악을 들으며 함께 달리는 러닝</em></span>
+          </button>
+          <button class="project-gallery-card project-gallery-card--qiri js-open-project" type="button" data-project="qiri">
+            <img src="./img/Qiri.png" alt="Qiri 프로젝트 미리보기" loading="lazy" />
+            <span class="project-gallery-copy"><small>watchOS · AI</small><strong>Qiri</strong><em>Apple Watch를 위한 AI 에이전트</em></span>
+          </button>
+          <button class="project-gallery-card project-gallery-card--jipchak js-open-project" type="button" data-project="jipchak">
+            <img src="./img/jipchak-thumbnail.png" alt="집착 프로젝트 미리보기" loading="lazy" />
+            <span class="project-gallery-copy"><small>iOS · AI</small><strong>집착</strong><em>사회 초년생을 위한 자취 플랫폼</em></span>
+          </button>
+        </div>
 
         <div
           class="project-tabs reveal"
@@ -446,7 +479,7 @@
                 <figure class="project-shot">
                   <img
                     class="project-shot-img"
-                    src="./img/SNAPY-banner.jpg"
+                    src="./img/snapy-preview-1.jpg"
                     alt="SNAPY 앱 화면"
                     loading="lazy"
                   />
@@ -713,7 +746,7 @@
             rel="noreferrer"
             style="padding:0;overflow:hidden;"
           >
-            <img src="./img/SNAPY-banner.jpg" alt="SNAPY" style="width:100%;height:220px;object-fit:cover;" />
+            <img src="./img/snapy-download-banner.png" alt="SNAPY 앱 배너" style="width:100%;height:220px;object-fit:cover;object-position:center;" />
             <div style="padding:20px 22px 22px;">
               <h3 class="sub-card-title">SNAPY</h3>
               <p class="sub-card-desc">
@@ -746,7 +779,7 @@
 
           <a
             class="sub-card reveal"
-            href="https://youtu.be/vIUcH8E60pg?si=FS7nKiLLC_Ti2CTS"
+            href="https://apps.apple.com/kr/app/%EC%A7%91%EC%B0%A9/id6757211728"
             target="_blank"
             rel="noreferrer"
             style="padding:0;overflow:hidden;"
@@ -770,7 +803,7 @@
             rel="noreferrer"
             style="padding:0;overflow:hidden;"
           >
-            <img src="./img/IceStudy.jpg" alt="얼공" style="width:100%;height:220px;object-fit:cover;" />
+            <img src="./img/eolgong-download-banner.png" alt="얼공 앱 배너" style="width:100%;height:220px;object-fit:cover;object-position:center;" />
             <div style="padding:20px 22px 22px;">
               <h3 class="sub-card-title">얼공</h3>
               <p class="sub-card-desc">
@@ -953,95 +986,13 @@
         </div>
       </section>
 
-      <section id="Activity" class="section-dark">
-        <div class="Introduce-mini-text">
-          <span class="span01">03</span>
-          <p>Activity</p>
-        </div>
-        <div class="activity-wrap activity-wrap--three">
-          <!-- 왼쪽: Activity & Career -->
-          <div class="activity-col reveal">
-            <h2 class="activity-title">Activity & Career</h2>
-            <ul class="timeline timeline-reverse-date">
-              <li><span class="t-date">2026.06</span><span class="t-text">귀뚜라미장학재단 모범학생 장학금 수료</span></li>
-              <li><span class="t-date">2026.06</span><span class="t-text">아진산업 SILI AX 기술전 경상북도교육청 부스 운영</span></li>
-              <li><span class="t-date">2026.01</span><span class="t-text">실리콘밸리 글로벌 기업 견학 및 탐방 프로그램 참여</span></li>
-              <li><span class="t-date">2026.01</span><span class="t-text">교내 캡스톤 프로젝트 동상</span></li>
-              <li><span class="t-date">2025.12</span><span class="t-text">코즈모 인턴십</span></li>
-              <li><span class="t-date">2025.12</span><span class="t-text">2학년 2학기 3C 인재상 수상</span></li>
-              <li><span class="t-date">2025.12</span><span class="t-text">교내 아이디어 경진대회 동상 수상</span></li>
-              <li><span class="t-date">2025.12</span><span class="t-text">SW-AI 인재 양성 프로젝트 최우수상</span></li>
-              <li><span class="t-date">2025.12</span><span class="t-text">지식전략산업 스타트업 아이디어 경진대회 혁신상</span></li>
-              <li><span class="t-date">2025.10</span><span class="t-text">대구 Expo ICT 박람회 행사 도우미</span></li>
-              <li><span class="t-date">2025.09</span><span class="t-text">마이스터 특성화고 디지털 융합 챌린지 최우수상</span></li>
-              <li><span class="t-date">2025.07</span><span class="t-text">구미 직업교육 박람회 행사 도우미</span></li>
-              <li><span class="t-date">2025.07</span><span class="t-text">교내 캡스톤 프로젝트 대상</span></li>
-              <li><span class="t-date">2025.06</span><span class="t-text">2025 디지털 SW-AI 캠프 도우미</span></li>
-              <li><span class="t-date">2025.03</span><span class="t-text">FRAME 디자인 동아리 창설</span></li>
-              <li><span class="t-date">2025.02</span><span class="t-text">2025 블레이버스 MVP 개발 해커톤 참여</span></li>
-              <li><span class="t-date">2025.01</span><span class="t-text">교내 해커톤 프로젝트 장려</span></li>
-              <li><span class="t-date">2024.12</span><span class="t-text">의성군인재육성재단 장학금 수료</span></li>
-              <li><span class="t-date">2024.08</span><span class="t-text">2024 Microsoft Azure 해커그라운드 장려</span></li>
-            </ul>
-          </div>
-      
-          <!-- 오른쪽: 자격증 + 활동 세로로 쌓기 -->
-          <div class="activity-col-right reveal">
-            <div class="activity-col activity-col--sub">
-              <h2 class="activity-title">License</h2>
-              <ul class="timeline">
-                <li>
-                  <span class="t-date">2026.07.09</span>
-                  <div class="t-text">
-                    <strong>정보처리산업기사</strong>
-                    <p class="t-sub">한국산업인력공단</p>
-                    <p class="t-sub">자격번호 26251160120X</p>
-                  </div>
-                </li>
-                <li>
-                  <span class="t-date">2024.09.25</span>
-                  <div class="t-text">
-                    <strong>정보처리기능사</strong>
-                    <p class="t-sub">한국산업인력공단</p>
-                    <p class="t-sub">자격번호 24403160650J</p>
-                  </div>
-                </li>
-                <li>
-                  <span class="t-date">2024.12.04</span>
-                  <div class="t-text">
-                    <strong>웹디자인기능사</strong>
-                    <p class="t-sub">한국산업인력공단</p>
-                    <p class="t-sub">자격번호 24404041554E</p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-      
-            <div class="activity-col activity-col--sub">
-              <h2 class="activity-title">Education</h2>
-              <ul class="timeline">
-                <li>
-                  <span class="t-date">2024 ~</span>
-                  <div class="t-text">
-                    <strong>경북 소프트웨어 마이스터고등학교</strong>
-                    <p class="t-sub">소프트웨어개발과 졸업 예정</p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <footer id="endpage" class="section-dark">
         <div class="endfage-mini-text">
-          <span class="span04">04</span>
           <p>Contact</p>
         </div>
 
         <div class="endfage-main-text reveal">
-          <div class="endfage-main-text1"><h1>Thank</h1></div>
-          <div class="endfage-main-text2"><h1>you</h1></div>
+          <div class="endfage-main-text1"><h1>Thank you</h1></div>
           <div class="endfage-main-text3"><h1>for Watching</h1></div>
         </div>
 
@@ -1067,13 +1018,21 @@
       </footer>
     </div>
 
-    <div
-      class="toast"
-      id="toast"
-      role="status"
-      aria-live="polite"
-      aria-atomic="true"
-    ></div>
+    <dialog class="about-modal" id="aboutDetailModal" aria-label="About 상세">
+      <div class="about-modal-inner">
+        <button class="modal-close js-close-about" type="button" aria-label="About 닫기">×</button>
+        <div class="about-modal-profile">
+          <img src="./img/profile-portrait.png" alt="김은찬 프로필 사진" />
+        </div>
+        <div class="about-modal-copy">
+          <p>(01) ABOUT ME</p>
+          <h2>만드는 과정을 좋아하고,<br /><em>쓰이는 결과</em>를 중요하게 생각합니다.</h2>
+          <p>경북소프트웨어마이스터고등학교에서 소프트웨어를 공부하며, SwiftUI 기반 iOS 앱을 설계하고 직접 출시했습니다. 기능 구현보다 사용자가 자연스럽게 이해하고 계속 사용할 수 있는 흐름을 고민합니다.</p>
+          <div class="about-modal-tags"><span>SwiftUI</span><span>MVVM</span><span>UI/UX</span><span>App Store Release</span></div>
+          <div class="stack-detail" aria-label="기술 스택"><span>Swift</span><span>Flutter</span><span>React</span><span>Figma</span><span>Spring</span><span>Git</span></div>
+        </div>
+      </div>
+    </dialog>
 
     <dialog class="project-modal" id="projectModal" aria-label="프로젝트 상세">
       <div class="modal-inner">
@@ -1082,15 +1041,31 @@
           type="button"
           aria-label="프로젝트 목록으로 돌아가기"
         >
-          <span aria-hidden="true">‹</span>
+          <span aria-hidden="true">×</span>
         </button>
+        <section class="project-detail-hero">
+          <img id="projectHeroImage" src="./img/snapy-thumbnail.png" alt="" />
+          <div class="project-detail-hero-shade"></div>
+          <div class="project-detail-hero-copy">
+            <p id="projectHeroKicker"></p>
+            <h2 id="projectHeroTitle"></h2>
+            <p id="projectHeroPeriod"></p>
+            <a id="projectHeroGithub" class="project-detail-hero-link" href="#" target="_blank" rel="noreferrer">GitHub ↗</a>
+          </div>
+        </section>
         <div class="modal-header">
-          <p class="modal-kicker" id="modalKicker">Project</p>
+          <div class="modal-project-heading">
+            <img class="modal-project-icon" id="modalProjectIcon" src="./img/snapy-icon.jpg" alt="" />
+            <div class="modal-kicker" id="modalKicker" aria-label="프로젝트 태그">Project</div>
+          </div>
           <h2 class="modal-title" id="modalTitle">Title</h2>
+          <p class="modal-subtitle" id="modalSubtitle"></p>
           <p class="modal-period" id="modalPeriod"></p>
+            <a class="modal-detail-link btn btn-ghost" id="modalDetailLink" href="#" hidden>자세히 보기 →</a>
         </div>
 
         <div class="modal-content-grid">
+          <div class="modal-visual" aria-hidden="true"><img id="modalVisual" src="./img/snapy-modal-banner.jpg" alt="" /></div>
           <nav class="modal-tabs" role="tablist" aria-label="프로젝트 상세 목차">
           <button
             class="modal-tab is-active"
@@ -1160,6 +1135,7 @@
           </nav>
 
           <div class="modal-body" id="modalBody"></div>
+          <section class="project-screenshots" id="projectScreenshots" aria-label="프로젝트 스크린샷"></section>
         </div>
       </div>
     </dialog>

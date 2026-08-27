@@ -1,0 +1,61 @@
+.service-screens{width:100vw;margin-left:calc((min(980px,calc(100vw - 44px)) - 100vw)/2);padding:0 max(22px,calc((100vw - 1180px)/2))}.service-screens h2{margin-bottom:8px}.screen-note{display:none!important}.screens-horizontal{display:flex!important;grid-template-columns:none!important;gap:18px!important;overflow-x:auto!important;padding:0 0 8px!important;scroll-snap-type:x mandatory;scrollbar-width:none;-ms-overflow-style:none}.screens-horizontal::-webkit-scrollbar{display:none;width:0;height:0}.screens-horizontal figure{flex:0 0 238px!important;height:422px;margin:0!important;overflow:hidden;border:1px solid rgba(255,255,255,.15);border-radius:20px;background:#202124;scroll-snap-align:start}.screens-horizontal img{display:block;width:100%;height:100%;object-fit:contain!important;background:#202124}@media(max-width:700px){.service-screens{margin-left:calc((100vw - 100%)/-2);padding:0 22px}.screens-horizontal figure{flex-basis:194px;height:344px}}
+
+/* SNAPY 상세 내용은 사례가 잘 읽히도록 제목 크기를 한 단계 낮춥니다. */
+.screens-horizontal figure{flex-basis:220px!important;aspect-ratio:1242/2688;height:auto!important}
+@media(max-width:700px){.screens-horizontal figure{flex-basis:178px!important;height:auto!important}}
+.snapy-page h2,
+.case-study h2,
+.service-screens h2 {
+  font-size: clamp(24px, 3.2vw, 40px) !important;
+}
+
+.hero h1 {
+  font-size: clamp(48px, 8vw, 112px) !important;
+}
+
+.tech-note,
+.case-study article p,
+.case-study > p:not(.label),
+.validation h3 {
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.tech-note {
+  max-width: 760px;
+  margin: 24px 0 0;
+}
+
+.case-study article {
+  padding: 0 0 28px;
+  border-bottom: 1px solid var(--line);
+}
+
+.case-study article + article {
+  margin-top: 32px;
+}
+
+.case-study h3,
+.validation h3 {
+  margin: 0 0 14px;
+  color: var(--ink);
+  font-size: 21px;
+  letter-spacing: -.045em;
+}
+
+.case-study article p {
+  margin: 0 0 12px;
+}
+
+.validation-result {
+  color: #c8ff75 !important;
+  font-weight: 800;
+}
+
+.tech-note strong,
+.case-study strong,
+.validation strong,
+.block li strong {
+  color: var(--ink);
+  font-weight: 700;
+}

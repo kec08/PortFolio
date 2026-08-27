@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>집착 | 김은찬</title>
+    <link rel="stylesheet" href="../detail.css?v=3" />
+    <link rel="stylesheet" href="../snapy/snapy.css" />
+    <link rel="stylesheet" href="../../glass-interaction.css?v=5" />
+    <script src="../detail.js?v=2" defer></script>
+    <script src="../detail-links.js?v=1" defer></script>
+    <script src="../project-theme.js" defer></script>
+    <script src="../../glass-pointer.js?v=5" defer></script>
+  </head>
+  <body data-project="jipchak">
+    <a class="back" href="../index.html" aria-label="프로젝트 목록으로 돌아가기">‹</a>
+    <button class="project-theme-toggle detail-theme-toggle" type="button" data-project-theme-toggle aria-label="화이트 모드로 변경" aria-pressed="false"></button>
+
+    <section class="hero">
+      <img data-image alt="집착 대표 이미지" />
+      <div class="hero-copy">
+        <span class="tag" data-tag></span>
+        <h1 data-title></h1>
+        <p data-period></p>
+        <div class="detail-links" data-detail-links aria-label="집착 관련 링크"></div>
+      </div>
+    </section>
+
+    <main>
+      <p class="intro" data-summary></p>
+
+      <section class="block">
+        <p class="label">MY ROLE</p>
+        <h2>주요 구현</h2>
+        <ul data-role></ul>
+      </section>
+
+      <section class="block">
+        <p class="label">TECH</p>
+        <h2>사용 기술</h2>
+        <div class="tech" data-tech></div>
+        <p class="tech-note">
+          SwiftUI와 MVVM을 기반으로 화면 상태와 비즈니스 로직을 분리하고, <strong>Combine</strong>·Moya·Naver Map SDK를 조합해 매물 탐색부터 서류 분석, 계약 전 체크리스트까지의 흐름을 구현했습니다.
+        </p>
+      </section>
+
+      <section class="block case-study">
+        <p class="label">PROBLEM SOLVING</p>
+        <h2>문제 해결 과정</h2>
+
+        <article>
+          <h3>SwiftUI와 Naver Map 상태 동기화</h3>
+          <p>
+            Naver Map SDK가 UIKit 기반이라 SwiftUI 상태와 지도 이벤트를 직접 연결하기 어려웠습니다. 카메라 이동과 마커 선택이 즉시 반영되지 않아 지도와 매물 상세 정보가 어긋났습니다.
+          </p>
+          <p>
+            <strong>UIViewRepresentable</strong>로 NMFMapView를 연결하고, updateUIView에서 좌표가 변경된 경우에만 카메라를 갱신했습니다. 지도 이벤트는 ViewModel의 <strong>@Published</strong> 상태로 전달해 일관되게 관리했습니다.
+          </p>
+        </article>
+
+        <article>
+          <h3>PDF 파일 접근 및 업로드 안정성</h3>
+          <p>
+            외부 PDF는 Security-Scoped Resource로 보호되어 직접 접근할 때 권한 오류가 발생했습니다. JSON과 PDF를 함께 보내야 해 일반 업로드 방식으로는 요청을 처리하기 어려웠습니다.
+          </p>
+          <p>
+            PDF 형식과 크기를 먼저 검증하고 접근 권한을 획득한 뒤 파일을 읽도록 변경했습니다. <strong>Moya Multipart</strong>로 매물 정보 JSON과 PDF를 하나의 요청으로 전송해 잘못된 파일과 권한 오류를 사전에 처리했습니다.
+          </p>
+        </article>
+      </section>
+
+      <section class="block service-screens">
+        <p class="label">(02) SCREENSHOTS</p>
+        <h2>서비스 화면</h2>
+        <p class="screen-note">가로로 넘겨 보세요.</p>
+        <div class="screens screens-horizontal" aria-label="집착 서비스 화면">
+          <figure><img src="../../img/jipchak-preview-1.jpg" alt="집착 체크리스트 화면" /></figure>
+          <figure><img src="../../img/jipchak-preview-2.jpg" alt="집착 매물 분석 화면" /></figure>
+          <figure><img src="../../img/jipchak-preview-3.jpg" alt="집착 지도 화면" /></figure>
+          <figure><img src="../../img/jipchak-preview-4.jpg" alt="집착 대출 가이드 화면" /></figure>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
