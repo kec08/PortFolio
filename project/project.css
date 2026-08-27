@@ -127,4 +127,7 @@ header>.project-theme-toggle{grid-column:3!important;grid-row:1!important;justif
 header>.project-theme-toggle{position:absolute!important;right:18px!important;top:50%!important;transform:translateY(-50%)!important}
 header>.project-theme-toggle:hover{transform:translateY(-50%) scale(1.08)!important}
 @media(max-width:700px){header{height:54px!important;padding:0 13px!important}}
+.page-shared-header>a{font-size:16px!important;font-weight:900!important;letter-spacing:-.09em!important}
+.page-shared-header nav a.is-current{padding:8px 12px!important;margin:-8px -12px!important;border-radius:999px!important}
+body.is-light-theme .page-shared-header nav a.is-current{background:rgba(17,21,34,.12)!important;box-shadow:inset 0 1px rgba(255,255,255,.72),0 4px 14px rgba(17,21,34,.08)!important;color:#111522!important}
 header.page-shared-header{width:100vw!important}
