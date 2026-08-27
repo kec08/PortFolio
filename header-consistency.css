@@ -2,9 +2,11 @@
 .page-shared-header .topbar-brand,
 .page-shared-header .brand,
 .page-shared-header > a:not(.topbar-brand){
-  font-size:16px!important;
+  font-family:ui-rounded,"SF Pro Rounded","Pretendard-Regular",system-ui,sans-serif!important;
+  font-size:18px!important;
   font-weight:900!important;
-  letter-spacing:-.09em!important;
+  letter-spacing:-.08em!important;
+  text-shadow:0 1px 18px rgba(255,255,255,.22)!important;
 }
 .page-shared-header nav a.is-current{
   padding:8px 12px!important;
