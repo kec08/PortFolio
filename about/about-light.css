@@ -1,0 +1,4 @@
+/* White mode uses a clear blue accent throughout the About page. */
+.light {
+  --accent: #2f80ed !important;
+}

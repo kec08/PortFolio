@@ -1,0 +1,24 @@
+/* Header transitions from a page-attached bar to a floating glass capsule. */
+.topbar{top:0!important;left:0!important;right:0!important;transform:none!important;width:100%!important;height:82px!important;border:0!important;border-radius:0!important;background:rgba(18,19,23,.94)!important;box-shadow:none!important;backdrop-filter:blur(10px)!important;transition:top .62s cubic-bezier(.2,.8,.2,1),left .62s cubic-bezier(.2,.8,.2,1),width .62s cubic-bezier(.2,.8,.2,1),height .62s cubic-bezier(.2,.8,.2,1),border-radius .62s cubic-bezier(.2,.8,.2,1),background .62s ease,box-shadow .62s ease!important}.topbar-inner{width:min(1440px,calc(100% - 64px))!important;margin:0 auto!important;padding:0!important}.topbar.is-scrolled{top:14px!important;left:50%!important;right:auto!important;transform:translateX(-50%)!important;width:min(1240px,calc(100% - 32px))!important;height:58px!important;border:1px solid rgba(255,255,255,.22)!important;border-radius:999px!important;background:linear-gradient(100deg,rgba(24,28,39,.6),rgba(182,218,246,.3) 57%,rgba(205,255,136,.19))!important;box-shadow:inset 0 1px rgba(255,255,255,.36),0 18px 42px rgba(0,0,0,.24)!important;backdrop-filter:blur(22px) saturate(1.55)!important}@media(max-width:720px){.topbar{height:64px!important}.topbar-inner{width:calc(100% - 28px)!important}.topbar.is-scrolled{top:8px!important;width:calc(100% - 16px)!important;height:54px!important}}
+.topbar.is-scrolled{background:transparent!important;box-shadow:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+
+/* 스크롤 헤더는 뒤 요소의 색이 비치는 Apple 스타일 글래스로 표시합니다. */
+.topbar.is-scrolled {
+  background: rgba(255, 255, 255, .14) !important;
+  border-color: rgba(255, 255, 255, .26) !important;
+  box-shadow: inset 0 1px rgba(255, 255, 255, .24), 0 14px 36px rgba(0, 0, 0, .12) !important;
+  backdrop-filter: blur(22px) saturate(1.45) !important;
+  -webkit-backdrop-filter: blur(22px) saturate(1.45) !important;
+}
+
+body:not(.is-light-theme) .topbar.is-scrolled {
+  background: rgba(255, 255, 255, .14) !important;
+}
+
+body.is-light-theme .topbar.is-scrolled {
+  background: rgba(255, 255, 255, .68) !important;
+  border-color: rgba(17, 21, 34, .16) !important;
+  box-shadow: inset 0 1px rgba(255, 255, 255, .7), 0 14px 36px rgba(38, 45, 72, .1) !important;
+  backdrop-filter: blur(22px) saturate(1.45) !important;
+  -webkit-backdrop-filter: blur(22px) saturate(1.45) !important;
+}

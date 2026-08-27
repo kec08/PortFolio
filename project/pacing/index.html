@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pacing | 김은찬</title>
+    <link rel="stylesheet" href="../detail.css?v=4" />
+    <link rel="stylesheet" href="./pacing.css?v=4" />
+    <link rel="stylesheet" href="../../glass-interaction.css?v=6" />
+    <script src="../detail.js" defer></script>
+    <script src="../detail-links.js?v=1" defer></script>
+    <script src="../project-theme.js" defer></script>
+    <script src="../../glass-pointer.js?v=6" defer></script>
+  </head>
+  <body data-project="pacing">
+    <a class="back" href="../index.html" aria-label="프로젝트 목록으로 닫기">×</a>
+    <button class="project-theme-toggle detail-theme-toggle" type="button" data-project-theme-toggle aria-label="화이트 모드로 변경" aria-pressed="false"></button>
+    <section class="hero">
+      <img data-image alt="Pacing 프로젝트 배너" />
+      <div class="hero-copy"><span class="tag" data-tag></span><h1 data-title></h1><p data-period></p><div class="detail-links" data-detail-links aria-label="Pacing 관련 링크"></div></div>
+    </section>
+    <main>
+      <p class="intro" data-summary></p>
+      <section class="block"><p class="label">MY ROLE</p><h2>만든 경험</h2><ul data-role></ul></section>
+      <section class="block"><p class="label">TECH</p><h2>사용 기술</h2><div class="tech" data-tech></div></section>
+      <section class="block case-study refactoring">
+        <p class="label">REFACTORING</p>
+        <h2>리팩터링 및 성능 개선</h2>
+        <article>
+          <h3>러닝 통계 계산 최적화</h3>
+          <p><strong>lazy 기반 단일 순회</strong>로 변경해 중간 배열 생성을 제거하고 거리·시간·유효 페이스를 한 번에 누적했습니다.<br>100,000개 기록 기준 <strong>83.6% 개선</strong>을 확인했습니다.</p>
+        </article>
+        <article>
+          <h3>러닝 경로 계산 최적화</h3>
+          <p>위도·경도 배열을 따로 복사하지 않고 좌표를 한 번만 순회해 최솟값과 최댓값을 직접 갱신했습니다.<br>불필요한 컬렉션 생성과 다중 순회를 제거했습니다.</p>
+        </article>
+      </section>
+      <section class="block case-study">
+        <p class="label">PROBLEM SOLVING</p>
+        <h2>문제 해결 과정</h2>
+        <article>
+          <h3>같이 듣기 중 곡 전환 동기화</h3>
+          <p>1초 주기로 세션을 갱신하는 구조에서 재생 위치 보정과 곡 변경 이벤트가 구분되지 않아,<br>게스트 기기의 곡 전환이 지연되거나 재생 준비가 중복되는 문제가 있었습니다.</p>
+          <p><strong>playbackEventID</strong>를 추가해 곡 변경 이벤트와 위치 보정 이벤트를 분리하고,<br>새 곡 이벤트가 발생하면 이전 비동기 재생 준비 작업의 결과를 무효화했습니다.</p>
+        </article>
+        <article>
+          <h3>백그라운드 전환 시 러닝 기록 유지</h3>
+          <p>앱을 백그라운드로 전환하면 시간은 증가하지만 거리·페이스·칼로리·지도 경로가<br>갱신되지 않는 문제가 있었습니다.</p>
+          <p><strong>location·audio 백그라운드 모드</strong>와 allowsBackgroundLocationUpdates를 적용하고,<br>위치 이벤트가 LocationManager에서 ViewModel을 거쳐 화면까지 전달되도록 흐름을 안정화했습니다.</p>
+        </article>
+      </section>
+
+      <section class="block service-screens">
+        <p class="label">(02) SCREENSHOTS</p>
+        <h2>서비스 화면</h2>
+        <p class="screen-note">가로로 넘겨 보세요.</p>
+        <div class="screens screens-horizontal" aria-label="Pacing 서비스 화면">
+        <img src="../../img/pacing-preview-1.jpg" alt="Pacing 시작 화면" />
+        <img src="../../img/pacing-preview-2.jpg" alt="Pacing 러닝 기록 화면" />
+        <img src="../../img/pacing-preview-3.jpg" alt="Pacing 러닝 상세 화면" />
+        <img src="../../img/pacing-preview-4.jpg" alt="Pacing 친구 화면" />
+        <img src="../../img/pacing-preview-5.jpg" alt="Pacing 러닝 지도 화면" />
+        <img src="../../img/pacing-preview-6.jpg" alt="Pacing 음악 재생 화면" />
+        <img src="../../img/pacing-preview-7.jpg" alt="Pacing 주변 러너 화면" />
+        <img src="../../img/pacing-preview-8.jpg" alt="Pacing 플레이리스트 화면" />
+        <img src="../../img/pacing-preview-9.jpg" alt="Pacing 주간 러닝 통계 화면" />
+      </div></section>
+    </main>
+  </body>
+</html>
