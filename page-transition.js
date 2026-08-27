@@ -2,6 +2,16 @@
   const header = document.querySelector('.nav, body > header, html > header');
   if (header) {
     header.classList.add('page-shared-header');
+    const currentPath = window.location.pathname.replace(/\/$/, '') || '/';
+    header.querySelectorAll('nav a[href]').forEach((anchor) => {
+      const destination = new URL(anchor.href, window.location.href);
+      const destinationPath = destination.pathname.replace(/\/$/, '') || '/';
+      const isHome = currentPath === '/' && destinationPath === '/index.html';
+      const isCurrent = destination.origin === window.location.origin && (destinationPath === currentPath || isHome);
+      anchor.classList.toggle('is-current', isCurrent);
+      if (isCurrent) anchor.setAttribute('aria-current', 'page');
+      else anchor.removeAttribute('aria-current');
+    });
     const syncHeader = () => header.classList.toggle('is-scrolled', window.scrollY > 36);
     syncHeader();
     window.addEventListener('scroll', syncHeader, { passive: true });

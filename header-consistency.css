@@ -1,0 +1,20 @@
+/* Final header details shared by Home, About, and Projects. */
+.page-shared-header .topbar-brand,
+.page-shared-header .brand,
+.page-shared-header > a:not(.topbar-brand){
+  font-size:16px!important;
+  font-weight:900!important;
+  letter-spacing:-.09em!important;
+}
+.page-shared-header nav a.is-current{
+  padding:8px 12px!important;
+  margin:-8px -12px!important;
+  border-radius:999px!important;
+}
+body.is-light-theme .page-shared-header nav a.is-current,
+.light .page-shared-header nav a.is-current{
+  background:rgba(17,21,34,.12)!important;
+  box-shadow:inset 0 1px rgba(255,255,255,.72),0 4px 14px rgba(17,21,34,.08)!important;
+  color:#111522!important;
+}
+#MainProjects .project-stage,#MainProjects .project-tabs{display:none!important}

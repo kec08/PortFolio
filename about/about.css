@@ -105,6 +105,9 @@ main{display:flex!important;flex-direction:column!important}
 .license-list>div strong,.license-list>div p{min-width:0!important}
 .license-list>div p{grid-column:2!important}
 @media(max-width:720px){.credential-layout{grid-template-columns:1fr!important;gap:0!important}.education-card{border-right:0!important;border-bottom:1px solid var(--line)!important;padding-right:0!important}.license-list .credential-label{padding-top:22px!important}.license-list>div{grid-template-columns:92px minmax(0,1fr)!important;gap:14px!important}}
+.page-shared-header .brand{font-size:16px!important;font-weight:900!important;letter-spacing:-.09em!important}
+.page-shared-header nav a.is-current{padding:8px 12px!important;margin:-8px -12px!important;border-radius:999px!important}
+.light .page-shared-header nav a.is-current{background:rgba(17,21,34,.12)!important;box-shadow:inset 0 1px rgba(255,255,255,.72),0 4px 14px rgba(17,21,34,.08)!important;color:#111522!important}
 body:not(.light) .stack-label img,body:not(.light) .stack-tags img,body:not(.light) .stack span img{filter:brightness(0) invert(1)!important}
 .light .stack-label img,.light .stack-tags img,.light .stack span img{filter:brightness(0)!important}
 html,body:not(.light){background:#0b0c0f!important}
