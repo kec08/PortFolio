@@ -6,3 +6,22 @@ body.is-light-theme #Activity,body.is-light-theme #endpage{background:#fff!impor
 .topbar-theme-toggle::after{content:none!important}
 body.is-light-theme .topbar-theme-toggle{background-image:none!important;color:#10131d!important}
 body.is-light-theme .topbar-theme-toggle::after{content:"☀"!important;display:block!important;color:currentColor!important;font:400 27px/44px Arial,sans-serif!important;text-align:center!important}
+
+/* 홈 다크 모드에서는 달 아이콘을 흰색으로 표시합니다. */
+body:not(.is-light-theme) .topbar-theme-toggle {
+  background-image: url("./img/moon.png") !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: 24px 24px !important;
+  color: transparent !important;
+  filter: none !important;
+}
+
+body:not(.is-light-theme) .topbar-theme-toggle::before {
+  content: none !important;
+  display: none !important;
+}
+
+body.is-light-theme .topbar-theme-toggle {
+  filter: none !important;
+}

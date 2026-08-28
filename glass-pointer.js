@@ -15,7 +15,7 @@
     // 모달이 열릴 때 이전 프로젝트 카드의 큰 매핑 영역이 모달을 덮지 않게 합니다.
     if (openDialog) {
       activeTarget = null;
-      cursor.classList.remove('is-targeting', 'is-header-target');
+      cursor.classList.remove('is-targeting', 'is-header-target', 'is-theme-target');
       cursor.style.removeProperty('--target-width');
       cursor.style.removeProperty('--target-height');
       cursor.style.removeProperty('--target-radius');
@@ -32,7 +32,7 @@
 
   const clearTarget = () => {
     activeTarget = null;
-    cursor.classList.remove('is-targeting', 'is-header-target');
+    cursor.classList.remove('is-targeting', 'is-header-target', 'is-theme-target');
     cursor.style.removeProperty('--target-width');
     cursor.style.removeProperty('--target-height');
     cursor.style.removeProperty('--target-radius');
@@ -65,6 +65,7 @@
       : target.matches('.project-row, .sub-card, .activity-card') ? '20px' : '999px';
     cursor.style.setProperty('--target-radius', radius);
     cursor.classList.toggle('is-header-target', isHeaderControl);
+    cursor.classList.toggle('is-theme-target', target.matches('.topbar-theme-toggle'));
     cursor.classList.add('is-targeting');
   };
 

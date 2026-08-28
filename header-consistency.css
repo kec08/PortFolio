@@ -19,4 +19,30 @@ body.is-light-theme .page-shared-header nav a.is-current,
   box-shadow:inset 0 1px rgba(255,255,255,.72),0 4px 14px rgba(17,21,34,.08)!important;
   color:#111522!important;
 }
+
 #MainProjects .project-stage,#MainProjects .project-tabs{display:none!important}
+
+/* 홈 헤더는 스크롤 시 폭·높이·모서리가 한 번에 튀지 않도록 부드럽게 전환합니다. */
+.topbar {
+  will-change: width, height, top, border-radius, background, box-shadow;
+  transition: width .72s cubic-bezier(.2,.8,.2,1), height .72s cubic-bezier(.2,.8,.2,1), top .72s cubic-bezier(.2,.8,.2,1), border-radius .72s cubic-bezier(.2,.8,.2,1), border-color .5s ease, background .5s ease, box-shadow .5s ease !important;
+}
+
+/* 홈 테마 아이콘의 현재 페이지용 음수 마진을 제거해 좌우 간격을 맞춥니다. */
+.topbar nav a.topbar-theme-toggle,
+.topbar nav a.topbar-theme-toggle.is-current {
+  margin: 0 !important;
+}
+
+/* 헤더 내부의 불필요한 좌우 여백을 줄입니다. */
+.topbar-inner {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 16px !important;
+}
+
+/* 홈 헤더의 왼쪽 메뉴 항목 간격을 컴팩트하게 조정합니다. */
+.topbar .topbar-nav--left {
+  gap: 10px !important;
+}
