@@ -112,8 +112,8 @@ body.is-light-theme .page-shared-header nav a.is-current,
   position: static !important;
   transform: none !important;
   white-space: nowrap !important;
-  font-size: 16px !important;
-  font-weight: 900 !important;
+  font-size: 17px !important;
+  font-weight: 800 !important;
   letter-spacing: -.09em !important;
 }
 
@@ -194,10 +194,18 @@ body header.page-shared-header:not(.topbar).is-scrolled {
 /* 화이트 모드의 프로젝트·어바웃 스크롤 헤더도 홈처럼 밝은 글래스로 표시합니다. */
 body.is-light-theme header.page-shared-header:not(.topbar).is-scrolled,
 .light header.page-shared-header:not(.topbar).is-scrolled {
-  background: linear-gradient(100deg, rgba(255,255,255,.94), rgba(214,223,243,.9) 56%, rgba(230,244,231,.92)) !important;
+  background: rgba(255, 255, 255, .68) !important;
   border-color: rgba(17,21,34,.12) !important;
-  box-shadow: 0 18px 42px rgba(80,95,125,.16), inset 0 1px rgba(255,255,255,.96) !important;
-  backdrop-filter: blur(22px) saturate(1.35) !important;
+  box-shadow: inset 0 1px rgba(255,255,255,.7), 0 14px 36px rgba(38,45,72,.1) !important;
+  backdrop-filter: blur(22px) saturate(1.45) !important;
+}
+
+/* 홈 스크롤 헤더와 동일하게 다크 모드도 무지갯빛 없는 단색 글래스로 표시합니다. */
+body:not(.is-light-theme):not(.light) header.page-shared-header:not(.topbar).is-scrolled {
+  background: rgba(255, 255, 255, .14) !important;
+  border-color: rgba(255, 255, 255, .26) !important;
+  box-shadow: inset 0 1px rgba(255,255,255,.24), 0 14px 36px rgba(0,0,0,.12) !important;
+  backdrop-filter: blur(22px) saturate(1.45) !important;
 }
 
 body header.page-shared-header:not(.topbar) > nav {
@@ -335,4 +343,14 @@ body:not(.is-light-theme) .topbar .topbar-theme-toggle.is-current::before {
   width: 24px !important;
   height: 24px !important;
   background: url("./img/moon.png") center / contain no-repeat !important;
+}
+
+/* 프로젝트·어바웃의 브랜드 색상도 홈 헤더 기준으로 통일합니다. */
+body.is-light-theme header.page-shared-header:not(.topbar) > a:first-child,
+.light header.page-shared-header:not(.topbar) > a:first-child {
+  color: #10131d !important;
+}
+
+body:not(.is-light-theme):not(.light) header.page-shared-header:not(.topbar) > a:first-child {
+  color: rgba(255, 255, 255, .86) !important;
 }
