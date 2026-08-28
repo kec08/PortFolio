@@ -110,6 +110,17 @@ body.is-light-theme .universal-glass-cursor.is-targeting.is-header-target {
   border-color: rgba(17, 21, 34, .26) !important;
 }
 
+/* 홈 화이트 모드의 테마 아이콘 뒤에는 선택 원을 표시하지 않습니다. */
+body.is-light-theme .universal-glass-cursor.is-theme-target {
+  background: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
+body.is-light-theme .universal-glass-cursor.is-theme-target::before {
+  display: none !important;
+}
+
 /* 프로젝트 화살표 뒤의 회색 원 제거 */
 .project-row > b,
 .project-row:hover > b,

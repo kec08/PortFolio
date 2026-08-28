@@ -68,6 +68,14 @@ body.is-light-theme #projectModal .modal-meta-tag--1,body.is-light-theme #projec
 body.is-light-theme .topbar-theme-toggle{background-image:none!important;color:#10131d!important}
 body.is-light-theme .topbar-theme-toggle::after{content:"☀"!important;display:block!important;color:currentColor!important;font:400 27px/44px Arial,sans-serif!important;text-align:center!important}
 
+/* 홈 헤더의 좌우 콘텐츠 여백을 줄여 화면 가장자리와 더 가깝게 배치합니다. */
+.topbar-inner {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 10px !important;
+}
+
 /* 홈 About 소개 문장은 '서비스를'가 한 단어처럼 보이도록 본문 폭을 넓힙니다. */
 .about-feature-copy>p:not(.about-feature-index){max-width:760px!important}
 
@@ -420,3 +428,14 @@ body.is-light-theme #projectModal .modal-meta-tag--3{color:#087a52!important;bac
 .topbar-theme-toggle::after{content:none!important;display:none!important}
 body.is-light-theme .topbar-theme-toggle{background-image:none!important;color:#10131d!important}
 body.is-light-theme .topbar-theme-toggle::after{content:"☀"!important;display:block!important;color:currentColor!important;font:400 27px/44px Arial,sans-serif!important;text-align:center!important}
+
+/* 테마 아이콘은 현재 페이지 표시용 원형 배경을 사용하지 않습니다. */
+.topbar-theme-toggle.is-current,
+body.is-light-theme .topbar-theme-toggle.is-current,
+body.is-light-theme .topbar nav a.is-current.topbar-theme-toggle {
+  padding: 0 !important;
+  margin: 0 0 0 6px !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
