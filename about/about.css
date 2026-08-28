@@ -135,6 +135,20 @@ html,body:not(.light){background:#0b0c0f!important}
 .activity-type{position:absolute!important;top:20px!important;right:20px!important;padding:5px 8px!important;border:1px solid currentColor!important;border-radius:999px!important;color:var(--accent)!important;font-size:11px!important;font-weight:600!important}
 .activity-type-work{color:#ffbc76!important}
 .activity-card:hover{transform:none!important;border-color:var(--line)!important;background:rgba(255,255,255,.045)!important;box-shadow:none!important}
+
+/* 어바웃 페이지는 스크롤 기능은 유지하고 우측 스크롤바 UI만 숨깁니다. */
+html,
+body {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
 .activity-card{isolation:isolate!important;border-color:transparent!important}
 .activity-card::before{content:""!important;position:absolute!important;z-index:5!important;inset:0!important;padding:1px!important;border-radius:inherit!important;opacity:0!important;pointer-events:none!important;background:linear-gradient(125deg,rgba(255,255,255,.84),rgba(138,224,255,.6) 28%,rgba(220,153,255,.55) 55%,rgba(216,255,137,.52) 76%,rgba(255,255,255,.8))!important;-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0)!important;-webkit-mask-composite:xor!important;mask-composite:exclude!important;transition:opacity .38s ease!important}
 .activity-card:hover::before{opacity:1!important}
