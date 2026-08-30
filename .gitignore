@@ -1,0 +1,7 @@
+# macOS metadata
+.DS_Store
+**/.DS_Store
+
+# Local editor settings
+.vscode/*
+!.vscode/settings.json
