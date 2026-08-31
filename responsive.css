@@ -151,6 +151,88 @@ img, video, svg, canvas { max-width: 100%; }
     background: none !important;
   }
 
+  /* Match project and About headers to the compact home header. */
+  body header.page-shared-header:not(.topbar),
+  body > header:not(.topbar),
+  body > .nav {
+    position: fixed !important;
+    z-index: 1000 !important;
+    top: 8px !important;
+    left: 50% !important;
+    width: calc(100% - 16px) !important;
+    height: 58px !important;
+    margin: 0 !important;
+    padding: 0 8px !important;
+    transform: translateX(-50%) !important;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) !important;
+    gap: 4px !important;
+  }
+
+  /* About has a more specific top-state rule; keep its frame on the home size. */
+  body header.nav.page-shared-header:not(.topbar):not(.is-scrolled) {
+    position: fixed !important;
+    top: 8px !important;
+    left: 50% !important;
+    width: calc(100% - 16px) !important;
+    height: 58px !important;
+    margin: 0 !important;
+    padding: 0 8px !important;
+    transform: translateX(-50%) !important;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) !important;
+    border: 0 !important;
+    border-radius: 999px !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+  }
+
+  body header.page-shared-header:not(.topbar) > nav,
+  body > header:not(.topbar) nav,
+  body > .nav nav {
+    display: flex !important;
+    min-width: 0 !important;
+    gap: 1px !important;
+    overflow: visible !important;
+    font-size: 10px !important;
+  }
+
+  body header.page-shared-header:not(.topbar) > nav a,
+  body > header:not(.topbar) nav a,
+  body > .nav nav a {
+    display: inline-flex !important;
+    padding: 7px 5px !important;
+    font-size: 10px !important;
+    white-space: nowrap !important;
+  }
+
+  body header.page-shared-header:not(.topbar) > a:first-child,
+  body > header:not(.topbar) > a,
+  body > .nav .brand {
+    position: static !important;
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    justify-self: center !important;
+    transform: none !important;
+    font-size: 10px !important;
+    white-space: nowrap !important;
+  }
+
+  body header.page-shared-header:not(.topbar) > .project-theme-toggle,
+  body header.page-shared-header:not(.topbar) > .theme,
+  body > header:not(.topbar) > .project-theme-toggle,
+  body > .nav > .theme {
+    position: static !important;
+    grid-column: 3 !important;
+    grid-row: 1 !important;
+    justify-self: end !important;
+    width: 32px !important;
+    height: 32px !important;
+    flex: 0 0 32px !important;
+    transform: none !important;
+  }
+
   .project-gallery-card {
     height: auto !important;
     aspect-ratio: 16 / 9;
