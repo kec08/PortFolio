@@ -116,8 +116,8 @@ body.is-light-theme .hero .detail-link:hover{
   background:rgba(255,255,255,.14)!important;
 }
 body.is-light-theme .hero .detail-link-icon:not(.detail-link-icon--apple):not(.detail-link-icon--blog){filter:brightness(0) invert(1)!important}
-body.is-light-theme > .project-theme-toggle{background-image:url("../../img/moon.png")!important;color:transparent!important}
-body.is-light-theme > .project-theme-toggle::before{content:none!important}
+body.is-light-theme > .project-theme-toggle{background-image:none!important;color:#111522!important}
+body.is-light-theme > .project-theme-toggle::before{content:"☀"!important;display:block!important;color:currentColor!important;font:400 24px/1 Arial,sans-serif!important;text-align:center!important}
 
 /* 상세 페이지의 섹션 라벨과 검증 수치는 화이트 모드에서 파란색으로 강조합니다. */
 body.is-light-theme main .label,
@@ -128,8 +128,8 @@ body.is-light-theme main .validation-result{
 /* 상세 화면도 목록·홈 헤더의 우측 테마 버튼 위치에 맞춥니다. */
 .detail-theme-toggle{top:21px!important;right:max(32px,calc((100vw - 1240px)/2 + 32px))!important;width:44px!important;height:44px!important}
 @media(min-width:701px){
-  body[data-project] > button.project-theme-toggle.detail-theme-toggle{top:21px!important;left:24px!important;right:auto!important}
-  body > .back{top:21px!important;left:88px!important;width:44px!important;height:44px!important}
+  body[data-project] > button.project-theme-toggle.detail-theme-toggle{top:21px!important;left:auto!important;right:max(32px,calc((100vw - 1240px)/2 + 32px))!important}
+  body > .back{top:21px!important;left:24px!important;width:44px!important;height:44px!important}
 }
 @media(max-width:700px){
   .detail-theme-toggle{top:13px!important;right:14px!important}
