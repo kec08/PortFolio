@@ -140,6 +140,17 @@ img, video, svg, canvas { max-width: 100%; }
     flex: 0 0 32px !important;
   }
 
+  body:not(.is-light-theme) .topbar .topbar-theme-toggle::before {
+    content: none !important;
+    display: none !important;
+  }
+
+  body:not(.is-light-theme) .topbar .topbar-theme-toggle.is-current::before {
+    content: none !important;
+    display: none !important;
+    background: none !important;
+  }
+
   .project-gallery-card {
     height: auto !important;
     aspect-ratio: 16 / 9;
