@@ -323,6 +323,16 @@ img, video, svg, canvas { max-width: 100%; }
   }
 }
 
+/* 모바일 다크 모드에서는 모든 헤더의 달 아이콘을 흰색으로 표시합니다. */
+@media (max-width: 900px) {
+  body:not(.is-light-theme) .topbar-theme-toggle,
+  body:not(.is-light-theme) .project-theme-toggle,
+  body:not(.light) .theme {
+    background-image: url("./img/moon.png") !important;
+    filter: brightness(0) invert(1) !important;
+  }
+}
+
 /* Final mobile video rule: preserve the complete 16:9 frame. */
 @media (max-width: 720px) {
   /* Keep the fixed mobile header clear of the first video frame. */
