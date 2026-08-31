@@ -275,6 +275,15 @@ img, video, svg, canvas { max-width: 100%; }
   .links a, .links .contact-phone { max-width: 100%; overflow-wrap: anywhere; }
 }
 
+/* Keep the About menu spacing aligned with Projects on compact screens. */
+@media (max-width: 800px) {
+  body header.nav.page-shared-header:not(.topbar) > nav {
+    gap: 23px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
 /* Final mobile video rule: preserve the complete 16:9 frame. */
 @media (max-width: 720px) {
   /* Keep the fixed mobile header clear of the first video frame. */
