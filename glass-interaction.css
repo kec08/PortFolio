@@ -121,14 +121,6 @@ body.is-light-theme .universal-glass-cursor.is-theme-target::before {
   display: none !important;
 }
 
-/* 테마 아이콘 호버 시 커서 오버레이가 아이콘을 덮지 않도록 숨깁니다. */
-.universal-glass-cursor.is-theme-target {
-  display: none !important;
-  opacity: 0 !important;
-  visibility: hidden !important;
-  pointer-events: none !important;
-}
-
 /* 프로젝트 화살표 뒤의 회색 원 제거 */
 .project-row > b,
 .project-row:hover > b,
