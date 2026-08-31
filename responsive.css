@@ -25,6 +25,16 @@ img, video, svg, canvas { max-width: 100%; }
 
   #MainProjects.section-light { padding-top: 64px !important; }
 
+  #SubProjects .mini-text,
+  #SubProjects .about-me {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+  }
+
+  #SubProjects .about-me h2 {
+    text-align: left !important;
+  }
+
   .project-gallery-card {
     height: auto !important;
     aspect-ratio: 16 / 9;
