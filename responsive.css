@@ -11,6 +11,7 @@ img, video, svg, canvas { max-width: 100%; }
 
   /* Keep profile imagery compact on small screens. */
   #about.about-section { padding-top: 48px !important; }
+  #about.about-section { padding-bottom: 48px !important; }
   .about-feature { gap: 28px !important; }
   .about-feature-photo { width: min(140px, 42vw) !important; height: 192px !important; min-height: 0 !important; }
   .intro-photo { width: min(128px, 42vw) !important; height: 180px !important; }
@@ -21,6 +22,8 @@ img, video, svg, canvas { max-width: 100%; }
     grid-auto-rows: auto !important;
     gap: 10px !important;
   }
+
+  #MainProjects.section-light { padding-top: 64px !important; }
 
   .project-gallery-card {
     height: auto !important;
