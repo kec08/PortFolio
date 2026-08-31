@@ -277,6 +277,11 @@ img, video, svg, canvas { max-width: 100%; }
 
 /* Final mobile video rule: preserve the complete 16:9 frame. */
 @media (max-width: 720px) {
+  /* Keep the fixed mobile header clear of the first video frame. */
+  .firstpage .hero-visual {
+    margin-top: 78px !important;
+  }
+
   .hero-visual { height: auto !important; }
   .portfolio-main-img {
     height: auto !important;
