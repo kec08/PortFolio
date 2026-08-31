@@ -3,6 +3,15 @@ html, body { min-width: 0; overflow-x: hidden; }
 img, video, svg, canvas { max-width: 100%; }
 
 @media (max-width: 720px) {
+  /* The home hero should follow the video height instead of filling the viewport. */
+  .firstpage { min-height: 0 !important; }
+  .hero-visual { aspect-ratio: auto; }
+  .portfolio-main-img { height: auto; aspect-ratio: auto; object-fit: contain; }
+
+  /* Keep profile imagery compact on small screens. */
+  .about-feature-photo { width: min(210px, 58vw) !important; height: 280px !important; min-height: 0 !important; }
+  .intro-photo { width: min(180px, 55vw) !important; height: 250px !important; }
+
   .hero { height: 78vw; min-height: 340px; max-height: 560px; }
   .hero-copy { left: 20px; right: 20px; bottom: 42px; min-width: 0; }
   .hero h1 { font-size: clamp(48px, 16vw, 82px); overflow-wrap: anywhere; }
