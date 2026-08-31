@@ -95,6 +95,51 @@ img, video, svg, canvas { max-width: 100%; }
     text-align: center !important;
   }
 
+  /* Keep home navigation usable on mobile: links, brand, and theme control. */
+  .topbar-inner {
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) !important;
+    gap: 4px !important;
+    padding: 0 8px !important;
+  }
+
+  .topbar-nav--left {
+    display: flex !important;
+    gap: 1px !important;
+    min-width: 0 !important;
+    overflow: visible !important;
+  }
+
+  .topbar-nav--left > a,
+  .topbar-nav--left > a:not(.topbar-about-toggle) {
+    display: inline-flex !important;
+    padding: 7px 5px !important;
+    font-size: 10px !important;
+    white-space: nowrap !important;
+  }
+
+  .topbar .topbar-brand {
+    display: block !important;
+    font-size: 10px !important;
+    white-space: nowrap !important;
+  }
+
+  .topbar-nav--right {
+    display: flex !important;
+    justify-content: flex-end !important;
+    min-width: 0 !important;
+  }
+
+  .topbar-nav--right > a:not(.topbar-theme-toggle) {
+    display: none !important;
+  }
+
+  .topbar-theme-toggle {
+    display: grid !important;
+    width: 32px !important;
+    height: 32px !important;
+    flex: 0 0 32px !important;
+  }
+
   .project-gallery-card {
     height: auto !important;
     aspect-ratio: 16 / 9;
