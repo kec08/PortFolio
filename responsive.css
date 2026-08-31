@@ -278,7 +278,7 @@ img, video, svg, canvas { max-width: 100%; }
 /* Keep the About menu spacing aligned with Projects on compact screens. */
 @media (max-width: 800px) {
   body header.nav.page-shared-header:not(.topbar) > nav {
-    gap: 23px !important;
+    gap: 1px !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
