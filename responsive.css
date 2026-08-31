@@ -287,54 +287,57 @@ img, video, svg, canvas { max-width: 100%; }
   }
 }
 
-/* 최종 다크모드 아이콘 규칙: 홈도 프로젝트와 동일하게 원본 흰색 달을 유지합니다. */
-body:not(.is-light-theme) .topbar .topbar-theme-toggle,
-body:not(.is-light-theme) .topbar .topbar-theme-toggle:hover,
-body:not(.is-light-theme) .topbar .topbar-theme-toggle.is-current:hover {
-  background-color: transparent !important;
-  background-image: url("./img/moon.png") !important;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-  background-size: 24px 24px !important;
-  filter: none !important;
-}
-
+/* 모바일 테마 아이콘은 실제 심볼만 사용하고, 호버 커서가 덮지 않게 합니다. */
 @media (max-width: 900px) {
+  .topbar .topbar-theme-toggle,
+  body header.page-shared-header:not(.topbar) > .project-theme-toggle,
+  body header.page-shared-header:not(.topbar) > .theme,
+  body > header:not(.topbar) > .project-theme-toggle,
+  body > .nav > .theme {
+    width: 32px !important;
+    height: 32px !important;
+    flex: 0 0 32px !important;
+    display: grid !important;
+    place-items: center !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 20px 20px !important;
+    filter: none !important;
+  }
+
   body:not(.is-light-theme) .topbar .topbar-theme-toggle,
-  body:not(.is-light-theme) .topbar .topbar-theme-toggle:hover,
-  body:not(.is-light-theme) .topbar .topbar-theme-toggle.is-current:hover {
-    background-size: 20px 20px !important;
+  body:not(.is-light-theme) header.page-shared-header:not(.topbar) > .project-theme-toggle,
+  body:not(.is-light-theme) header.page-shared-header:not(.topbar) > .theme,
+  body:not(.is-light-theme) > header:not(.topbar) > .project-theme-toggle,
+  body:not(.light) > .nav > .theme {
+    background-image: url("./img/moon.png") !important;
   }
-}
 
-/* 다크모드 호버에서도 달 아이콘이 배경색에 가려지지 않도록 유지합니다. */
-body:not(.is-light-theme) .topbar-theme-toggle:hover,
-body:not(.is-light-theme) .project-theme-toggle:hover,
-body:not(.light) .theme:hover {
-  background-color: rgba(255, 255, 255, .10) !important;
-  background-image: url("./img/moon.png") !important;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-  background-size: 24px 24px !important;
-  filter: brightness(0) invert(1) !important;
-}
-
-@media (max-width: 900px) {
-  body:not(.is-light-theme) .topbar-theme-toggle:hover,
-  body:not(.is-light-theme) .project-theme-toggle:hover,
-  body:not(.light) .theme:hover {
-    background-size: 20px 20px !important;
+  body.is-light-theme .topbar .topbar-theme-toggle,
+  body.is-light-theme header.page-shared-header:not(.topbar) > .project-theme-toggle,
+  body.is-light-theme header.page-shared-header:not(.topbar) > .theme,
+  body.is-light-theme > header:not(.topbar) > .project-theme-toggle,
+  body.light > .nav > .theme {
+    background-image: url("./img/sun-black.svg") !important;
   }
-}
 
-/* moon.png는 원본이 흰색이므로 다크모드에서 반전 필터를 적용하지 않습니다. */
-body:not(.is-light-theme) .topbar-theme-toggle,
-body:not(.is-light-theme) .topbar-theme-toggle:hover,
-body:not(.is-light-theme) .project-theme-toggle,
-body:not(.is-light-theme) .project-theme-toggle:hover,
-body:not(.light) .theme,
-body:not(.light) .theme:hover {
-  filter: none !important;
+  .topbar .topbar-theme-toggle::before,
+  .topbar .topbar-theme-toggle::after,
+  body header.page-shared-header:not(.topbar) > .project-theme-toggle::before,
+  body header.page-shared-header:not(.topbar) > .project-theme-toggle::after,
+  body header.page-shared-header:not(.topbar) > .theme::before,
+  body header.page-shared-header:not(.topbar) > .theme::after {
+    content: none !important;
+    display: none !important;
+  }
+
+  .universal-glass-cursor.is-theme-target {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
 }
 
 /* 홈 헤더를 기준으로 태블릿·큰 모바일 폭의 공통 헤더 값을 통일합니다. */
