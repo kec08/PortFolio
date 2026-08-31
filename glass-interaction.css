@@ -132,6 +132,12 @@ body:not(.is-light-theme) .universal-glass-cursor.is-theme-target::before {
   display: none !important;
 }
 
+/* 테마 버튼 위에서는 글래스 커서 자체를 숨겨 아이콘을 완전히 노출합니다. */
+.universal-glass-cursor.is-theme-target {
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
 /* 프로젝트 화살표 뒤의 회색 원 제거 */
 .project-row > b,
 .project-row:hover > b,
