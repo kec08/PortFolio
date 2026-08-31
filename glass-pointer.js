@@ -87,7 +87,7 @@
     const target = event.target.closest(mappedTargets);
     const themeToggle = event.target.closest('.topbar-theme-toggle');
     if (themeToggle) {
-      // 테마 버튼 위에는 확대형 글래스 커서를 띄우지 않아 아이콘이 가려지지 않게 합니다.
+      // 테마 아이콘 위에는 확대형 글래스 커서를 띄우지 않아 아이콘이 가려지지 않게 합니다.
       window.clearTimeout(clearTimer);
       clearTarget();
       cursor.classList.add('is-theme-target');
