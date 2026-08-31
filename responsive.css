@@ -284,6 +284,45 @@ img, video, svg, canvas { max-width: 100%; }
   }
 }
 
+/* 홈 헤더를 기준으로 태블릿·큰 모바일 폭의 공통 헤더 값을 통일합니다. */
+@media (min-width: 721px) and (max-width: 900px) {
+  body header.page-shared-header:not(.topbar),
+  body > header:not(.topbar),
+  body > .nav {
+    height: 82px !important;
+    padding: 0 16px !important;
+  }
+
+  body header.page-shared-header:not(.topbar) > nav,
+  body > header:not(.topbar) nav,
+  body > .nav nav {
+    gap: 10px !important;
+    padding: 0 !important;
+  }
+
+  body header.page-shared-header:not(.topbar) > nav a,
+  body > header:not(.topbar) nav a,
+  body > .nav nav a {
+    padding: 12px 14px !important;
+    font-size: 13px !important;
+  }
+
+  body header.page-shared-header:not(.topbar) > a:first-child,
+  body > header:not(.topbar) > a,
+  body > .nav .brand {
+    font-size: 17px !important;
+  }
+
+  body header.page-shared-header:not(.topbar) > .project-theme-toggle,
+  body header.page-shared-header:not(.topbar) > .theme,
+  body > header:not(.topbar) > .project-theme-toggle,
+  body > .nav > .theme {
+    width: 44px !important;
+    height: 44px !important;
+    flex-basis: 44px !important;
+  }
+}
+
 /* Final mobile video rule: preserve the complete 16:9 frame. */
 @media (max-width: 720px) {
   /* Keep the fixed mobile header clear of the first video frame. */
