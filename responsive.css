@@ -307,6 +307,16 @@ body:not(.light) .theme:hover {
   }
 }
 
+/* moon.png는 원본이 흰색이므로 다크모드에서 반전 필터를 적용하지 않습니다. */
+body:not(.is-light-theme) .topbar-theme-toggle,
+body:not(.is-light-theme) .topbar-theme-toggle:hover,
+body:not(.is-light-theme) .project-theme-toggle,
+body:not(.is-light-theme) .project-theme-toggle:hover,
+body:not(.light) .theme,
+body:not(.light) .theme:hover {
+  filter: none !important;
+}
+
 /* 홈 헤더를 기준으로 태블릿·큰 모바일 폭의 공통 헤더 값을 통일합니다. */
 @media (min-width: 721px) and (max-width: 900px) {
   body header.page-shared-header:not(.topbar),
