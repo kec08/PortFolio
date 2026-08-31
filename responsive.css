@@ -325,6 +325,22 @@ img, video, svg, canvas { max-width: 100%; }
 
 /* 모바일 다크 모드에서는 모든 헤더의 달 아이콘을 흰색으로 표시합니다. */
 @media (max-width: 900px) {
+  /* 홈 기준 모바일 헤더: 테마 버튼 크기와 세로 정렬을 통일합니다. */
+  body .topbar-theme-toggle,
+  body header.page-shared-header:not(.topbar) > .project-theme-toggle,
+  body header.page-shared-header:not(.topbar) > .theme,
+  body > header:not(.topbar) > .project-theme-toggle,
+  body > .nav > .theme {
+    width: 32px !important;
+    height: 32px !important;
+    flex: 0 0 32px !important;
+    align-self: center !important;
+  }
+
+  body .topbar-nav--right {
+    align-items: center !important;
+  }
+
   body:not(.is-light-theme) .topbar-theme-toggle,
   body:not(.is-light-theme) .project-theme-toggle,
   body:not(.light) .theme {
