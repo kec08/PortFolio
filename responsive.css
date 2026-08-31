@@ -364,6 +364,26 @@ img, video, svg, canvas { max-width: 100%; }
   }
 }
 
+/* 721px 이상은 데스크톱 헤더 크기를 복구하고, 아이콘 축소는 실제 모바일에만 적용합니다. */
+@media (min-width: 721px) and (max-width: 900px) {
+  body .topbar-theme-toggle,
+  body header.page-shared-header:not(.topbar) > .project-theme-toggle,
+  body header.page-shared-header:not(.topbar) > .theme,
+  body > header:not(.topbar) > .project-theme-toggle,
+  body > .nav > .theme {
+    width: 44px !important;
+    height: 44px !important;
+    flex-basis: 44px !important;
+    transform: none !important;
+    background-size: 24px 24px !important;
+  }
+
+  body.is-light-theme .topbar-theme-toggle::after {
+    font-size: 27px !important;
+    line-height: 44px !important;
+  }
+}
+
 /* Final mobile video rule: preserve the complete 16:9 frame. */
 @media (min-width: 721px) {
   #endpage .endfage-main-text3 h1 .desktop-only-break { display: block !important; }
