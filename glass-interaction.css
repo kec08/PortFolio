@@ -121,6 +121,17 @@ body.is-light-theme .universal-glass-cursor.is-theme-target::before {
   display: none !important;
 }
 
+/* 홈 다크모드 테마 아이콘은 글래스 커서가 덮지 않도록 프로젝트 버튼처럼 비웁니다. */
+body:not(.is-light-theme) .universal-glass-cursor.is-theme-target {
+  background: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
+body:not(.is-light-theme) .universal-glass-cursor.is-theme-target::before {
+  display: none !important;
+}
+
 /* 프로젝트 화살표 뒤의 회색 원 제거 */
 .project-row > b,
 .project-row:hover > b,
