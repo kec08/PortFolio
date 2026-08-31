@@ -438,3 +438,66 @@ img, video, svg, canvas { max-width: 100%; }
     object-position: center !important;
   }
 }
+
+/* 최종 모바일 헤더 아이콘 규칙: 이전 중복 선언보다 마지막에 적용합니다. */
+@media (max-width: 900px) {
+  body .topbar .topbar-theme-toggle,
+  body .topbar .topbar-theme-toggle.is-current,
+  body header.page-shared-header:not(.topbar) > .project-theme-toggle,
+  body header.page-shared-header:not(.topbar) > .theme,
+  body > header:not(.topbar) > .project-theme-toggle,
+  body > .nav > .theme {
+    width: 32px !important;
+    height: 32px !important;
+    flex: 0 0 32px !important;
+    display: grid !important;
+    place-items: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    transform: translateY(2px) !important;
+    background-color: transparent !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 20px 20px !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    filter: none !important;
+  }
+
+  body:not(.is-light-theme) .topbar .topbar-theme-toggle,
+  body:not(.is-light-theme) .topbar .topbar-theme-toggle:hover,
+  body:not(.is-light-theme) .topbar .topbar-theme-toggle.is-current:hover,
+  body:not(.is-light-theme) header.page-shared-header:not(.topbar) > .project-theme-toggle,
+  body:not(.is-light-theme) header.page-shared-header:not(.topbar) > .theme,
+  body:not(.is-light-theme) > header:not(.topbar) > .project-theme-toggle,
+  body:not(.light) > .nav > .theme {
+    background-image: url("./img/moon.png") !important;
+  }
+
+  body.is-light-theme .topbar .topbar-theme-toggle,
+  body.is-light-theme .topbar .topbar-theme-toggle:hover,
+  body.is-light-theme .topbar .topbar-theme-toggle.is-current,
+  body.is-light-theme .topbar .topbar-theme-toggle.is-current:hover,
+  body.is-light-theme header.page-shared-header:not(.topbar) > .project-theme-toggle,
+  body.is-light-theme header.page-shared-header:not(.topbar) > .theme,
+  body.is-light-theme > header:not(.topbar) > .project-theme-toggle,
+  body.light > .nav > .theme {
+    background-image: url("./img/sun-black.svg") !important;
+  }
+
+  body .topbar .topbar-theme-toggle::before,
+  body .topbar .topbar-theme-toggle::after,
+  body header.page-shared-header:not(.topbar) > .project-theme-toggle::before,
+  body header.page-shared-header:not(.topbar) > .project-theme-toggle::after,
+  body header.page-shared-header:not(.topbar) > .theme::before,
+  body header.page-shared-header:not(.topbar) > .theme::after {
+    content: none !important;
+    display: none !important;
+  }
+
+  .universal-glass-cursor.is-theme-target {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
+}
