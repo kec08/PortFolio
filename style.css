@@ -1150,6 +1150,8 @@ footer {
   font-size: clamp(50px, 5.6vw, 80px);
   margin-bottom: 20px;
 }
+.endfage-main-text3 h1 span { display: inline; }
+.endfage-main-text3 h1 .desktop-only-break { display: block; }
 
 .end-note {
   max-width: 980px;
