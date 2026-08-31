@@ -9,8 +9,20 @@ img, video, svg, canvas { max-width: 100%; }
   .portfolio-main-img { height: 100%; aspect-ratio: auto; object-fit: cover; object-position: center top; }
 
   /* Keep profile imagery compact on small screens. */
-  .about-feature-photo { width: min(210px, 58vw) !important; height: 280px !important; min-height: 0 !important; }
-  .intro-photo { width: min(180px, 55vw) !important; height: 250px !important; }
+  .about-feature-photo { width: min(176px, 50vw) !important; height: 240px !important; min-height: 0 !important; }
+  .intro-photo { width: min(160px, 50vw) !important; height: 224px !important; }
+
+  /* Reset the desktop grid tracks; otherwise each mobile card keeps a 360px row. */
+  .project-gallery {
+    grid-template-rows: repeat(4, auto) !important;
+    grid-auto-rows: auto !important;
+    gap: 10px !important;
+  }
+
+  .project-gallery-card {
+    height: auto !important;
+    aspect-ratio: 16 / 9;
+  }
 
   .hero { height: 78vw; min-height: 340px; max-height: 560px; }
   .hero-copy { left: 20px; right: 20px; bottom: 42px; min-width: 0; }
