@@ -35,6 +35,21 @@ img, video, svg, canvas { max-width: 100%; }
     text-align: left !important;
   }
 
+  #endpage .endfage-main-text {
+    margin: 36px 16px 0 !important;
+  }
+
+  #endpage .endfage-main-text1 {
+    margin-top: 24px !important;
+    margin-bottom: 8px !important;
+    font-size: clamp(34px, 10vw, 52px) !important;
+  }
+
+  #endpage .endfage-main-text3 {
+    margin-bottom: 12px !important;
+    font-size: clamp(36px, 11vw, 58px) !important;
+  }
+
   .project-gallery-card {
     height: auto !important;
     aspect-ratio: 16 / 9;
