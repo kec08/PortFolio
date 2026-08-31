@@ -128,7 +128,8 @@ body.is-light-theme main .validation-result{
 /* 상세 화면의 데스크톱 테마 버튼은 화면 오른쪽 끝에 고정합니다. */
 .detail-theme-toggle{top:21px!important;right:24px!important;width:44px!important;height:44px!important}
 @media(min-width:701px){
-  body[data-project] > button.project-theme-toggle.detail-theme-toggle{top:21px!important;left:auto!important;right:24px!important}
+  body[data-project] > button.project-theme-toggle.detail-theme-toggle{top:19px!important;left:auto!important;right:18px!important;transform:none!important}
+  body[data-project] > button.project-theme-toggle.detail-theme-toggle:hover{transform:scale(1.08)!important}
   body > .back{top:21px!important;left:24px!important;width:44px!important;height:44px!important}
 }
 @media(max-width:700px){
