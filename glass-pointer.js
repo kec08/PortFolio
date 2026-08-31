@@ -28,7 +28,7 @@
   });
   syncTopLayer();
 
-  const mappedTargets = '.project-gallery-card, .project-row, .sub-card, .activity-card, .about-detail-trigger, .modal-detail-link, .modal-quick-link, .modal-close, .detail-link, .links a, .contact-phone, .topbar a, .topbar-theme-toggle, .theme, .project-theme-toggle, header > a, header nav a, .back';
+  const mappedTargets = '.project-gallery-card, .project-row, .sub-card, .activity-card, .about-detail-trigger, .modal-detail-link, .modal-quick-link, .modal-close, .detail-link, .links a, .contact-phone, .topbar a, .theme, .project-theme-toggle, header > a, header nav a, .back';
 
   const clearTarget = () => {
     activeTarget = null;
@@ -85,7 +85,14 @@
 
   document.addEventListener('pointerover', (event) => {
     const target = event.target.closest(mappedTargets);
-    if (target) {
+    const themeToggle = event.target.closest('.topbar-theme-toggle');
+    if (themeToggle) {
+      // 테마 버튼 위에는 확대형 글래스 커서를 띄우지 않아 아이콘이 가려지지 않게 합니다.
+      window.clearTimeout(clearTimer);
+      clearTarget();
+      cursor.classList.add('is-theme-target');
+    }
+    else if (target) {
       window.clearTimeout(clearTimer);
       mapToTarget(target);
     }
@@ -102,6 +109,9 @@
       clearTimer = window.setTimeout(clearTarget, 90);
     }
     const target = event.target.closest('a, button, [role="button"]');
+    if (target?.matches('.topbar-theme-toggle') && !target.contains(event.relatedTarget)) {
+      cursor.classList.remove('is-theme-target');
+    }
     if (target && !target.contains(event.relatedTarget) && !activeTarget) cursor.classList.remove('is-hovering');
     const card = event.target.closest('.project-gallery-card, .project-row');
     if (card && !card.contains(event.relatedTarget)) card.classList.remove('is-glass-selected');
