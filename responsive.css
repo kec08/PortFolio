@@ -353,6 +353,10 @@ img, video, svg, canvas { max-width: 100%; }
 }
 
 /* Final mobile video rule: preserve the complete 16:9 frame. */
+@media (min-width: 721px) {
+  #endpage .endfage-main-text3 h1 .desktop-only-break { display: block !important; }
+}
+
 @media (max-width: 720px) {
   /* Keep the fixed mobile header clear of the first video frame. */
   .firstpage .hero-visual {
