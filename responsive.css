@@ -50,6 +50,47 @@ img, video, svg, canvas { max-width: 100%; }
     font-size: clamp(36px, 11vw, 58px) !important;
   }
 
+  #endpage {
+    min-height: 0 !important;
+    padding-bottom: 32px !important;
+  }
+
+  #endpage .endfage-mini-text {
+    padding-left: 16px !important;
+    justify-content: flex-start !important;
+    text-align: left !important;
+  }
+
+  #endpage .endfage-main-text1,
+  #endpage .endfage-main-text3 {
+    margin-top: 16px !important;
+    margin-left: 0 !important;
+    text-align: left !important;
+  }
+
+  #endpage .endfage-main-text1 h1,
+  #endpage .endfage-main-text3 h1 {
+    width: 100%;
+    font-size: clamp(30px, 10vw, 44px) !important;
+    line-height: 1 !important;
+    white-space: nowrap;
+  }
+
+  #endpage .end-note {
+    margin: 28px 0 0 !important;
+    padding: 0 16px !important;
+  }
+
+  #endpage .endfage-footer-text {
+    position: static !important;
+    width: auto !important;
+    margin: 32px 16px 0 !important;
+    transform: none !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    text-align: left !important;
+  }
+
   .project-gallery-card {
     height: auto !important;
     aspect-ratio: 16 / 9;
