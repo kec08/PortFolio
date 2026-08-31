@@ -12,8 +12,8 @@ img, video, svg, canvas { max-width: 100%; }
   /* Keep profile imagery compact on small screens. */
   #about.about-section { padding-top: 48px !important; }
   .about-feature { gap: 28px !important; }
-  .about-feature-photo { width: min(160px, 46vw) !important; height: 220px !important; min-height: 0 !important; }
-  .intro-photo { width: min(145px, 46vw) !important; height: 205px !important; }
+  .about-feature-photo { width: min(140px, 42vw) !important; height: 192px !important; min-height: 0 !important; }
+  .intro-photo { width: min(128px, 42vw) !important; height: 180px !important; }
 
   /* Reset the desktop grid tracks; otherwise each mobile card keeps a 360px row. */
   .project-gallery {
