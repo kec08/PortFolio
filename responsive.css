@@ -6,8 +6,8 @@ img, video, svg, canvas { max-width: 100%; }
   /* The home hero should follow the video height instead of filling the viewport. */
   .firstpage { min-height: 0 !important; }
   .firstpage { height: auto !important; }
-  .hero-visual { height: clamp(160px, 28vw, 240px); aspect-ratio: auto; }
-  .portfolio-main-img { height: 100%; aspect-ratio: auto; object-fit: cover; object-position: center top; }
+  .hero-visual { height: auto; aspect-ratio: auto; }
+  .portfolio-main-img { height: auto; aspect-ratio: 16 / 9; object-fit: contain; object-position: center; }
 
   /* Keep profile imagery compact on small screens. */
   #about.about-section { padding-top: 48px !important; }
@@ -62,4 +62,15 @@ img, video, svg, canvas { max-width: 100%; }
   .project-row img { height: auto !important; aspect-ratio: 16 / 10; }
   .project-row strong { font-size: clamp(32px, 11vw, 40px); }
   .links a, .links .contact-phone { max-width: 100%; overflow-wrap: anywhere; }
+}
+
+/* Final mobile video rule: preserve the complete 16:9 frame. */
+@media (max-width: 720px) {
+  .hero-visual { height: auto !important; }
+  .portfolio-main-img {
+    height: auto !important;
+    aspect-ratio: 16 / 9;
+    object-fit: contain !important;
+    object-position: center !important;
+  }
 }
