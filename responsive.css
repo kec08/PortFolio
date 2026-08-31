@@ -65,7 +65,7 @@ img, video, svg, canvas { max-width: 100%; }
   #endpage .endfage-main-text3 {
     margin-top: 16px !important;
     margin-left: 0 !important;
-    text-align: left !important;
+    text-align: center !important;
   }
 
   #endpage .endfage-main-text1 h1,
@@ -74,21 +74,25 @@ img, video, svg, canvas { max-width: 100%; }
     font-size: clamp(30px, 10vw, 44px) !important;
     line-height: 1 !important;
     white-space: nowrap;
+    text-align: center;
   }
 
   #endpage .end-note {
     margin: 28px 0 0 !important;
     padding: 0 16px !important;
+    text-align: center !important;
   }
+
+  #endpage .end-note-final-line { display: block; }
 
   #endpage .endfage-footer-text {
     position: static !important;
     width: auto !important;
     margin: 32px 16px 0 !important;
     transform: none !important;
-    align-items: flex-start !important;
-    justify-content: flex-start !important;
-    text-align: left !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
   }
 
   .project-gallery-card {
