@@ -5,8 +5,8 @@ img, video, svg, canvas { max-width: 100%; }
 @media (max-width: 720px) {
   /* The home hero should follow the video height instead of filling the viewport. */
   .firstpage { min-height: 0 !important; }
-  .hero-visual { aspect-ratio: auto; }
-  .portfolio-main-img { height: auto; aspect-ratio: auto; object-fit: contain; }
+  .hero-visual { height: clamp(180px, 28vw, 300px); aspect-ratio: auto; }
+  .portfolio-main-img { height: 100%; aspect-ratio: auto; object-fit: cover; object-position: center top; }
 
   /* Keep profile imagery compact on small screens. */
   .about-feature-photo { width: min(210px, 58vw) !important; height: 280px !important; min-height: 0 !important; }
