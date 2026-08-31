@@ -287,6 +287,26 @@ img, video, svg, canvas { max-width: 100%; }
   }
 }
 
+/* 최종 다크모드 아이콘 규칙: 홈도 프로젝트와 동일하게 원본 흰색 달을 유지합니다. */
+body:not(.is-light-theme) .topbar .topbar-theme-toggle,
+body:not(.is-light-theme) .topbar .topbar-theme-toggle:hover,
+body:not(.is-light-theme) .topbar .topbar-theme-toggle.is-current:hover {
+  background-color: transparent !important;
+  background-image: url("./img/moon.png") !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: 24px 24px !important;
+  filter: none !important;
+}
+
+@media (max-width: 900px) {
+  body:not(.is-light-theme) .topbar .topbar-theme-toggle,
+  body:not(.is-light-theme) .topbar .topbar-theme-toggle:hover,
+  body:not(.is-light-theme) .topbar .topbar-theme-toggle.is-current:hover {
+    background-size: 20px 20px !important;
+  }
+}
+
 /* 다크모드 호버에서도 달 아이콘이 배경색에 가려지지 않도록 유지합니다. */
 body:not(.is-light-theme) .topbar-theme-toggle:hover,
 body:not(.is-light-theme) .project-theme-toggle:hover,
