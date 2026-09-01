@@ -617,4 +617,14 @@ img, video, svg, canvas { max-width: 100%; }
   body.light header.page-shared-header:not(.topbar) > .theme:focus-visible {
     outline-color: rgba(17, 21, 34, .35) !important;
   }
+
+  /* 아이콘 뒤의 hover 채움은 제거하고 외곽 글래스 링만 유지합니다. */
+  body .topbar .topbar-theme-toggle:hover,
+  body .topbar .topbar-theme-toggle:focus-visible,
+  body header.page-shared-header:not(.topbar) > .project-theme-toggle:hover,
+  body header.page-shared-header:not(.topbar) > .project-theme-toggle:focus-visible,
+  body header.page-shared-header:not(.topbar) > .theme:hover,
+  body header.page-shared-header:not(.topbar) > .theme:focus-visible {
+    background-color: transparent !important;
+  }
 }
