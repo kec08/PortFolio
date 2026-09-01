@@ -87,10 +87,10 @@
     const target = event.target.closest(mappedTargets);
     const themeToggle = event.target.closest('.topbar-theme-toggle');
     if (themeToggle && window.matchMedia('(max-width: 900px)').matches) {
-      // 모바일 테마 버튼은 원형 글래스 커서가 아이콘을 가리지 않도록 제외합니다.
+      // 모바일 테마 버튼은 아이콘을 가리지 않는 투명 링으로 감쌉니다.
       window.clearTimeout(clearTimer);
       clearTarget();
-      cursor.classList.add('is-theme-target');
+      mapToTarget(themeToggle);
     }
     else if (target) {
       window.clearTimeout(clearTimer);

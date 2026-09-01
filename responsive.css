@@ -578,3 +578,23 @@ img, video, svg, canvas { max-width: 100%; }
     display: none !important;
   }
 }
+
+/* 모바일 테마 아이콘 hover는 아이콘 위를 채우지 않고 투명한 글래스 링만 표시합니다. */
+@media (max-width: 900px) {
+  html .universal-glass-cursor.is-targeting.is-theme-target {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    background: transparent !important;
+    border: 1px solid rgba(255, 255, 255, .72) !important;
+    box-shadow: 0 0 10px rgba(174, 220, 255, .08) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  html body.is-light-theme .universal-glass-cursor.is-targeting.is-theme-target {
+    background: transparent !important;
+    border-color: rgba(17, 21, 34, .32) !important;
+    box-shadow: 0 0 10px rgba(17, 21, 34, .08) !important;
+  }
+}
