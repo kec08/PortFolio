@@ -516,7 +516,6 @@ img, video, svg, canvas { max-width: 100%; }
     display: none !important;
   }
 
-  .universal-glass-cursor,
   .universal-glass-cursor.is-theme-target {
     display: none !important;
     opacity: 0 !important;
@@ -555,6 +554,26 @@ img, video, svg, canvas { max-width: 100%; }
 
   html body.light header.nav.page-shared-header > button.theme::before,
   html body.light header.nav.page-shared-header > button.theme::after {
+    content: none !important;
+    display: none !important;
+  }
+}
+
+/* 프로젝트 목록 헤더도 화이트 모드에서는 태양 SVG 하나만 표시합니다. */
+@media (max-width: 900px) {
+  html body.is-light-theme header.page-shared-header:not(.topbar) > button.project-theme-toggle,
+  html body.is-light-theme header.page-shared-header:not(.topbar) > button.project-theme-toggle:hover,
+  html body.is-light-theme header.page-shared-header:not(.topbar) > button.project-theme-toggle:focus-visible {
+    background: transparent url("./img/sun-black.svg") center / 20px 20px no-repeat !important;
+    background-image: url("./img/sun-black.svg") !important;
+    color: transparent !important;
+    font-size: 0 !important;
+    line-height: 0 !important;
+    transform: translateY(2px) !important;
+  }
+
+  html body.is-light-theme header.page-shared-header:not(.topbar) > button.project-theme-toggle::before,
+  html body.is-light-theme header.page-shared-header:not(.topbar) > button.project-theme-toggle::after {
     content: none !important;
     display: none !important;
   }
