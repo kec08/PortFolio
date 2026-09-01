@@ -15,6 +15,17 @@ if (themeToggle) {
     const isLight = document.body.classList.contains('is-light-theme');
     themeToggle.setAttribute('aria-pressed', String(isLight));
     themeToggle.setAttribute('aria-label', isLight ? '다크 모드로 변경' : '화이트 모드로 변경');
+
+    // 모바일에서는 기존 텍스트 태양/달 스타일이 중복될 수 있어 실제 심볼만 유지합니다.
+    if (window.matchMedia('(max-width: 900px)').matches) {
+      themeToggle.style.setProperty(
+        'background',
+        `transparent url("../img/${isLight ? 'sun-black.svg' : 'moon.png'}") center / 20px 20px no-repeat`,
+        'important'
+      );
+      themeToggle.style.setProperty('color', 'transparent', 'important');
+      themeToggle.style.setProperty('font-size', '0', 'important');
+    }
   };
 
   themeToggle.addEventListener('click', (event) => {

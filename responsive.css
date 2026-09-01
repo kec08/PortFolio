@@ -287,54 +287,76 @@ img, video, svg, canvas { max-width: 100%; }
   }
 }
 
-/* 최종 다크모드 아이콘 규칙: 홈도 프로젝트와 동일하게 원본 흰색 달을 유지합니다. */
-body:not(.is-light-theme) .topbar .topbar-theme-toggle,
-body:not(.is-light-theme) .topbar .topbar-theme-toggle:hover,
-body:not(.is-light-theme) .topbar .topbar-theme-toggle.is-current:hover {
-  background-color: transparent !important;
-  background-image: url("./img/moon.png") !important;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-  background-size: 24px 24px !important;
-  filter: none !important;
-}
-
+/* 모바일 테마 아이콘은 실제 심볼만 사용하고, 호버 커서가 덮지 않게 합니다. */
 @media (max-width: 900px) {
+  .topbar .topbar-theme-toggle,
+  body header.page-shared-header:not(.topbar) > .project-theme-toggle,
+  body header.page-shared-header:not(.topbar) > .theme,
+  body > header:not(.topbar) > .project-theme-toggle,
+  body > .nav > .theme {
+    width: 32px !important;
+    height: 32px !important;
+    flex: 0 0 32px !important;
+    display: grid !important;
+    place-items: center !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 20px 20px !important;
+    filter: none !important;
+  }
+
   body:not(.is-light-theme) .topbar .topbar-theme-toggle,
-  body:not(.is-light-theme) .topbar .topbar-theme-toggle:hover,
-  body:not(.is-light-theme) .topbar .topbar-theme-toggle.is-current:hover {
-    background-size: 20px 20px !important;
+  body:not(.is-light-theme) header.page-shared-header:not(.topbar) > .project-theme-toggle,
+  body:not(.is-light-theme) header.page-shared-header:not(.topbar) > .theme,
+  body:not(.is-light-theme) > header:not(.topbar) > .project-theme-toggle,
+  body:not(.light) > .nav > .theme {
+    background-image: url("./img/moon.png") !important;
   }
-}
 
-/* 다크모드 호버에서도 달 아이콘이 배경색에 가려지지 않도록 유지합니다. */
-body:not(.is-light-theme) .topbar-theme-toggle:hover,
-body:not(.is-light-theme) .project-theme-toggle:hover,
-body:not(.light) .theme:hover {
-  background-color: rgba(255, 255, 255, .10) !important;
-  background-image: url("./img/moon.png") !important;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-  background-size: 24px 24px !important;
-  filter: brightness(0) invert(1) !important;
-}
-
-@media (max-width: 900px) {
-  body:not(.is-light-theme) .topbar-theme-toggle:hover,
-  body:not(.is-light-theme) .project-theme-toggle:hover,
-  body:not(.light) .theme:hover {
-    background-size: 20px 20px !important;
+  body.is-light-theme .topbar .topbar-theme-toggle,
+  body.is-light-theme header.page-shared-header:not(.topbar) > .project-theme-toggle,
+  body.is-light-theme header.page-shared-header:not(.topbar) > .theme,
+  body.is-light-theme > header:not(.topbar) > .project-theme-toggle,
+  body.light > .nav > .theme {
+    background-image: url("./img/sun-black.svg") !important;
   }
-}
 
-/* moon.png는 원본이 흰색이므로 다크모드에서 반전 필터를 적용하지 않습니다. */
-body:not(.is-light-theme) .topbar-theme-toggle,
-body:not(.is-light-theme) .topbar-theme-toggle:hover,
-body:not(.is-light-theme) .project-theme-toggle,
-body:not(.is-light-theme) .project-theme-toggle:hover,
-body:not(.light) .theme,
-body:not(.light) .theme:hover {
-  filter: none !important;
+  /* 홈 테마 버튼의 is-current 전용 규칙보다 우선해 심볼을 유지합니다. */
+  body:not(.is-light-theme) .topbar nav.topbar-nav--right a.topbar-theme-toggle.is-current,
+  body:not(.is-light-theme) .topbar nav.topbar-nav--right a.topbar-theme-toggle.is-current:hover,
+  body:not(.is-light-theme) .topbar nav.topbar-nav--right a.topbar-theme-toggle.is-current:focus-visible {
+    background: transparent url("./img/moon.png") center / 20px 20px no-repeat !important;
+  }
+
+  body.is-light-theme .topbar nav.topbar-nav--right a.topbar-theme-toggle.is-current,
+  body.is-light-theme .topbar nav.topbar-nav--right a.topbar-theme-toggle.is-current:hover,
+  body.is-light-theme .topbar nav.topbar-nav--right a.topbar-theme-toggle.is-current:focus-visible {
+    background: transparent url("./img/sun-black.svg") center / 20px 20px no-repeat !important;
+  }
+
+  .topbar .topbar-theme-toggle::before,
+  .topbar .topbar-theme-toggle::after,
+  body header.page-shared-header:not(.topbar) > .project-theme-toggle::before,
+  body header.page-shared-header:not(.topbar) > .project-theme-toggle::after,
+  body header.page-shared-header:not(.topbar) > .theme::before,
+  body header.page-shared-header:not(.topbar) > .theme::after {
+    content: none !important;
+    display: none !important;
+  }
+
+  body .topbar nav.topbar-nav--right a.topbar-theme-toggle.is-current::before,
+  body .topbar nav.topbar-nav--right a.topbar-theme-toggle.is-current::after {
+    content: none !important;
+    display: none !important;
+  }
+
+  .universal-glass-cursor.is-theme-target {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
 }
 
 /* 홈 헤더를 기준으로 태블릿·큰 모바일 폭의 공통 헤더 값을 통일합니다. */
@@ -433,5 +455,349 @@ body:not(.light) .theme:hover {
     aspect-ratio: 16 / 9;
     object-fit: contain !important;
     object-position: center !important;
+  }
+}
+
+/* 모바일 테마 심볼은 글래스 포인터와 이전의 아이콘 효과를 적용하지 않습니다. */
+@media (max-width: 900px) {
+  body .topbar .topbar-theme-toggle,
+  body .topbar .topbar-theme-toggle.is-current,
+  body header.page-shared-header:not(.topbar) > .project-theme-toggle,
+  body header.page-shared-header:not(.topbar) > .theme,
+  body > header:not(.topbar) > .project-theme-toggle,
+  body > .nav > .theme {
+    width: 32px !important;
+    height: 32px !important;
+    flex: 0 0 32px !important;
+    display: grid !important;
+    place-items: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    transform: translateY(2px) !important;
+    background-color: transparent !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 20px 20px !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    filter: none !important;
+  }
+
+  body:not(.is-light-theme) .topbar .topbar-theme-toggle,
+  body:not(.is-light-theme) .topbar .topbar-theme-toggle:hover,
+  body:not(.is-light-theme) .topbar .topbar-theme-toggle:focus-visible,
+  body:not(.is-light-theme) .topbar .topbar-theme-toggle.is-current:hover,
+  body:not(.is-light-theme) header.page-shared-header:not(.topbar) > .project-theme-toggle,
+  body:not(.is-light-theme) header.page-shared-header:not(.topbar) > .theme,
+  body:not(.is-light-theme) > header:not(.topbar) > .project-theme-toggle,
+  body:not(.light) > .nav > .theme {
+    background-image: url("./img/moon.png") !important;
+  }
+
+  body.is-light-theme .topbar .topbar-theme-toggle,
+  body.is-light-theme .topbar .topbar-theme-toggle:hover,
+  body.is-light-theme .topbar .topbar-theme-toggle:focus-visible,
+  body.is-light-theme .topbar .topbar-theme-toggle.is-current,
+  body.is-light-theme .topbar .topbar-theme-toggle.is-current:hover,
+  body.is-light-theme header.page-shared-header:not(.topbar) > .project-theme-toggle,
+  body.is-light-theme header.page-shared-header:not(.topbar) > .theme,
+  body.is-light-theme > header:not(.topbar) > .project-theme-toggle,
+  body.light > .nav > .theme {
+    background-image: url("./img/sun-black.svg") !important;
+  }
+
+  body .topbar .topbar-theme-toggle::before,
+  body .topbar .topbar-theme-toggle::after,
+  body header.page-shared-header:not(.topbar) > .project-theme-toggle::before,
+  body header.page-shared-header:not(.topbar) > .project-theme-toggle::after,
+  body header.page-shared-header:not(.topbar) > .theme::before,
+  body header.page-shared-header:not(.topbar) > .theme::after {
+    content: none !important;
+    display: none !important;
+  }
+
+  .universal-glass-cursor.is-theme-target {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
+}
+
+/* 어바웃의 기존 텍스트 태양·달 배경이 겹치지 않도록 모바일 화이트 모드를 고정합니다. */
+@media (max-width: 900px) {
+  body.light > .nav > button.theme,
+  body.light > .nav > button.theme:hover,
+  body.light > .nav > button.theme:focus-visible {
+    background: transparent url("./img/sun-black.svg") center / 20px 20px no-repeat !important;
+    color: transparent !important;
+    transform: translateY(2px) !important;
+  }
+
+  body.light > .nav > button.theme::before,
+  body.light > .nav > button.theme::after {
+    content: none !important;
+    display: none !important;
+  }
+}
+
+/* 어바웃 전용 스타일보다 높은 우선순위로 화이트 모드 심볼을 하나만 표시합니다. */
+@media (max-width: 900px) {
+  html body.light header.nav.page-shared-header > button.theme,
+  html body.light header.nav.page-shared-header > button.theme:hover,
+  html body.light header.nav.page-shared-header > button.theme:focus-visible {
+    background: transparent url("./img/sun-black.svg") center / 20px 20px no-repeat !important;
+    background-image: url("./img/sun-black.svg") !important;
+    color: transparent !important;
+    font-size: 0 !important;
+    line-height: 0 !important;
+  }
+
+  html body.light header.nav.page-shared-header > button.theme::before,
+  html body.light header.nav.page-shared-header > button.theme::after {
+    content: none !important;
+    display: none !important;
+  }
+}
+
+/* 프로젝트 목록 헤더도 화이트 모드에서는 태양 SVG 하나만 표시합니다. */
+@media (max-width: 900px) {
+  html body.is-light-theme header.page-shared-header:not(.topbar) > button.project-theme-toggle,
+  html body.is-light-theme header.page-shared-header:not(.topbar) > button.project-theme-toggle:hover,
+  html body.is-light-theme header.page-shared-header:not(.topbar) > button.project-theme-toggle:focus-visible {
+    background: transparent url("./img/sun-black.svg") center / 20px 20px no-repeat !important;
+    background-image: url("./img/sun-black.svg") !important;
+    color: transparent !important;
+    font-size: 0 !important;
+    line-height: 0 !important;
+    transform: translateY(2px) !important;
+  }
+
+  html body.is-light-theme header.page-shared-header:not(.topbar) > button.project-theme-toggle::before,
+  html body.is-light-theme header.page-shared-header:not(.topbar) > button.project-theme-toggle::after {
+    content: none !important;
+    display: none !important;
+  }
+}
+
+/* 모바일 테마 아이콘 hover는 아이콘 위를 채우지 않고 투명한 글래스 링만 표시합니다. */
+@media (max-width: 900px) {
+  html .universal-glass-cursor.is-targeting.is-theme-target {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    background: transparent !important;
+    border: 1px solid rgba(255, 255, 255, .72) !important;
+    box-shadow: 0 0 10px rgba(174, 220, 255, .08) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  html body.is-light-theme .universal-glass-cursor.is-targeting.is-theme-target {
+    background: transparent !important;
+    border-color: rgba(17, 21, 34, .32) !important;
+    box-shadow: 0 0 10px rgba(17, 21, 34, .08) !important;
+  }
+
+  /* 테마 아이콘에는 커서의 내부 프리즘 레이어·그림자·중복 outline을 쓰지 않습니다. */
+  html .universal-glass-cursor.is-targeting.is-theme-target,
+  html body.is-light-theme .universal-glass-cursor.is-targeting.is-theme-target {
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  html .universal-glass-cursor.is-targeting.is-theme-target::before,
+  html .universal-glass-cursor.is-targeting.is-theme-target::after {
+    content: none !important;
+    display: none !important;
+    opacity: 0 !important;
+  }
+
+  body .topbar .topbar-theme-toggle:hover,
+  body .topbar .topbar-theme-toggle:focus-visible,
+  body header.page-shared-header:not(.topbar) > .project-theme-toggle:hover,
+  body header.page-shared-header:not(.topbar) > .project-theme-toggle:focus-visible,
+  body header.page-shared-header:not(.topbar) > .theme:hover,
+  body header.page-shared-header:not(.topbar) > .theme:focus-visible {
+    outline: none !important;
+  }
+
+  /* 커서 이벤트가 늦어도 CSS hover만으로 아이콘 주변 링이 즉시 보이게 합니다. */
+  body .topbar .topbar-theme-toggle:hover,
+  body .topbar .topbar-theme-toggle:focus-visible,
+  body header.page-shared-header:not(.topbar) > .project-theme-toggle:hover,
+  body header.page-shared-header:not(.topbar) > .project-theme-toggle:focus-visible,
+  body header.page-shared-header:not(.topbar) > .theme:hover,
+  body header.page-shared-header:not(.topbar) > .theme:focus-visible {
+    outline: 1px solid rgba(255, 255, 255, .72) !important;
+    outline-offset: 5px !important;
+  }
+
+  body.is-light-theme .topbar .topbar-theme-toggle:hover,
+  body.is-light-theme .topbar .topbar-theme-toggle:focus-visible,
+  body.is-light-theme header.page-shared-header:not(.topbar) > .project-theme-toggle:hover,
+  body.is-light-theme header.page-shared-header:not(.topbar) > .project-theme-toggle:focus-visible,
+  body.light header.page-shared-header:not(.topbar) > .theme:hover,
+  body.light header.page-shared-header:not(.topbar) > .theme:focus-visible {
+    outline-color: rgba(17, 21, 34, .35) !important;
+  }
+
+  /* 아이콘 뒤의 hover 채움은 제거하고 외곽 글래스 링만 유지합니다. */
+  body .topbar .topbar-theme-toggle:hover,
+  body .topbar .topbar-theme-toggle:focus-visible,
+  body header.page-shared-header:not(.topbar) > .project-theme-toggle:hover,
+  body header.page-shared-header:not(.topbar) > .project-theme-toggle:focus-visible,
+  body header.page-shared-header:not(.topbar) > .theme:hover,
+  body header.page-shared-header:not(.topbar) > .theme:focus-visible {
+    background-color: transparent !important;
+  }
+
+  /* 테마 버튼은 커스텀 글래스 링만 사용하므로 CSS outline은 끕니다. */
+  body .topbar .topbar-theme-toggle:hover,
+  body .topbar .topbar-theme-toggle:focus-visible,
+  body header.page-shared-header:not(.topbar) > .project-theme-toggle:hover,
+  body header.page-shared-header:not(.topbar) > .project-theme-toggle:focus-visible,
+  body header.page-shared-header:not(.topbar) > .theme:hover,
+  body header.page-shared-header:not(.topbar) > .theme:focus-visible {
+    outline: none !important;
+  }
+}
+
+/* 홈 헤더 기준: 어바웃·프로젝트도 같은 모바일 프레임과 간격을 사용합니다. */
+@media (max-width: 720px) {
+  html body header.page-shared-header:not(.topbar),
+  html body > header:not(.topbar),
+  html body > .nav {
+    position: fixed !important;
+    z-index: 1000 !important;
+    top: 8px !important;
+    left: 50% !important;
+    width: calc(100% - 16px) !important;
+    height: 58px !important;
+    margin: 0 !important;
+    padding: 0 13px !important;
+    transform: translateX(-50%) !important;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) !important;
+    gap: 4px !important;
+    align-items: center !important;
+  }
+
+  html body header.page-shared-header:not(.topbar) > nav,
+  html body > header:not(.topbar) nav,
+  html body > .nav nav {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 1px !important;
+    min-width: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: visible !important;
+  }
+
+  html body header.page-shared-header:not(.topbar) > nav a,
+  html body > header:not(.topbar) nav a,
+  html body > .nav nav a,
+  html body .topbar-nav--left > a {
+    display: inline-flex !important;
+    align-items: center !important;
+    padding: 7px 5px !important;
+    margin: 0 !important;
+    border-radius: 999px !important;
+    font-size: 10px !important;
+    line-height: 1 !important;
+    white-space: nowrap !important;
+  }
+
+  /* 현재 페이지 링크도 별도 강조 패딩을 사용하지 않아 모든 메뉴 폭을 동일하게 유지합니다. */
+  html body header.page-shared-header:not(.topbar) > nav a.is-current,
+  html body > header:not(.topbar) nav a.is-current,
+  html body > .nav nav a.is-current,
+  html body .topbar-nav--left > a.is-current {
+    padding: 7px 5px !important;
+    margin: 0 !important;
+    border-radius: 999px !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  html body header.page-shared-header:not(.topbar) > a:first-child,
+  html body > header:not(.topbar) > a,
+  html body > .nav > .brand {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    justify-self: center !important;
+    position: static !important;
+    transform: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    font-size: 10px !important;
+    line-height: 1 !important;
+    white-space: nowrap !important;
+  }
+
+  html body header.page-shared-header:not(.topbar) > .project-theme-toggle,
+  html body header.page-shared-header:not(.topbar) > .theme,
+  html body > header:not(.topbar) > .project-theme-toggle,
+  html body > .nav > .theme {
+    grid-column: 3 !important;
+    grid-row: 1 !important;
+    justify-self: end !important;
+    position: static !important;
+    width: 32px !important;
+    height: 32px !important;
+    flex: 0 0 32px !important;
+    margin: 0 !important;
+    transform: translateY(2px) !important;
+  }
+}
+
+/* 페이지별 CSS보다 우선해 홈 헤더의 모바일 간격을 공통으로 유지합니다. */
+@media (max-width: 720px) {
+  html body header.page-shared-header:not(.topbar),
+  html body > header:not(.topbar),
+  html body > .nav {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+
+  html body header.nav.page-shared-header:not(.topbar):not(.is-scrolled) > nav,
+  html body header.page-shared-header:not(.topbar):not(.is-scrolled) > nav,
+  html body > header:not(.topbar) nav,
+  html body > .nav nav,
+  html body .topbar-nav--left {
+    gap: 4px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* 홈의 상단 헤더 프레임까지 동일하게 맞춥니다. */
+  html body header.page-shared-header:not(.topbar),
+  html body > header:not(.topbar),
+  html body > .nav {
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 64px !important;
+    transform: none !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+  }
+
+  html body header.nav.page-shared-header:not(.topbar):not(.is-scrolled) {
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 64px !important;
+    transform: none !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
   }
 }
