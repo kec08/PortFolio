@@ -661,3 +661,143 @@ img, video, svg, canvas { max-width: 100%; }
     outline: none !important;
   }
 }
+
+/* 홈 헤더 기준: 어바웃·프로젝트도 같은 모바일 프레임과 간격을 사용합니다. */
+@media (max-width: 720px) {
+  html body header.page-shared-header:not(.topbar),
+  html body > header:not(.topbar),
+  html body > .nav {
+    position: fixed !important;
+    z-index: 1000 !important;
+    top: 8px !important;
+    left: 50% !important;
+    width: calc(100% - 16px) !important;
+    height: 58px !important;
+    margin: 0 !important;
+    padding: 0 13px !important;
+    transform: translateX(-50%) !important;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) !important;
+    gap: 4px !important;
+    align-items: center !important;
+  }
+
+  html body header.page-shared-header:not(.topbar) > nav,
+  html body > header:not(.topbar) nav,
+  html body > .nav nav {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 1px !important;
+    min-width: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: visible !important;
+  }
+
+  html body header.page-shared-header:not(.topbar) > nav a,
+  html body > header:not(.topbar) nav a,
+  html body > .nav nav a,
+  html body .topbar-nav--left > a {
+    display: inline-flex !important;
+    align-items: center !important;
+    padding: 7px 5px !important;
+    margin: 0 !important;
+    border-radius: 999px !important;
+    font-size: 10px !important;
+    line-height: 1 !important;
+    white-space: nowrap !important;
+  }
+
+  /* 현재 페이지 링크도 별도 강조 패딩을 사용하지 않아 모든 메뉴 폭을 동일하게 유지합니다. */
+  html body header.page-shared-header:not(.topbar) > nav a.is-current,
+  html body > header:not(.topbar) nav a.is-current,
+  html body > .nav nav a.is-current,
+  html body .topbar-nav--left > a.is-current {
+    padding: 7px 5px !important;
+    margin: 0 !important;
+    border-radius: 999px !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  html body header.page-shared-header:not(.topbar) > a:first-child,
+  html body > header:not(.topbar) > a,
+  html body > .nav > .brand {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    justify-self: center !important;
+    position: static !important;
+    transform: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    font-size: 10px !important;
+    line-height: 1 !important;
+    white-space: nowrap !important;
+  }
+
+  html body header.page-shared-header:not(.topbar) > .project-theme-toggle,
+  html body header.page-shared-header:not(.topbar) > .theme,
+  html body > header:not(.topbar) > .project-theme-toggle,
+  html body > .nav > .theme {
+    grid-column: 3 !important;
+    grid-row: 1 !important;
+    justify-self: end !important;
+    position: static !important;
+    width: 32px !important;
+    height: 32px !important;
+    flex: 0 0 32px !important;
+    margin: 0 !important;
+    transform: translateY(2px) !important;
+  }
+}
+
+/* 페이지별 CSS보다 우선해 홈 헤더의 모바일 간격을 공통으로 유지합니다. */
+@media (max-width: 720px) {
+  html body header.page-shared-header:not(.topbar),
+  html body > header:not(.topbar),
+  html body > .nav {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+
+  html body header.nav.page-shared-header:not(.topbar):not(.is-scrolled) > nav,
+  html body header.page-shared-header:not(.topbar):not(.is-scrolled) > nav,
+  html body > header:not(.topbar) nav,
+  html body > .nav nav,
+  html body .topbar-nav--left {
+    gap: 4px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* 홈의 상단 헤더 프레임까지 동일하게 맞춥니다. */
+  html body header.page-shared-header:not(.topbar),
+  html body > header:not(.topbar),
+  html body > .nav {
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 64px !important;
+    transform: none !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+  }
+
+  html body header.nav.page-shared-header:not(.topbar):not(.is-scrolled) {
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 64px !important;
+    transform: none !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+  }
+}
