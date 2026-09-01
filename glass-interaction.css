@@ -13,7 +13,7 @@
 .glass-cursor,.modal-glass-cursor{display:none!important}
 .universal-glass-cursor{display:block!important;width:26px!important;height:26px!important;margin:0!important;border-radius:50%!important;pointer-events:none!important;position:fixed!important;z-index:2147483647!important;transform:translate(-50%,-50%)!important;opacity:0!important;background:rgba(255,255,255,.045)!important;border:1px solid rgba(255,255,255,.86)!important;box-shadow:inset 1px 1px 3px rgba(255,255,255,.4),inset -2px -2px 5px rgba(0,0,0,.12),0 4px 14px rgba(0,0,0,.14)!important;backdrop-filter:blur(.6px) saturate(1.04)!important;-webkit-backdrop-filter:blur(.6px) saturate(1.04)!important;transition:width .28s cubic-bezier(.2,.8,.2,1),height .28s cubic-bezier(.2,.8,.2,1),opacity .16s ease!important}
 .universal-glass-cursor.is-visible{opacity:1!important}.universal-glass-cursor.is-hovering{width:44px!important;height:44px!important}
-.universal-glass-cursor.is-targeting{width:var(--target-width)!important;height:var(--target-height)!important;border-radius:var(--target-radius)!important;background:rgba(255,255,255,.028)!important;border:1px solid rgba(255,255,255,.72)!important;box-shadow:inset 1px 1px 3px rgba(255,255,255,.28),inset -2px -2px 7px rgba(0,0,0,.1),0 8px 22px rgba(0,0,0,.13)!important;backdrop-filter:blur(.6px) saturate(1.04)!important;-webkit-backdrop-filter:blur(.6px) saturate(1.04)!important;transition:width .48s cubic-bezier(.18,.9,.2,1),height .48s cubic-bezier(.18,.9,.2,1),left .42s cubic-bezier(.18,.9,.2,1),top .42s cubic-bezier(.18,.9,.2,1),border-radius .18s ease,opacity .16s ease!important}
+.universal-glass-cursor.is-targeting{width:var(--target-width)!important;height:var(--target-height)!important;border-radius:var(--target-radius)!important;background:rgba(255,255,255,.028)!important;border:1px solid rgba(255,255,255,.72)!important;box-shadow:inset 1px 1px 3px rgba(255,255,255,.28),inset -2px -2px 7px rgba(0,0,0,.1),0 8px 22px rgba(0,0,0,.13)!important;backdrop-filter:blur(.35px) saturate(1.04)!important;-webkit-backdrop-filter:blur(.35px) saturate(1.04)!important;transition:width .48s cubic-bezier(.18,.9,.2,1),height .48s cubic-bezier(.18,.9,.2,1),left .42s cubic-bezier(.18,.9,.2,1),top .42s cubic-bezier(.18,.9,.2,1),border-radius .18s ease,opacity .16s ease!important}
 dialog .universal-glass-cursor{position:fixed!important;z-index:2147483647!important}
 @media (pointer:fine){html.has-glass-pointer,html.has-glass-pointer *{cursor:none!important}}
 
@@ -25,7 +25,7 @@ dialog .universal-glass-cursor{position:fixed!important;z-index:2147483647!impor
 .universal-glass-cursor.is-targeting{background-color:rgba(255,255,255,.012)!important;background-image:none!important;border:1px solid rgba(255,255,255,.72)!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;box-shadow:inset 0 0 0 1px rgba(255,255,255,.08),0 0 10px rgba(174,220,255,.08),0 6px 18px rgba(0,0,0,.14)!important}
 .universal-glass-cursor::before{content:"";position:absolute;inset:-1px;border-radius:inherit;padding:1px;pointer-events:none;opacity:0;background:linear-gradient(115deg,rgba(255,255,255,.7),rgba(174,220,255,.38) 28%,rgba(226,181,255,.34) 52%,rgba(255,224,176,.3) 76%,rgba(255,255,255,.64));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;transition:opacity .3s ease}
 .universal-glass-cursor.is-targeting::before{opacity:.72}
-.universal-glass-cursor.is-targeting{backdrop-filter:blur(.6px)!important;-webkit-backdrop-filter:blur(.6px)!important}
+.universal-glass-cursor.is-targeting{backdrop-filter:blur(.35px)!important;-webkit-backdrop-filter:blur(.35px)!important}
 /* 열린 모달 내부에서는 커서와 버튼을 같은 좌표계로 맞춥니다. */
 dialog .universal-glass-cursor{position:absolute!important;z-index:2147483647!important}
 /* 모달 버튼은 자기 위치를 바꾸지 않고 glass cursor만 버튼을 감쌉니다. */
@@ -128,4 +128,15 @@ body.is-light-theme .universal-glass-cursor.is-theme-target::before {
   background: transparent !important;
   border: 0 !important;
   box-shadow: none !important;
+}
+
+/* The portfolio download CTA keeps the glass hover surface without the inner glow or scale motion. */
+.about-download-trigger::after {
+  display: none !important;
+}
+
+.about-download-trigger:hover,
+.about-download-trigger.is-sucked {
+  transform: none !important;
+  animation: none !important;
 }

@@ -90,12 +90,30 @@ img, video, svg, canvas { max-width: 100%; }
 
   #endpage .endfage-footer-text {
     position: static !important;
-    width: auto !important;
-    margin: 32px 16px 0 !important;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) !important;
+    column-gap: clamp(12px, 3vw, 24px) !important;
+    width: calc(100% - 32px) !important;
+    margin: 72px 16px 0 !important;
     transform: none !important;
     align-items: center !important;
-    justify-content: center !important;
+    justify-content: stretch !important;
+    text-align: left !important;
+  }
+
+  #endpage .endfage-footer-text1 {
+    justify-self: start !important;
+    text-align: left !important;
+  }
+
+  #endpage .endfage-footer-text2 {
+    justify-self: center !important;
     text-align: center !important;
+  }
+
+  #endpage .endfage-footer-text3 {
+    justify-self: end !important;
+    text-align: right !important;
   }
 
   /* Keep home navigation usable on mobile: links, brand, and theme control. */
@@ -446,7 +464,16 @@ img, video, svg, canvas { max-width: 100%; }
 @media (max-width: 720px) {
   /* Keep the fixed mobile header clear of the first video frame. */
   .firstpage .hero-visual {
-    margin-top: 78px !important;
+    margin-top: 64px !important;
+  }
+
+  /* In light mode the mobile header should meet the video with no visible gap. */
+  body.is-light-theme .topbar {
+    background: #fff !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
   }
 
   .hero-visual { height: auto !important; }
