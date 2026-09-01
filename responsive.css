@@ -597,4 +597,24 @@ img, video, svg, canvas { max-width: 100%; }
     border-color: rgba(17, 21, 34, .32) !important;
     box-shadow: 0 0 10px rgba(17, 21, 34, .08) !important;
   }
+
+  /* 커서 이벤트가 늦어도 CSS hover만으로 아이콘 주변 링이 즉시 보이게 합니다. */
+  body .topbar .topbar-theme-toggle:hover,
+  body .topbar .topbar-theme-toggle:focus-visible,
+  body header.page-shared-header:not(.topbar) > .project-theme-toggle:hover,
+  body header.page-shared-header:not(.topbar) > .project-theme-toggle:focus-visible,
+  body header.page-shared-header:not(.topbar) > .theme:hover,
+  body header.page-shared-header:not(.topbar) > .theme:focus-visible {
+    outline: 1px solid rgba(255, 255, 255, .72) !important;
+    outline-offset: 5px !important;
+  }
+
+  body.is-light-theme .topbar .topbar-theme-toggle:hover,
+  body.is-light-theme .topbar .topbar-theme-toggle:focus-visible,
+  body.is-light-theme header.page-shared-header:not(.topbar) > .project-theme-toggle:hover,
+  body.is-light-theme header.page-shared-header:not(.topbar) > .project-theme-toggle:focus-visible,
+  body.light header.page-shared-header:not(.topbar) > .theme:hover,
+  body.light header.page-shared-header:not(.topbar) > .theme:focus-visible {
+    outline-color: rgba(17, 21, 34, .35) !important;
+  }
 }
