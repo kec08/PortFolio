@@ -11,16 +11,16 @@
     <link rel="icon" href="./img/symbol-logo.png" />
     <link rel="apple-touch-icon" href="./img/symbol-logo.png" />
     <link rel="stylesheet" href="./style.css?v=2" />
-    <link rel="stylesheet" href="./override.css?v=6" />
+    <link rel="stylesheet" href="./override.css?v=7" />
     <link rel="stylesheet" href="./header-patch.css" />
     <link rel="stylesheet" href="./header-motion-patch.css" />
     <link rel="stylesheet" href="./theme-patch.css?v=4" />
     <link rel="stylesheet" href="./project-grid-patch.css" />
-    <link rel="stylesheet" href="./glass-interaction.css?v=4" />
+    <link rel="stylesheet" href="./glass-interaction.css?v=5" />
     <link rel="stylesheet" href="./page-transition.css?v=4" />
     <link rel="stylesheet" href="./header-consistency.css?v=4" />
     <link rel="stylesheet" href="./responsive.css?v=29" />
-    <script src="./glass-pointer.js?v=5" defer></script>
+    <script src="./glass-pointer.js?v=6" defer></script>
     <script src="./script.js?v=5" defer></script>
     <script src="./page-transition.js?v=5" defer></script>
   </head>
@@ -129,7 +129,21 @@
             <p>
               사용자가 실제로 겪는 불편을 기술로 해결하고, 출시 이후에도 사용자 피드백을 바탕으로 서비스를 지속적으로 개선하는 개발자를 목표로 합니다.
             </p>
-            <a class="btn about-detail-trigger" href="./about/index.html">포트폴리오 보기 <span aria-hidden="true">→</span></a>
+            <div class="about-feature-actions">
+              <a class="btn about-detail-trigger" href="./about/index.html">자세히 보기 <span aria-hidden="true">→</span></a>
+              <a
+                class="btn about-download-trigger"
+                href="./assets/kim-eunchan-portfolio.pdf"
+                download="김은찬_포트폴리오.pdf"
+                aria-label="김은찬 포트폴리오 PDF 다운로드"
+              >
+                <span class="about-download-icon" aria-hidden="true">
+                  <img class="about-download-icon--dark" src="./img/ci_download-white.svg" alt="" />
+                  <img class="about-download-icon--light" src="./img/ci_download-black.svg" alt="" />
+                </span>
+                <span>포트폴리오 보기</span>
+              </a>
+            </div>
           </div>
         </div>
 

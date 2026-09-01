@@ -28,7 +28,7 @@
   });
   syncTopLayer();
 
-  const mappedTargets = '.project-gallery-card, .project-row, .sub-card, .activity-card, .about-detail-trigger, .modal-detail-link, .modal-quick-link, .modal-close, .detail-link, .links a, .contact-phone, .topbar a, .topbar-theme-toggle, .theme, .project-theme-toggle, header > a, header nav a, .back';
+  const mappedTargets = '.project-gallery-card, .project-row, .sub-card, .activity-card, .about-detail-trigger, .about-download-trigger, .modal-detail-link, .modal-quick-link, .modal-close, .detail-link, .links a, .contact-phone, .topbar a, .topbar-theme-toggle, .theme, .project-theme-toggle, header > a, header nav a, .back';
 
   const clearTarget = () => {
     activeTarget = null;
@@ -58,7 +58,7 @@
     activeTarget = target;
     setCursorPoint(rect.left + rect.width / 2, rect.top + rect.height / 2);
     const isHeaderControl = target.matches('.topbar a, .topbar-theme-toggle, .theme, .project-theme-toggle, header > a, header nav a, .back');
-    const isActionButton = target.matches('.btn, .modal-detail-link, .modal-quick-link, .modal-close, .detail-link, .about-detail-trigger');
+    const isActionButton = target.matches('.btn, .modal-detail-link, .modal-quick-link, .modal-close, .detail-link, .about-detail-trigger, .about-download-trigger');
     cursor.style.setProperty('--target-width', `${rect.width + (isHeaderControl ? 14 : isActionButton ? 12 : 8)}px`);
     cursor.style.setProperty('--target-height', `${rect.height + (isHeaderControl ? 10 : isActionButton ? 10 : 8)}px`);
     const radius = target.matches('.project-gallery-card') ? '30px'

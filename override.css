@@ -347,6 +347,72 @@ body.is-light-theme .about-detail-trigger span {
   color: #111522 !important;
 }
 
+/* About actions: keep both CTAs consistent while using the supplied theme icons. */
+.about-feature-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-top: 38px;
+}
+
+.about-feature-actions .about-detail-trigger {
+  margin-top: 0 !important;
+}
+
+.about-download-trigger {
+  gap: 8px;
+  margin-top: 0 !important;
+}
+
+.about-download-icon,
+.about-download-trigger img {
+  display: block;
+  width: 21px;
+  height: 21px;
+}
+
+.about-download-icon--light {
+  display: none !important;
+}
+
+.about-download-trigger img {
+  object-fit: contain;
+}
+
+body.is-light-theme .about-download-icon--dark {
+  display: none !important;
+}
+
+body.is-light-theme .about-download-icon--light {
+  display: block !important;
+}
+
+@media (max-width: 520px) {
+  .about-feature-actions {
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 8px;
+  }
+
+  .about-feature-actions .btn {
+    min-width: 0;
+    padding: 0 12px !important;
+    font-size: clamp(13px, 3.7vw, 16px);
+    white-space: nowrap;
+  }
+
+  .about-download-trigger {
+    gap: 5px;
+  }
+
+  .about-download-icon,
+  .about-download-trigger img {
+    width: 18px;
+    height: 18px;
+  }
+}
+
 /* Continuous page surfaces: remove visible color bands between sections. */
 html,
 body,
