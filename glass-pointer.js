@@ -85,7 +85,14 @@
 
   document.addEventListener('pointerover', (event) => {
     const target = event.target.closest(mappedTargets);
-    if (target) {
+    const themeToggle = event.target.closest('.topbar-theme-toggle');
+    if (themeToggle && window.matchMedia('(max-width: 900px)').matches) {
+      // 모바일 테마 버튼은 원형 글래스 커서가 아이콘을 가리지 않도록 제외합니다.
+      window.clearTimeout(clearTimer);
+      clearTarget();
+      cursor.classList.add('is-theme-target');
+    }
+    else if (target) {
       window.clearTimeout(clearTimer);
       mapToTarget(target);
     }
@@ -102,6 +109,9 @@
       clearTimer = window.setTimeout(clearTarget, 90);
     }
     const target = event.target.closest('a, button, [role="button"]');
+    if (target?.matches('.topbar-theme-toggle') && !target.contains(event.relatedTarget)) {
+      cursor.classList.remove('is-theme-target');
+    }
     if (target && !target.contains(event.relatedTarget) && !activeTarget) cursor.classList.remove('is-hovering');
     const card = event.target.closest('.project-gallery-card, .project-row');
     if (card && !card.contains(event.relatedTarget)) card.classList.remove('is-glass-selected');

@@ -323,12 +323,31 @@ img, video, svg, canvas { max-width: 100%; }
     background-image: url("./img/sun-black.svg") !important;
   }
 
+  /* 홈 테마 버튼의 is-current 전용 규칙보다 우선해 심볼을 유지합니다. */
+  body:not(.is-light-theme) .topbar nav.topbar-nav--right a.topbar-theme-toggle.is-current,
+  body:not(.is-light-theme) .topbar nav.topbar-nav--right a.topbar-theme-toggle.is-current:hover,
+  body:not(.is-light-theme) .topbar nav.topbar-nav--right a.topbar-theme-toggle.is-current:focus-visible {
+    background: transparent url("./img/moon.png") center / 20px 20px no-repeat !important;
+  }
+
+  body.is-light-theme .topbar nav.topbar-nav--right a.topbar-theme-toggle.is-current,
+  body.is-light-theme .topbar nav.topbar-nav--right a.topbar-theme-toggle.is-current:hover,
+  body.is-light-theme .topbar nav.topbar-nav--right a.topbar-theme-toggle.is-current:focus-visible {
+    background: transparent url("./img/sun-black.svg") center / 20px 20px no-repeat !important;
+  }
+
   .topbar .topbar-theme-toggle::before,
   .topbar .topbar-theme-toggle::after,
   body header.page-shared-header:not(.topbar) > .project-theme-toggle::before,
   body header.page-shared-header:not(.topbar) > .project-theme-toggle::after,
   body header.page-shared-header:not(.topbar) > .theme::before,
   body header.page-shared-header:not(.topbar) > .theme::after {
+    content: none !important;
+    display: none !important;
+  }
+
+  body .topbar nav.topbar-nav--right a.topbar-theme-toggle.is-current::before,
+  body .topbar nav.topbar-nav--right a.topbar-theme-toggle.is-current::after {
     content: none !important;
     display: none !important;
   }
@@ -439,7 +458,7 @@ img, video, svg, canvas { max-width: 100%; }
   }
 }
 
-/* 최종 모바일 헤더 아이콘 규칙: 이전 중복 선언보다 마지막에 적용합니다. */
+/* 모바일 테마 심볼은 글래스 포인터와 이전의 아이콘 효과를 적용하지 않습니다. */
 @media (max-width: 900px) {
   body .topbar .topbar-theme-toggle,
   body .topbar .topbar-theme-toggle.is-current,
@@ -466,6 +485,7 @@ img, video, svg, canvas { max-width: 100%; }
 
   body:not(.is-light-theme) .topbar .topbar-theme-toggle,
   body:not(.is-light-theme) .topbar .topbar-theme-toggle:hover,
+  body:not(.is-light-theme) .topbar .topbar-theme-toggle:focus-visible,
   body:not(.is-light-theme) .topbar .topbar-theme-toggle.is-current:hover,
   body:not(.is-light-theme) header.page-shared-header:not(.topbar) > .project-theme-toggle,
   body:not(.is-light-theme) header.page-shared-header:not(.topbar) > .theme,
@@ -476,6 +496,7 @@ img, video, svg, canvas { max-width: 100%; }
 
   body.is-light-theme .topbar .topbar-theme-toggle,
   body.is-light-theme .topbar .topbar-theme-toggle:hover,
+  body.is-light-theme .topbar .topbar-theme-toggle:focus-visible,
   body.is-light-theme .topbar .topbar-theme-toggle.is-current,
   body.is-light-theme .topbar .topbar-theme-toggle.is-current:hover,
   body.is-light-theme header.page-shared-header:not(.topbar) > .project-theme-toggle,
@@ -495,6 +516,7 @@ img, video, svg, canvas { max-width: 100%; }
     display: none !important;
   }
 
+  .universal-glass-cursor,
   .universal-glass-cursor.is-theme-target {
     display: none !important;
     opacity: 0 !important;
